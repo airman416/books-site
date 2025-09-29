@@ -4,6 +4,39 @@
  * to ensure optimal readability across different page sections.
  */
 
+function getRgbFromImageAtPoint(imgElement, clientX, clientY) {
+  try {
+    const rect = imgElement.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return null;
+
+    const scaleX = imgElement.naturalWidth / rect.width;
+    const scaleY = imgElement.naturalHeight / rect.height;
+
+    const sx = Math.floor((clientX - rect.left) * scaleX);
+    const sy = Math.floor((clientY - rect.top) * scaleY);
+
+    if (sx < 0 || sy < 0 || sx >= imgElement.naturalWidth || sy >= imgElement.naturalHeight) {
+      return null;
+    }
+
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+
+    // Draw a 1x1 region from the image at the sampled coordinates
+    ctx.drawImage(imgElement, sx, sy, 1, 1, 0, 0, 1, 1);
+    const data = ctx.getImageData(0, 0, 1, 1).data;
+    const [r, g, b, a] = data;
+    if (a === 0) return null; // fully transparent
+    return `rgb(${r}, ${g}, ${b})`;
+  } catch (_) {
+    // Likely a CORS-tainted canvas or other drawing issue
+    return null;
+  }
+}
+
 function updateInitialsColor() {
   const initials = document.getElementById('nav-initials');
   if (!initials) return;
@@ -20,6 +53,7 @@ function updateInitialsColor() {
   const originalVisibility = navContainer.style.visibility;
   navContainer.style.visibility = 'hidden';
   const elementBelow = document.elementFromPoint(centerX, centerY);
+  const elementsBelow = document.elementsFromPoint(centerX, centerY) || [];
   navContainer.style.visibility = originalVisibility;
   
   if (!elementBelow) {
@@ -28,13 +62,25 @@ function updateInitialsColor() {
     return;
   }
   
-  // Get the computed background color of the element
-  let element = elementBelow;
+  // Try to sample from images first (covers dark thumbnails and images)
   let bgColor = null;
+  for (let i = 0; i < elementsBelow.length; i++) {
+    const el = elementsBelow[i];
+    if (el instanceof HTMLImageElement) {
+      const imgColor = getRgbFromImageAtPoint(el, centerX, centerY);
+      if (imgColor) {
+        bgColor = imgColor;
+        break;
+      }
+    }
+  }
+  
+  // If no image color could be determined, traverse up for solid background colors
+  let element = elementBelow;
   let attempts = 0;
   
   // Traverse up the DOM tree to find a non-transparent background
-  while (element && attempts < 10) {
+  while (!bgColor && element && attempts < 10) {
     const style = window.getComputedStyle(element);
     const bg = style.backgroundColor;
     

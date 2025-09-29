@@ -38,34 +38,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <PostHog />
   </head>
   <body>
+    <!-- Initials in Top Left -->
+    <div class="fixed top-6 left-6 z-50">
+      <a href="/" class="text-2xl font-bold text-black hover:opacity-70">
+        A.A.
+      </a>
+    </div>
+    
     <slot />
     
     <!-- Footer Navigation -->
-    <footer class="bg-black text-white py-12 mt-24">
+    <footer class="bg-black text-white py-12 mt-24 footer-futura">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <!-- Name/Brand -->
           <div>
-            <h3 class="text-2xl font-bold mb-2">Armaan Agrawal</h3>
+            <h3 class="text-2xl font-bold mb-2 keep-default-font">Armaan Agrawal</h3>
             <p class="text-sm opacity-80">Startups, Productivity, Business, Technology</p>
           </div>
           
           <!-- Navigation Links -->
           <nav class="flex flex-col md:flex-row gap-6 text-sm">
-            <a href="/" class="opacity-80 hover:opacity-100">Home</a>
-            <a href="/projects" class="opacity-80 hover:opacity-100">Projects</a>
-            <a href="/blog" class="opacity-80 hover:opacity-100">Blog</a>
-            <a href="/about" class="opacity-80 hover:opacity-100">About</a>
+            <a href="/" class="text-white opacity-80 hover:opacity-100">Home</a>
+            <a href="/projects" class="text-white opacity-80 hover:opacity-100">Projects</a>
+            <a href="/blog" class="text-white opacity-80 hover:opacity-100">Blog</a>
+            <a href="/about" class="text-white opacity-80 hover:opacity-100">About</a>
           </nav>
           
           <!-- Social Links & Resume -->
           <div class="flex flex-col gap-4">
             <div class="flex gap-6 text-sm">
-              <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" class="opacity-80 hover:opacity-100">X</a>
-              <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" class="opacity-80 hover:opacity-100">LinkedIn</a>
-              <a href="https://tiktok.com/@armaanagrawal5" target="_blank" rel="noopener noreferrer" class="opacity-80 hover:opacity-100">TikTok</a>
+              <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">X</a>
+              <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">LinkedIn</a>
+              <a href="https://tiktok.com/@armaanagrawal5" target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">TikTok</a>
             </div>
-            <a href="/resume.pdf" download class="text-sm opacity-80 hover:opacity-100 underline">Download Resume</a>
+            <a href="/resume.pdf" download class="text-sm text-white opacity-80 hover:opacity-100 underline">Download Resume</a>
           </div>
         </div>
         
@@ -74,5 +81,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         </div>
       </div>
     </footer>
+    
+    <style>
+      .footer-futura {
+        font-family: "futura-pt", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .keep-default-font {
+        font-family: inherit !important;
+      }
+    </style>
   </body>
 </html>

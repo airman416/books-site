@@ -42,8 +42,22 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Remove hover effects globally */
-a, button {
+/* Link styling with color paradigms */
+a {
+  transition: none;
+}
+
+/* Black text turns green on hover */
+a:not(.text-white):hover {
+  color: var(--color-green);
+}
+
+/* White text turns bold on hover */
+a.text-white:hover {
+  font-weight: 700;
+}
+
+button {
   transition: none;
 }
 

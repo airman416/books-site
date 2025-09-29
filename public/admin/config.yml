@@ -8,9 +8,16 @@ backend:
 media_folder: "public/images"
 public_folder: "/images"
 
-# Disable the editor preview pane globally
+# Disable the editor preview pane globally for better mobile experience
 editor:
   preview: false
+
+# Global markdown configuration
+markdown:
+  # Enable markdown shortcuts and features
+  shortcuts: true
+  # Default to markdown for rich text fields
+  default: true
 
 collections:
   # Blog Posts Collection
@@ -26,7 +33,25 @@ collections:
       - { label: "Author", name: "author", widget: "string", default: "Armaan Agrawal" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        default: ""
+        hint: "Write your blog post content in Markdown format"
+        buttons:
+          - "bold"
+          - "italic"
+          - "link"
+          - "heading-one"
+          - "heading-two"
+          - "heading-three"
+          - "heading-four"
+          - "heading-five"
+          - "heading-six"
+          - "code"
+          - "quote"
+          - "bulleted-list"
+          - "numbered-list"
 
   # Site Settings
   - name: "settings"

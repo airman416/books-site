@@ -1,0 +1,95 @@
+/* Custom mobile enhancements for Decap CMS */
+
+/* Ensure proper mobile viewport handling */
+@media (max-width: 768px) {
+  /* Make the editor more mobile-friendly */
+  .nc-editor {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+  }
+  
+  /* Improve form field spacing on mobile */
+  .nc-widgetInput {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Better button sizing for touch */
+  .nc-button {
+    min-height: 44px !important; /* iOS recommended touch target */
+    padding: 12px 16px !important;
+  }
+  
+  /* Improve navigation on mobile */
+  .nc-sidebar {
+    width: 100% !important;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .nc-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* Better text input handling */
+  input[type="text"], 
+  input[type="email"], 
+  input[type="url"],
+  textarea {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    padding: 12px !important;
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 4px !important;
+  }
+  
+  /* Improve markdown editor on mobile */
+  .nc-markdownEditor {
+    min-height: 300px !important;
+  }
+  
+  /* Better image upload interface */
+  .nc-imageUploadArea {
+    padding: 2rem !important;
+    border: 2px dashed #cbd5e0 !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Improve list management */
+  .nc-listWidget {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Better datetime picker on mobile */
+  .nc-datetimeWidget input {
+    font-size: 16px !important;
+    padding: 12px !important;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nc-sidebar {
+    width: 280px !important;
+  }
+  
+  .nc-main {
+    margin-left: 280px !important;
+  }
+}
+
+/* Additional touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch device optimizations */
+  .nc-button:hover {
+    background-color: initial !important;
+  }
+  
+  /* Larger touch targets */
+  .nc-collectionListItem {
+    min-height: 60px !important;
+    padding: 1rem !important;
+  }
+  
+  /* Better spacing for touch */
+  .nc-widgetTopBar {
+    padding: 1rem !important;
+  }
+}

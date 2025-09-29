@@ -44,10 +44,19 @@ git push origin main
 2. Click "Enable Identity"
 3. Under "Registration preferences", select "Invite only"
 4. Under "Services" → "Git Gateway", click "Enable Git Gateway"
-5. Go to "Identity" tab and click "Invite users"
-6. Enter your email address
-7. Check your email and accept the invitation
-8. Access CMS at: `https://armaanagrawal.com/admin`
+5. **IMPORTANT**: Ensure the Netlify Identity widget is installed in your site (already included in `Layout.astro`)
+6. **Deploy your site** if you just added the Netlify Identity widget
+7. Go to "Identity" tab and click "Invite users"
+8. Enter your email address
+9. Check your email and click the invitation link
+10. You'll see a password setup screen - **create your password**
+11. After setting your password, you'll be redirected to your site
+12. Access CMS at: `https://armaanagrawal.com/admin`
+
+**Note**: If the password setup screen doesn't appear when clicking the invitation link, make sure:
+- The Netlify Identity widget script is loaded on your site
+- Your site has been deployed with the widget included
+- Try requesting a new invitation or password reset from the Netlify dashboard
 
 ### Option B: GitHub OAuth (Alternative)
 

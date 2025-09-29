@@ -1,104 +1,102 @@
 # Personal Website Project
 
 ## Project Goal
-The goal of this project is to build a personal website that balances professionalism with authenticity. It serves as a holistic online presence for Armaan Agrawal, showcasing technical skills, personal thoughts, and experiences. The site will highlight technical projects while incorporating personal elements like blog articles to appeal to both technical and non-technical audiences. Key principles include:
-- **Professional yet Authentic**: Present skills and achievements credibly without being overly corporate; infuse personality to build genuine connections.
-- **Content-Driven UI**: Focus on high-quality, impressive content with a simplistic design that elevates fundamentals (e.g., clean typography, fast loading, intuitive navigation) rather than flashy animations.
-- **Holistic Scope**: Include sections for technical work (e.g., project showcases), personal info, and a blog for thoughts/articles. Leave some investor-facing details intriguing to encourage outreach.
-- **Performance and Accessibility**: Ensure fast page loads, mobile responsiveness, and broad appeal.
-- **Minimalism**: Keep the codebase as small as possible while achieving the goals—avoid unnecessary features or bloat.
+The goal of this project is to build a personal website that positions Armaan Agrawal as a leader in startups, productivity, business, and technology. It emphasizes a strong personal brand with consistent branding elements, incorporating many pictures, compelling copy, and simple, intuitive navigation to appeal to laymen. The site includes an easily accessible blog that supports on-the-fly updates via CMS in markdown format. Key principles include:
+- **Leadership and Authenticity**: Showcase expertise and thought leadership in startups, productivity, business, and technology through authentic content, personal stories, and insights.
+- **Personal Brand Focus**: Infuse the site with a consistent brand identity, using high-quality images of Armaan, great copywriting that highlights achievements and vision, and spaced-out, simple design.
+- **Holistic Scope**: Include sections for thought leadership (e.g., blog articles), project showcases, personal bio, and contact, with links to social profiles (X.com/airman416, LinkedIn.com/in/agr1, TikTok) and a downloadable resume.
+- **Performance and Accessibility**: Ensure fast page loads, mobile responsiveness, and easy navigation for all audiences, including non-technical users.
+- **Minimalism**: Keep the codebase small, focusing on essential features with a clean, authentic aesthetic.
 
-The site will support online presence by linking to external profiles: X.com/airman416, LinkedIn.com/in/agr1, and TikTok.
+The site supports an online presence by linking to external profiles and featuring a blog for sharing insights on startups, productivity, business, and technology.
 
 ## Target Audience
-The website is designed to appeal to a diverse group:
-- **Recruiters for Software Engineering Jobs**: Emphasize technical skills, project fit, and achievements to demonstrate job readiness. Include resume-like sections with code samples, tech stack details, and quantifiable impacts.
-- **Startup Founders**: Showcase drive, execution ability, and a "wow factor" through innovative project stories, personal anecdotes of overcoming challenges, and dynamic elements (e.g., interactive demos if minimal).
-- **Investors**: Highlight potential and intrigue with partial stories or teasers (e.g., "Ongoing ventures—let's chat") to leave questions unanswered and encourage direct contact.
-- **General Public**: Support broader online presence with engaging, accessible content that ties into social media (e.g., embedded feeds or links to X, LinkedIn, TikTok). Make it relatable for non-technical visitors through clear language and visuals.
+The website is designed to appeal to:
+- **Startup Founders and Entrepreneurs**: Showcase innovative thinking, execution in startups, and productivity strategies through stories and insights.
+- **Investors**: Intrigue with leadership narratives, ongoing ventures, and teasers to encourage outreach.
+- **General Public and Followers**: Provide engaging, accessible content on business and technology topics, with simple navigation and visual appeal for laymen.
 
-The design appeals to technical users (e.g., code snippets, deep dives) and non-technical ones (e.g., narrative blogs, simple navigation).
+The design balances technical depth with relatable content for broad appeal.
+
+## Theme and Design Principles
+- **Color Scheme**: Largely black and white, with occasional green highlights (#06402B). Light-mode only; no dark-mode support.
+- **Fonts**:
+  - Body Text: Abril Display (serif) – Use for main text content.
+    - Include: &lt;link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css"&gt;
+    - Styles: abril-display (regular, italic, bold, bold italic); abril-fatface (regular, italic); abril-text (regular, italic, bold, bold italic).
+  - Headings: Futura PT (sans-serif) – Use for titles and headings.
+    - Include: &lt;link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css"&gt;
+    - Styles: futura-pt (book, book oblique, heavy, heavy oblique); futura-pt-bold (bold, bold oblique).
+- **Layout and Style**:
+  - Ample spacing for a clean, spaced-out feel.
+  - No top navigation bar; use simple, easy navigation (e.g., footer links or side menu).
+  - Prominently display name and face (e.g., hero section with photo).
+  - No rounded borders.
+  - No hover animations, but include subtle scroll animations for engagement.
+  - Keep it simple, authentic, and focused on content with many pictures integrated throughout.
+  - **Landing Page Optimization**: Hero section immediately conveys who Armaan is and what he's about, with compelling copy, prominent photo, and many optimized images loading quickly. Use Astro's image optimization for fast loads, lazy-loading for non-critical images, and eager loading for initial visible pictures.
+  - **Image Management**: Allow images to be uploaded and managed via Decap CMS media library, storing in the repo for automatic deployment on changes without manual redeploys.
+  - **Resume Download**: Place a downloadable resume link near social links, e.g., in the footer or contact section.
 
 ## Tech Stack
-The tech stack is chosen for modernity, performance, minimal code footprint, and free tools. It uses a modern framework for styling and speed, with a focus on static site generation (SSG) for lightning-fast loads. The site prioritizes SSG deployment and uses Astro's island architecture for interactive components to ensure only necessary JavaScript is loaded.
+The tech stack supports the design and branding goals with modernity, performance, and minimalism. It uses SSG for fast loads and island architecture for interactivity.
 
-- **Framework**: Astro – A modern framework for building fast, content-focused websites with SSG by default. Integrate Svelte for interactive components using Astro's island architecture, which enables partial hydration—loading JavaScript only for dynamic "islands" on the page, keeping the rest static for optimal performance. This setup ensures lightning-fast load times by minimizing client-side JS.
-- **Interactive Components**: Svelte – Used within Astro for any interactive elements (e.g., forms, dynamic demos). Svelte components are compiled to efficient vanilla JS, and with island architecture, they hydrate only when needed, prioritizing speed. Avoid SvelteKit as a full framework; instead, use Svelte directly in Astro for simplicity and minimalism.
-- **Styling**: Tailwind CSS – Utility-first CSS framework integrated via Astro's official Tailwind integration. It generates pure CSS without requiring any JavaScript for styling—styles are compiled to static CSS files during build. This ensures all styling is CSS-only, with no runtime JS dependency. Tailwind integrates seamlessly with Astro components (including Svelte islands) by applying classes directly in markup, and PostCSS handles processing during the Astro build process.
-- **Analytics**: PostHog – Free, open-source analytics tool. Integrate via a simple script tag or NPM package to track user behavior without compromising privacy or adding code complexity.
-- **CMS**: Decap CMS (formerly Netlify CMS) – A free, open-source, Git-based CMS. It allows quick content changes (e.g., updating blog posts or project details) via a user-friendly admin interface. No database needed; content is stored in Git repo files (e.g., Markdown). Chosen for its seamless integration with Netlify, minimal setup, and zero cost.
-- **Other**: 
-  - Markdown for content (e.g., blogs/articles) – Simple and free for holistic, personal writing.
-  - Git for version control – Free and standard.
+- **Framework**: Astro – For fast, content-focused sites with SSG. Integrate Svelte for interactive components via island architecture to minimize JS. Use Astro's built-in image component for optimization (resizing, formatting, lazy-loading).
+- **Interactive Components**: Svelte – For any dynamic elements, hydrated only as needed.
+- **Styling**: Tailwind CSS – Utility-first, compiled to static CSS. Configure for the theme (black/white with green accents), fonts, spacing, and design rules (no rounded borders, no hovers, scroll animations via CSS or minimal JS).
+- **Analytics**: PostHog – Free analytics integration.
+- **CMS**: Decap CMS – Git-based, supports markdown for blog posts and media uploads for images, allowing on-the-fly updates via admin interface with automatic Netlify deploys.
+- **Other**: Markdown for blog content, Git for version control.
 
-All components are free (open-source with generous free tiers). The codebase will be minimal: A basic Astro app structure with only essential pages (e.g., home, projects, blog, about/contact), Tailwind for styling, Decap CMS config, Svelte for islands, and PostHog script.
+All tools are free and keep the codebase minimal.
 
 ## Tools and Platforms
-All tools and platforms are free, with minimal setup to keep development straightforward.
+All free with minimal setup:
 
-- **Development Tools**:
-  - **Node.js and NPM/Yarn**: For running Astro locally (free, install via official site or package manager).
-  - **VS Code or Cursor**: Recommended IDE for editing (free).
-  - **Git**: For version control and CMS integration (free).
-
-- **CMS Setup (Decap CMS)**:
-  - Integrates directly with the Git repo on GitHub.
-  - Admin interface at `/admin` for editing content without code changes.
-  - Content stored as Markdown/YAML files in the repo (e.g., `/content/blog/` for articles).
-
-- **Analytics (PostHog)**:
-  - Sign up for a free account at posthog.com.
-  - Add the JS snippet to the Astro layout file for tracking, ensuring it's loaded only if necessary (e.g., not in static islands).
-
-- **Deployment Platform**: Netlify – Free for personal sites. Provides continuous deployment from GitHub, automatic HTTPS, and built-in support for Decap CMS and Astro SSG builds. Deploy by linking the GitHub repo and configuring builds. Ensure SSG mode for lightning-fast, pre-rendered pages.
-
-- **Hosting/Repo**: GitHub – Free public repo for the project code and content.
-
-No paid tools are used. Ensure all integrations are via free tiers (e.g., PostHog's free plan covers basic analytics).
+- **Development Tools**: Node.js, NPM, VS Code/Cursor, Git.
+- **CMS Setup (Decap CMS)**: Integrates with GitHub; admin at /admin for markdown blog updates.
+- **Analytics (PostHog)**: Free account, JS snippet for tracking.
+- **Deployment**: Netlify – Free, continuous deployment, SSG support, CMS integration.
+- **Hosting/Repo**: GitHub – Free public repo.
 
 ## Development Guide
-This section explains every step from scratch so another agent can take over. Assume basic web dev knowledge; all commands are run in the terminal from the project root (`/Users/armaanagrawal/Documents/GitHub/Personal-Website`). The guide ensures the site is built with SSG, island architecture for interactivity, Tailwind for CSS-only styling, and prioritizes fast loads.
+Follow these steps to build the site with the specified theme, fonts, and design. Run commands from project root.
 
 ### 1. Setup Environment
-- Install Node.js (v18+): Download from nodejs.org or use `nvm install 18`.
-- Clone/init repo: If not already, `git init` or clone from GitHub.
-- Install Astro: `npm create astro@latest .` (choose empty template, add Svelte integration when prompted: yes to Svelte, yes to TypeScript if desired, yes to Tailwind).
+- Install Node.js (v18+).
+- Init repo: `git init` or clone.
+- Install Astro: `npm create astro@latest .` (empty template, add Svelte and Tailwind).
 
 ### 2. Configure Tech Stack
-- **Tailwind CSS**: Added during Astro setup. Customize in `astro.config.mjs` and `tailwind.config.js` for simplistic styles (e.g., focus on sans-serif fonts, neutral colors). Ensure all styles are compiled to static CSS—no JS required for styling. Use Tailwind classes in Astro and Svelte components.
-- **Svelte Integration**: Added during setup. Create Svelte components in `src/components/` and use them as islands in Astro pages with the `client:load` (or other directives) to enable partial hydration only for interactive parts, keeping the site fast and mostly static.
-- **Decap CMS**:
-  - Install: `npm install decap-cms-app`.
-  - Create `src/pages/admin.astro` with the CMS import and config.
-  - Create `static/admin/config.yml` (follow decapcms.org/docs for minimal config, integrating with Astro's content collections if using them).
-  - Content files: Store in `/src/content/` or similar, fetched via Astro's content API for SSG rendering.
-- **PostHog**:
-  - Install: `npm install posthog-js`.
-  - Initialize in a layout or base Astro file: Import and use `posthog.init()` with your project ID, but wrap in a client-side script to avoid loading in static parts.
-- **Pages/Structure** (Minimal):
-  - Use Astro's file-based routing: Create pages in `src/pages/` (e.g., index.astro for home, projects/index.astro).
-  - Home: Intro, links to socials.
-  - Projects: Technical showcases, with Svelte islands for any interactive demos.
-  - Blog: Articles with personal thoughts, rendered from Markdown.
-  - About/Contact: Holistic personal info, investor teasers.
-  - Ensure all pages are SSG by default; use islands for any JS needs.
+- **Tailwind CSS**: Customize config for colors (#06402B green), spacing, no rounded borders. Add font families via @font-face or Typekit links.
+- **Fonts**: Add Typekit links to layout.astro; apply font families in Tailwind classes.
+- **Svelte**: For islands, e.g., scroll animations (use CSS where possible).
+- **Decap CMS**: Install `decap-cms-app`; setup admin.astro and config.yml for markdown blog collection and media library for image management.
+- **PostHog**: Install and init client-side.
+- **Pages/Structure**:
+  - Hero with name, photo, compelling copy, and multiple optimized images for immediate impact.
+  - Sections: Home, Projects, Blog (markdown from CMS), About/Contact.
+  - Simple navigation, many images, great copy focused on leadership.
+  - Implement scroll animations (e.g., fade-ins via CSS intersections).
+  - Add resume download link near social links.
 
 ### 3. Implement Features
-- **UI Design**: Use Tailwind for responsive, content-focused layout (e.g., grid for projects, clean prose for blogs). Ensure fast loads with Astro's built-in optimizations (image handling, asset bundling). All styling via CSS classes—no JS for styles.
-- **Content Integration**: Use Astro's content collections or `gray-matter` to parse Markdown from CMS files, pre-rendering everything in SSG builds.
-- **Island Architecture**: For any interactive component (e.g., contact form), wrap in Svelte and use Astro's &lt;Component client:load /&gt; to hydrate only that island, keeping the page static elsewhere for lightning-fast performance.
-- **Analytics**: Track page views and events minimally, loading JS only client-side.
-- **Social Links**: Add hyperlinks/icons for X, LinkedIn, TikTok.
+- **Theme**: Apply black/white with green highlights in Tailwind.
+- **Design**: Ensure spacing, no nav bar, prominent name/face, no rounds/hovers, fast-loading pictures on landing.
+- **Blog**: Fetch markdown from CMS, render with Astro, accessible via simple link.
+- **Content**: Write copy emphasizing leadership; integrate pictures managed via CMS.
+- **Animations**: Add scroll-based via CSS or Svelte islands.
+- **Image Optimization**: Use Astro Image for resizing, webp/avif formats, lazy-loading, and eager for hero images to ensure many pictures load quickly on page load.
+- **Resume**: Add a link to download resume.pdf, placed near social links.
 
 ### 4. Deployment
 - Push to GitHub.
-- Sign up at netlify.com, connect repo.
-- Set build command: `astro build`, publish dir: `dist`.
-- Enable Identity for Decap CMS auth (free). Netlify will handle SSG deployment automatically.
+- Connect to Netlify: build `astro build`, publish `dist`.
+- Enable CMS auth.
 
 ### 5. Testing and Iteration
-- Local dev: `npm run dev`.
-- Test speed: Use Lighthouse in Chrome to verify lightning-fast loads and SSG efficiency.
-- Update content via CMS admin; commit changes trigger Netlify redeploys.
+- Dev: `npm run dev`.
+- Test: Check fonts, theme, navigation, blog updates, performance.
+- Update blog via CMS for on-the-fly changes.
 
-This setup ensures a minimal, effective site with SSG, island architecture, CSS-only styling, and prioritized performance. Expand only as needed.
+This ensures a branded, leadership-focused site with simple, authentic design.

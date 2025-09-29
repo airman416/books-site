@@ -1,66 +1,169 @@
-/* Custom mobile enhancements for Decap CMS */
+/* Comprehensive mobile enhancements for Decap CMS */
 
-/* Ensure proper mobile viewport handling */
+/* Base responsive improvements */
+* {
+  box-sizing: border-box;
+}
+
+/* Mobile-first approach - default mobile styles */
 @media (max-width: 768px) {
-  /* Make the editor more mobile-friendly */
-  .nc-editor {
-    font-size: 16px !important; /* Prevent zoom on iOS */
+  /* Root container adjustments */
+  .nc-root {
+    overflow-x: hidden !important;
   }
   
-  /* Improve form field spacing on mobile */
-  .nc-widgetInput {
-    margin-bottom: 1rem !important;
-  }
-  
-  /* Better button sizing for touch */
-  .nc-button {
-    min-height: 44px !important; /* iOS recommended touch target */
-    padding: 12px 16px !important;
-  }
-  
-  /* Improve navigation on mobile */
+  /* Sidebar mobile behavior */
   .nc-sidebar {
-    width: 100% !important;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 1000 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease-in-out !important;
+    background: white !important;
   }
   
   .nc-sidebar.open {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
   
-  /* Better text input handling */
-  input[type="text"], 
-  input[type="email"], 
-  input[type="url"],
-  textarea {
-    font-size: 16px !important; /* Prevent zoom on iOS */
-    padding: 12px !important;
-    border: 2px solid #e2e8f0 !important;
+  /* Main content area */
+  .nc-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  /* Header adjustments */
+  .nc-header {
+    padding: 1rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* Navigation button */
+  .nc-sidebarToggle {
+    display: block !important;
+    position: fixed !important;
+    top: 1rem !important;
+    left: 1rem !important;
+    z-index: 1001 !important;
+    background: #007cba !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 16px !important;
     border-radius: 4px !important;
+    font-size: 16px !important;
   }
   
-  /* Improve markdown editor on mobile */
+  /* Collection list improvements */
+  .nc-collectionList {
+    padding: 1rem !important;
+  }
+  
+  .nc-collectionListItem {
+    min-height: 60px !important;
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 4px !important;
+    background: white !important;
+  }
+  
+  /* Form improvements */
+  .nc-widgetInput {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .nc-widgetInput input,
+  .nc-widgetInput textarea {
+    font-size: 16px !important; /* Prevent iOS zoom */
+    padding: 12px !important;
+    border: 2px solid #e1e5e9 !important;
+    border-radius: 4px !important;
+    width: 100% !important;
+    min-height: 44px !important; /* Touch-friendly */
+  }
+  
+  .nc-widgetInput label {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+  }
+  
+  /* Button improvements */
+  .nc-button {
+    min-height: 44px !important;
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    border-radius: 4px !important;
+    border: none !important;
+    margin: 0.5rem 0 !important;
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+  
+  .nc-buttonPrimary {
+    background: #007cba !important;
+    color: white !important;
+  }
+  
+  /* Markdown editor improvements */
   .nc-markdownEditor {
     min-height: 300px !important;
+    font-size: 16px !important;
   }
   
-  /* Better image upload interface */
+  .nc-markdownEditor .CodeMirror {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Image upload improvements */
   .nc-imageUploadArea {
     padding: 2rem !important;
     border: 2px dashed #cbd5e0 !important;
     border-radius: 8px !important;
+    text-align: center !important;
+    margin: 1rem 0 !important;
   }
   
-  /* Improve list management */
+  /* List widget improvements */
   .nc-listWidget {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.5rem !important;
   }
   
-  /* Better datetime picker on mobile */
+  .nc-listWidgetItem {
+    padding: 1rem !important;
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 4px !important;
+    margin-bottom: 1rem !important;
+    background: #f8f9fa !important;
+  }
+  
+  /* Datetime widget */
   .nc-datetimeWidget input {
     font-size: 16px !important;
     padding: 12px !important;
+    min-height: 44px !important;
+  }
+  
+  /* Modal improvements */
+  .nc-modal {
+    padding: 1rem !important;
+  }
+  
+  .nc-modalContent {
+    max-width: 95vw !important;
+    max-height: 95vh !important;
+    overflow-y: auto !important;
+  }
+  
+  /* Hide desktop-only elements */
+  .nc-desktopOnly {
+    display: none !important;
   }
 }
 
@@ -68,28 +171,72 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .nc-sidebar {
     width: 280px !important;
+    position: relative !important;
+    transform: none !important;
   }
   
   .nc-main {
     margin-left: 280px !important;
+    padding: 2rem !important;
+  }
+  
+  .nc-sidebarToggle {
+    display: none !important;
   }
 }
 
-/* Additional touch-friendly improvements */
+/* Desktop - hide mobile toggle */
+@media (min-width: 1025px) {
+  .nc-sidebarToggle {
+    display: none !important;
+  }
+  
+  .nc-sidebar {
+    position: relative !important;
+    transform: none !important;
+  }
+}
+
+/* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
-  /* Touch device optimizations */
   .nc-button:hover {
     background-color: initial !important;
   }
   
-  /* Larger touch targets */
-  .nc-collectionListItem {
-    min-height: 60px !important;
-    padding: 1rem !important;
+  .nc-collectionListItem:hover {
+    background-color: initial !important;
   }
   
-  /* Better spacing for touch */
-  .nc-widgetTopBar {
-    padding: 1rem !important;
+  /* Larger touch targets for interactive elements */
+  .nc-widgetInput input,
+  .nc-widgetInput textarea,
+  .nc-button {
+    min-height: 44px !important;
+  }
+}
+
+/* Overlay for mobile sidebar */
+.nc-sidebarOverlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nc-sidebarOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .nc-sidebarOverlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 }

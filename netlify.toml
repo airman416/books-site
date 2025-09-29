@@ -16,9 +16,9 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://app.posthog.com https://use.typekit.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://use.typekit.net; img-src 'self' data: https:; font-src 'self' https://use.typekit.net data:; connect-src 'self' https://identity.netlify.com https://*.identity.netlify.com https://app.posthog.com; frame-src 'self' https://identity.netlify.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://app.posthog.com https://use.typekit.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://use.typekit.net https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://use.typekit.net data:; connect-src 'self' https://identity.netlify.com https://*.identity.netlify.com https://app.posthog.com; frame-src 'self' https://identity.netlify.com;"
 
 [[headers]]
   for = "/admin/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://identity.netlify.com https://app.posthog.com https://use.typekit.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://use.typekit.net; img-src 'self' data: https:; font-src 'self' https://use.typekit.net data:; connect-src 'self' https://identity.netlify.com https://*.identity.netlify.com https://app.posthog.com https://unpkg.com; frame-src 'self' https://identity.netlify.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://identity.netlify.com https://app.posthog.com https://use.typekit.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://use.typekit.net https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://use.typekit.net data:; connect-src 'self' https://identity.netlify.com https://*.identity.netlify.com https://app.posthog.com https://unpkg.com; frame-src 'self' https://identity.netlify.com;"

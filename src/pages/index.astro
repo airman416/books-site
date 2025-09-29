@@ -2,41 +2,44 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import homePage from '../data/homePage.json';
 
 const allPosts = await getCollection('blog');
 const recentPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
 ---
 
-<Layout title="Armaan Agrawal - Home" description="Armaan Agrawal explores startups, productivity, business, and technology through writing and building.">
+<Layout title={`${homePage.hero.title} - Home`} description={homePage.hero.subtitle}>
   <!-- Hero Section -->
   <section class="min-h-screen flex items-center justify-center px-6 py-24">
     <div class="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
       <!-- Hero Content -->
       <div class="space-y-8">
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-          Armaan Agrawal
+          {homePage.hero.title}
         </h1>
         <p class="text-xl md:text-2xl text-gray-800">
-          I build startups and write about what I learn along the way.
+          {homePage.hero.subtitle}
         </p>
         <p class="text-lg text-gray-700">
-          Most of my time goes into starting companies, thinking about productivity, and exploring how technology shapes business. I share what works and what doesn't.
+          {homePage.hero.description}
         </p>
         <div class="flex gap-4 pt-4">
-          <a href="/blog" class="bg-[#06402B] text-white px-8 py-4 text-lg font-medium">
-            Read My Writing
+          <a href={homePage.hero.primaryButton.url} class="bg-[#06402B] text-white px-8 py-4 text-lg font-medium">
+            {homePage.hero.primaryButton.text}
           </a>
-          <a href="#connect" class="border-2 border-[#06402B] text-black px-8 py-4 text-lg font-medium">
-            Connect With Me
+          <a href={homePage.hero.secondaryButton.url} class="border-2 border-[#06402B] text-black px-8 py-4 text-lg font-medium">
+            {homePage.hero.secondaryButton.text}
           </a>
         </div>
       </div>
       
       <!-- Hero Image -->
       <div class="order-first md:order-last">
-        <img 
-          src="/images/image.jpg" 
-          alt="Armaan Agrawal"
+        <Image 
+          src={homePage.hero.image} 
+          alt={homePage.hero.imageAlt}
+          width={800}
+          height={800}
           class="w-full h-auto"
           loading="eager"
         />
@@ -47,23 +50,14 @@ const recentPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.
   <!-- About Preview Section -->
   <section class="py-24 px-6 bg-gray-50">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8">What I Do</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">{homePage.aboutPreview.heading}</h2>
       <div class="space-y-6 text-lg text-gray-700">
-        <p>
-          I'm a founder working on ideas at the intersection of technology and human behavior. 
-          My focus is on building products that help people work better and think clearer.
-        </p>
-        <p>
-          Before this, I spent time studying how teams operate, why some startups succeed while others fail, 
-          and what makes productivity systems actually stick. These questions still drive most of what I work on.
-        </p>
-        <p>
-          I write to understand things better. If you're working on similar problems or just want to 
-          exchange ideas, reach out.
-        </p>
+        {homePage.aboutPreview.paragraphs.map((paragraph: string) => (
+          <p>{paragraph}</p>
+        ))}
       </div>
       <div class="mt-12">
-        <a href="/about" class="text-lg underline">More about me →</a>
+        <a href={homePage.aboutPreview.link.url} class="text-lg underline">{homePage.aboutPreview.link.text}</a>
       </div>
     </div>
   </section>
@@ -71,35 +65,28 @@ const recentPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.
   <!-- Featured Work -->
   <section class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold mb-12">Recent Work</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-12">{homePage.featuredWork.heading}</h2>
       <div class="space-y-8">
-        <!-- Work Item 1 -->
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-2xl font-bold mb-2">Building in Public</h3>
-          <p class="text-gray-700">
-            I'm currently working on tools that help founders make better decisions faster. 
-            The first version launches soon.
-          </p>
-        </div>
-        
-        <!-- Work Item 2 -->
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-2xl font-bold mb-2">Productivity Research</h3>
-          <p class="text-gray-700">
-            A year-long experiment testing different productivity systems on real teams. 
-            Compiling the findings into a series of essays.
-          </p>
-        </div>
+        {homePage.featuredWork.workItems.map((item: any) => (
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-2xl font-bold mb-2">{item.title}</h3>
+            <p class="text-gray-700">
+              {item.description}
+            </p>
+          </div>
+        ))}
         
         <!-- Latest Writing -->
         <div>
-          <h3 class="text-2xl font-bold mb-4">Latest Writing</h3>
+          <h3 class="text-2xl font-bold mb-4">{homePage.featuredWork.latestWriting.heading}</h3>
           <div class="space-y-4">
             {recentPosts.map((post) => (
               <a href={`/blog/${post.slug}`} class="flex gap-4 items-center group hover:opacity-70 transition-opacity">
-                <img 
-                  src={post.data.image || "/images/image.jpg"}
+                <Image 
+                  src={post.data.image || homePage.hero.image}
                   alt={post.data.title}
+                  width={80}
+                  height={80}
                   class="w-20 h-20 object-cover flex-shrink-0"
                   loading="lazy"
                 />
@@ -116,7 +103,7 @@ const recentPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.
               </a>
             ))}
           </div>
-          <a href="/blog" class="inline-block text-lg underline mt-4">Read all posts →</a>
+          <a href={homePage.featuredWork.latestWriting.viewAllLink.url} class="inline-block text-lg underline mt-4">{homePage.featuredWork.latestWriting.viewAllLink.text}</a>
         </div>
       </div>
     </div>
@@ -125,18 +112,20 @@ const recentPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.
   <!-- CTA Section -->
   <section id="connect" class="py-24 px-6 bg-[#06402B] text-white">
     <div class="max-w-4xl mx-auto text-center space-y-8">
-      <h2 class="text-4xl md:text-5xl font-bold">Let's Connect</h2>
+      <h2 class="text-4xl md:text-5xl font-bold">{homePage.cta.heading}</h2>
       <p class="text-xl">
-        I'm always interested in meeting people working on hard problems. 
-        Whether you're starting something, investing in founders, or just exploring ideas, say hello.
+        {homePage.cta.description}
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-        <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" 
-           class="text-lg text-white underline">Follow on X</a>
-        <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" 
-           class="text-lg text-white underline">Connect on LinkedIn</a>
-        <a href="/resume.pdf" download 
-           class="text-lg text-white underline">Download Resume</a>
+        {homePage.cta.links.map((link: any) => (
+          link.url ? (
+            <a href={link.url} target="_blank" rel="noopener noreferrer" 
+               class="text-lg text-white underline">{link.label}</a>
+          ) : (
+            <a href={link.file} download 
+               class="text-lg text-white underline">{link.label}</a>
+          )
+        ))}
       </div>
     </div>
   </section>

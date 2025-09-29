@@ -1,13 +1,14 @@
 ---
 import '../styles/global.css';
 import PostHog from '../components/posthog.astro';
+import siteSettings from '../data/siteSettings.json';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = "Armaan Agrawal - Startups, Productivity, Business, and Technology" } = Astro.props;
+const { title, description = siteSettings.site.description } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -27,7 +28,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@airman416" />
+    <meta name="twitter:creator" content={siteSettings.site.twitter} />
     
     <!-- Adobe Typekit Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css" />
@@ -43,8 +44,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <body>
     <!-- Initials in Top Left -->
     <div class="fixed top-6 left-6 z-50">
-      <a href="/" class="text-2xl font-bold text-black hover:opacity-70">
-        A.A.
+      <a href="/" id="nav-initials" class="text-2xl font-bold text-black hover:opacity-70">
+        {siteSettings.site.initials}
       </a>
     </div>
     
@@ -63,36 +64,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
     </script>
     
+    <!-- Navigation Initials Color Adapter -->
+    <script>
+      import '../scripts/navColorAdapter.js';
+    </script>
+    
     <!-- Footer Navigation -->
     <footer class="bg-black text-white py-12 mt-24 footer-futura">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <!-- Name/Brand -->
           <div>
-            <h3 class="text-2xl font-bold mb-2 keep-default-font">Armaan Agrawal</h3>
-            <p class="text-sm opacity-80">Startups, Productivity, Business, Technology</p>
+            <h3 class="text-2xl font-bold mb-2 keep-default-font">{siteSettings.footer.brandName}</h3>
+            <p class="text-sm opacity-80">{siteSettings.footer.tagline}</p>
           </div>
           
           <!-- Navigation Links -->
           <nav class="flex flex-col md:flex-row gap-6 text-sm">
-            <a href="/" class="text-white opacity-80 hover:opacity-100">Home</a>
-            <a href="/blog" class="text-white opacity-80 hover:opacity-100">Blog</a>
-            <a href="/about" class="text-white opacity-80 hover:opacity-100">About</a>
+            {siteSettings.footer.navigation.map((link: any) => (
+              <a href={link.url} class="text-white opacity-80 hover:opacity-100">{link.label}</a>
+            ))}
           </nav>
           
           <!-- Social Links & Resume -->
           <div class="flex flex-col gap-4">
             <div class="flex gap-6 text-sm">
-              <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">X</a>
-              <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">LinkedIn</a>
-              <a href="https://tiktok.com/@armaanagrawal5" target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">TikTok</a>
+              {siteSettings.footer.socialLinks.map((link: any) => (
+                <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">{link.label}</a>
+              ))}
             </div>
-            <a href="/resume.pdf" download class="text-sm text-white opacity-80 hover:opacity-100 underline">Download Resume</a>
+            <a href={siteSettings.footer.resumeLink.file} download class="text-sm text-white opacity-80 hover:opacity-100 underline">{siteSettings.footer.resumeLink.label}</a>
           </div>
         </div>
         
         <div class="mt-8 pt-8 border-t border-white border-opacity-20 text-sm opacity-60 text-center">
-          <p>&copy; {new Date().getFullYear()} Armaan Agrawal. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {siteSettings.footer.copyrightName}. All rights reserved.</p>
         </div>
       </div>
     </footer>

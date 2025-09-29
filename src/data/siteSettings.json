@@ -1,0 +1,45 @@
+{
+  "site": {
+    "title": "Armaan Agrawal",
+    "description": "Armaan Agrawal - Startups, Productivity, Business, and Technology",
+    "initials": "A.A.",
+    "twitter": "@airman416"
+  },
+  "footer": {
+    "brandName": "Armaan Agrawal",
+    "tagline": "Startups, Productivity, Business, Technology",
+    "copyrightName": "Armaan Agrawal",
+    "navigation": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Blog",
+        "url": "/blog"
+      },
+      {
+        "label": "About",
+        "url": "/about"
+      }
+    ],
+    "socialLinks": [
+      {
+        "label": "X",
+        "url": "https://x.com/airman416"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/agr1"
+      },
+      {
+        "label": "TikTok",
+        "url": "https://tiktok.com/@armaanagrawal5"
+      }
+    ],
+    "resumeLink": {
+      "label": "Download Resume",
+      "file": "/resume.pdf"
+    }
+  }
+}

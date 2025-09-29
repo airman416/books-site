@@ -9,6 +9,7 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
+  # Blog Posts Collection
   - name: "blog"
     label: "Blog Posts"
     folder: "src/content/blog"
@@ -22,3 +23,156 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  # Site Settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Site Configuration"
+        name: "site"
+        file: "src/data/siteSettings.json"
+        fields:
+          - label: "Site"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "Site Title", name: "title", widget: "string" }
+              - { label: "Site Description", name: "description", widget: "text" }
+              - { label: "Initials (top left logo)", name: "initials", widget: "string" }
+              - { label: "Twitter Handle", name: "twitter", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Brand Name", name: "brandName", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Copyright Name", name: "copyrightName", widget: "string" }
+              - label: "Navigation Links"
+                name: "navigation"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Resume Link"
+                name: "resumeLink"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/" }
+
+  # Home Page Content
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/data/homePage.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - label: "Primary Button"
+                name: "primaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Secondary Button"
+                name: "secondaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "About Preview Section"
+            name: "aboutPreview"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - label: "Link"
+                name: "link"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Featured Work Section"
+            name: "featuredWork"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Work Items"
+                name: "workItems"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - label: "Latest Writing"
+                name: "latestWriting"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - label: "View All Link"
+                    name: "viewAllLink"
+                    widget: "object"
+                    fields:
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
+          - label: "Call-to-Action Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", required: false }
+                  - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/", required: false }
+
+      - label: "About Page"
+        name: "about"
+        file: "src/data/aboutPage.json"
+        fields:
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+          - label: "Content Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, required: false }
+              - { label: "Bullet Points", name: "bulletPoints", widget: "list", field: { label: "Point", name: "point", widget: "string" }, required: false }
+              - { label: "Paragraphs After Bullets", name: "afterBullets", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, required: false }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Resume Section"
+            name: "resumeSection"
+            widget: "object"
+            fields:
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/" }

@@ -1,0 +1,69 @@
+{
+  "header": {
+    "title": "About Me",
+    "subtitle": "I build companies and explore ideas at the intersection of technology, productivity, and business.",
+    "image": "/images/image.jpg",
+    "imageAlt": "Armaan Agrawal"
+  },
+  "sections": [
+    {
+      "heading": "Background",
+      "paragraphs": [
+        "I started my first company when I was still figuring out what I wanted to do. It failed, but it taught me more than any class or job could have.",
+        "Since then, I've spent my time starting things, sometimes succeeding, often failing, and always learning. The pattern has taught me that the most valuable skill is knowing how to learn from what doesn't work."
+      ]
+    },
+    {
+      "heading": "What I Focus On",
+      "paragraphs": [
+        "Most of my work centers on three questions:"
+      ],
+      "bulletPoints": [
+        "How do we build products that actually solve real problems?",
+        "What makes some teams productive while others just stay busy?",
+        "How can technology serve people without overwhelming them?"
+      ],
+      "afterBullets": [
+        "These questions show up in everything I build and write about."
+      ]
+    },
+    {
+      "heading": "Current Work",
+      "paragraphs": [
+        "Right now, I'm building tools for founders who feel buried under information. The goal is simple: help people make better decisions without adding more noise.",
+        "I also write regularly about startups, productivity systems, and technology trends. The writing helps me think clearer about what I'm working on."
+      ]
+    },
+    {
+      "heading": "Beyond Work",
+      "paragraphs": [
+        "I read a lot, mostly about psychology, systems thinking, and how people make decisions. I also spend time talking to other founders about their challenges.",
+        "When I'm not working, I'm usually experimenting with new productivity systems, exploring different technologies, or having conversations that change how I think about something."
+      ]
+    },
+    {
+      "heading": "Get in Touch",
+      "paragraphs": [
+        "I'm always open to meeting people working on interesting problems. If you're building something, investing in startups, or just want to exchange ideas, reach out."
+      ],
+      "socialLinks": [
+        {
+          "label": "X (Twitter)",
+          "url": "https://x.com/airman416"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://linkedin.com/in/agr1"
+        },
+        {
+          "label": "TikTok",
+          "url": "https://tiktok.com/@armaanagrawal5"
+        }
+      ]
+    }
+  ],
+  "resumeSection": {
+    "buttonText": "Download Resume",
+    "file": "/resume.pdf"
+  }
+}

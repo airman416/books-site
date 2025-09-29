@@ -8,6 +8,10 @@ backend:
 media_folder: "public/images"
 public_folder: "/images"
 
+# Disable the editor preview pane globally
+editor:
+  preview: false
+
 collections:
   # Blog Posts Collection
   - name: "blog"

@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const recentPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
 ---
 
 <Layout title="Armaan Agrawal - Home" description="Armaan Agrawal explores startups, productivity, business, and technology through writing and building.">
@@ -22,8 +26,8 @@ import { Image } from 'astro:assets';
           <a href="/blog" class="bg-[#06402B] text-white px-8 py-4 text-lg font-medium">
             Read My Writing
           </a>
-          <a href="/projects" class="border-2 border-[#06402B] text-black px-8 py-4 text-lg font-medium">
-            View Projects
+          <a href="#connect" class="border-2 border-[#06402B] text-black px-8 py-4 text-lg font-medium">
+            Connect With Me
           </a>
         </div>
       </div>
@@ -68,44 +72,58 @@ import { Image } from 'astro:assets';
   <section class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold mb-12">Recent Work</h2>
-      <div class="grid md:grid-cols-2 gap-12">
-        <!-- Project Preview 1 -->
-        <div class="space-y-4">
-          <img 
-            src="/images/image.jpg" 
-            alt="Project preview"
-            class="w-full h-64 object-cover"
-            loading="lazy"
-          />
-          <h3 class="text-2xl font-bold">Building in Public</h3>
+      <div class="space-y-8">
+        <!-- Work Item 1 -->
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-2xl font-bold mb-2">Building in Public</h3>
           <p class="text-gray-700">
             I'm currently working on tools that help founders make better decisions faster. 
             The first version launches soon.
           </p>
-          <a href="/projects" class="inline-block text-lg underline">See all projects →</a>
         </div>
         
-        <!-- Blog Preview -->
-        <div class="space-y-4">
-          <img 
-            src="/images/image.jpg" 
-            alt="Blog preview"
-            class="w-full h-64 object-cover"
-            loading="lazy"
-          />
-          <h3 class="text-2xl font-bold">Latest Thinking</h3>
+        <!-- Work Item 2 -->
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-2xl font-bold mb-2">Productivity Research</h3>
           <p class="text-gray-700">
-            Writing about startup lessons, productivity experiments, and technology trends. 
-            New posts every week.
+            A year-long experiment testing different productivity systems on real teams. 
+            Compiling the findings into a series of essays.
           </p>
-          <a href="/blog" class="inline-block text-lg underline">Read the blog →</a>
+        </div>
+        
+        <!-- Latest Writing -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Latest Writing</h3>
+          <div class="space-y-4">
+            {recentPosts.map((post) => (
+              <a href={`/blog/${post.slug}`} class="flex gap-4 items-center group hover:opacity-70 transition-opacity">
+                <img 
+                  src={post.data.image || "/images/image.jpg"}
+                  alt={post.data.title}
+                  class="w-20 h-20 object-cover flex-shrink-0"
+                  loading="lazy"
+                />
+                <div class="flex-1">
+                  <h4 class="font-bold text-lg group-hover:text-[#06402B] transition-colors">{post.data.title}</h4>
+                  <p class="text-sm text-gray-600">
+                    {post.data.date.toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <a href="/blog" class="inline-block text-lg underline mt-4">Read all posts →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-24 px-6 bg-[#06402B] text-white">
+  <section id="connect" class="py-24 px-6 bg-[#06402B] text-white">
     <div class="max-w-4xl mx-auto text-center space-y-8">
       <h2 class="text-4xl md:text-5xl font-bold">Let's Connect</h2>
       <p class="text-xl">

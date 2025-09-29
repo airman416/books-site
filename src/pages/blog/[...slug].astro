@@ -16,7 +16,7 @@ const { Content } = await post.render();
 
 <Layout title={`${post.data.title} - Armaan Agrawal`} description={post.data.description}>
   <main class="min-h-screen py-24 px-6">
-    <article class="max-w-3xl mx-auto">
+    <article class="max-w-4xl mx-auto">
       <!-- Back Link -->
       <div class="mb-8">
         <a href="/blog" class="text-lg underline">← Back to Blog</a>
@@ -69,9 +69,6 @@ const { Content } = await post.render();
             <a href="/blog" class="bg-[#06402B] text-white px-6 py-3">
               Read More Posts
             </a>
-            <a href="/projects" class="border-2 border-[#06402B] text-black px-6 py-3">
-              View Projects
-            </a>
           </div>
         </div>
       </footer>
@@ -81,11 +78,26 @@ const { Content } = await post.render();
 
 <style is:global>
   /* Prose styling for blog content */
+  .prose {
+    color: #000000;
+    max-width: none;
+  }
+
+  /* Headings */
+  .prose h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
   .prose h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
+    line-height: 1.3;
   }
 
   .prose h3 {
@@ -93,49 +105,165 @@ const { Content } = await post.render();
     font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
+    line-height: 1.4;
   }
 
+  .prose h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .prose h5 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .prose h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  /* Paragraphs */
   .prose p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    font-size: 1.125rem;
   }
 
+  /* Lists */
   .prose ul, .prose ol {
     margin-bottom: 1.5rem;
     padding-left: 2rem;
+    line-height: 1.8;
+  }
+
+  .prose ul {
+    list-style-type: disc;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
   }
 
   .prose li {
     margin-bottom: 0.5rem;
+    font-size: 1.125rem;
   }
 
+  .prose li > ul,
+  .prose li > ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Links */
   .prose a {
+    color: #06402B;
     text-decoration: underline;
+    text-decoration-color: #06402B;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s ease;
   }
 
+  .prose a:hover {
+    opacity: 0.7;
+  }
+
+  /* Strong and emphasis */
   .prose strong {
     font-weight: 700;
   }
 
+  .prose em {
+    font-style: italic;
+  }
+
+  /* Code */
   .prose code {
     background-color: #f3f4f6;
+    color: #1f2937;
     padding: 0.2rem 0.4rem;
     font-size: 0.9em;
+    font-family: 'Courier New', monospace;
   }
 
   .prose pre {
     background-color: #1f2937;
     color: #f3f4f6;
-    padding: 1rem;
+    padding: 1.5rem;
     overflow-x: auto;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    line-height: 1.6;
   }
 
+  .prose pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Blockquotes */
   .prose blockquote {
     border-left: 4px solid #06402B;
     padding-left: 1.5rem;
     margin: 2rem 0;
     font-style: italic;
     color: #4b5563;
+    font-size: 1.125rem;
+  }
+
+  .prose blockquote p {
+    margin-bottom: 1rem;
+  }
+
+  /* Images */
+  .prose img {
+    margin: 2rem 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Horizontal rules */
+  .prose hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 3rem 0;
+  }
+
+  /* Tables */
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  .prose table th {
+    background-color: #f9fafb;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 1px solid #e5e7eb;
+  }
+
+  .prose table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .prose table tr:nth-child(even) {
+    background-color: #f9fafb;
   }
 </style>

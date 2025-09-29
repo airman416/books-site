@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Armaan Agrawal" description="Learn more about Armaan Agrawal's background, interests, and work in startups and technology.">
+  <main class="min-h-screen py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header with Image -->
+      <div class="grid md:grid-cols-5 gap-12 mb-16">
+        <div class="md:col-span-3 space-y-6">
+          <h1 class="text-5xl md:text-6xl font-bold">About Me</h1>
+          <p class="text-xl text-gray-700">
+            I build companies and explore ideas at the intersection of technology, productivity, and business.
+          </p>
+        </div>
+        <div class="md:col-span-2">
+          <img 
+            src="/images/image.jpg" 
+            alt="Armaan Agrawal"
+            class="w-full h-auto"
+            loading="eager"
+          />
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="space-y-12 text-lg text-gray-700">
+        <section class="space-y-4">
+          <h2 class="text-3xl font-bold text-black">Background</h2>
+          <p>
+            I started my first company when I was still figuring out what I wanted to do. 
+            It failed, but it taught me more than any class or job could have.
+          </p>
+          <p>
+            Since then, I've spent my time starting things, sometimes succeeding, often failing, 
+            and always learning. The pattern has taught me that the most valuable skill is knowing 
+            how to learn from what doesn't work.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-3xl font-bold text-black">What I Focus On</h2>
+          <p>
+            Most of my work centers on three questions:
+          </p>
+          <ul class="list-none space-y-3 pl-6 border-l-4 border-[#06402B]">
+            <li>How do we build products that actually solve real problems?</li>
+            <li>What makes some teams productive while others just stay busy?</li>
+            <li>How can technology serve people without overwhelming them?</li>
+          </ul>
+          <p>
+            These questions show up in everything I build and write about.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-3xl font-bold text-black">Current Work</h2>
+          <p>
+            Right now, I'm building tools for founders who feel buried under information. 
+            The goal is simple: help people make better decisions without adding more noise.
+          </p>
+          <p>
+            I also write regularly about startups, productivity systems, and technology trends. 
+            The writing helps me think clearer about what I'm working on.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-3xl font-bold text-black">Beyond Work</h2>
+          <p>
+            I read a lot, mostly about psychology, systems thinking, and how people make decisions. 
+            I also spend time talking to other founders about their challenges.
+          </p>
+          <p>
+            When I'm not working, I'm usually experimenting with new productivity systems, 
+            exploring different technologies, or having conversations that change how I think about something.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-3xl font-bold text-black">Get in Touch</h2>
+          <p>
+            I'm always open to meeting people working on interesting problems. 
+            If you're building something, investing in startups, or just want to exchange ideas, reach out.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 pt-4">
+            <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" 
+               class="text-lg underline">X (Twitter)</a>
+            <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" 
+               class="text-lg underline">LinkedIn</a>
+            <a href="https://tiktok.com/@armaanagrawal5" target="_blank" rel="noopener noreferrer" 
+               class="text-lg underline">TikTok</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Resume Download -->
+      <div class="mt-16 pt-12 border-t border-gray-200">
+        <a href="/resume.pdf" download class="bg-black text-white px-8 py-4 text-lg font-medium inline-block">
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>

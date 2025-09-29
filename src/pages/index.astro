@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Armaan Agrawal - Home" description="Armaan Agrawal explores startups, productivity, business, and technology through writing and building.">
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-6 py-24">
+    <div class="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center">
+      <!-- Hero Content -->
+      <div class="space-y-8">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          Armaan Agrawal
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-800">
+          I build startups and write about what I learn along the way.
+        </p>
+        <p class="text-lg text-gray-700">
+          Most of my time goes into starting companies, thinking about productivity, and exploring how technology shapes business. I share what works and what doesn't.
+        </p>
+        <div class="flex gap-4 pt-4">
+          <a href="/blog" class="bg-black text-white px-8 py-4 text-lg font-medium">
+            Read My Writing
+          </a>
+          <a href="/projects" class="border-2 border-black text-black px-8 py-4 text-lg font-medium">
+            View Projects
+          </a>
+        </div>
+      </div>
+      
+      <!-- Hero Image -->
+      <div class="order-first md:order-last">
+        <img 
+          src="/images/image.jpg" 
+          alt="Armaan Agrawal"
+          class="w-full h-auto"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="py-24 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">What I Do</h2>
+      <div class="space-y-6 text-lg text-gray-700">
+        <p>
+          I'm a founder working on ideas at the intersection of technology and human behavior. 
+          My focus is on building products that help people work better and think clearer.
+        </p>
+        <p>
+          Before this, I spent time studying how teams operate, why some startups succeed while others fail, 
+          and what makes productivity systems actually stick. These questions still drive most of what I work on.
+        </p>
+        <p>
+          I write to understand things better. If you're working on similar problems or just want to 
+          exchange ideas, reach out.
+        </p>
+      </div>
+      <div class="mt-12">
+        <a href="/about" class="text-lg underline">More about me →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-12">Recent Work</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Project Preview 1 -->
+        <div class="space-y-4">
+          <img 
+            src="/images/image.jpg" 
+            alt="Project preview"
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+          <h3 class="text-2xl font-bold">Building in Public</h3>
+          <p class="text-gray-700">
+            I'm currently working on tools that help founders make better decisions faster. 
+            The first version launches soon.
+          </p>
+          <a href="/projects" class="inline-block text-lg underline">See all projects →</a>
+        </div>
+        
+        <!-- Blog Preview -->
+        <div class="space-y-4">
+          <img 
+            src="/images/image.jpg" 
+            alt="Blog preview"
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+          <h3 class="text-2xl font-bold">Latest Thinking</h3>
+          <p class="text-gray-700">
+            Writing about startup lessons, productivity experiments, and technology trends. 
+            New posts every week.
+          </p>
+          <a href="/blog" class="inline-block text-lg underline">Read the blog →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 px-6 bg-[#06402B] text-white">
+    <div class="max-w-4xl mx-auto text-center space-y-8">
+      <h2 class="text-4xl md:text-5xl font-bold">Let's Connect</h2>
+      <p class="text-xl">
+        I'm always interested in meeting people working on hard problems. 
+        Whether you're starting something, investing in founders, or just exploring ideas, say hello.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+        <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" 
+           class="text-lg underline">Follow on X</a>
+        <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" 
+           class="text-lg underline">Connect on LinkedIn</a>
+        <a href="/resume.pdf" download 
+           class="text-lg underline">Download Resume</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Scroll animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  section {
+    animation: fadeInUp 0.8s ease-out;
+  }
+</style>

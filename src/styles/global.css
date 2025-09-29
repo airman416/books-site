@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-green: #06402B;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  
+  /* Font Families */
+  --font-family-abril: 'abril-display', serif;
+  --font-family-futura: 'futura-pt', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-2xl: 6rem;
+  --spacing-3xl: 8rem;
+  
+  /* Border Radius - set to 0 for no rounded borders */
+  --radius-none: 0;
+}
+
+/* Reset rounded borders globally */
+* {
+  border-radius: 0 !important;
+}
+
+/* Base Typography */
+body {
+  font-family: var(--font-family-abril);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-futura);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Remove hover effects globally */
+a, button {
+  transition: none;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}

@@ -7,17 +7,17 @@ import aboutPage from '../data/aboutPage.json';
   <main class="w-full max-w-4xl mx-auto px-8 py-20">
     <!-- Header -->
     <div class="mb-16">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">{aboutPage.header.title}</h1>
-      <p class="text-xl text-gray-700">
+      <h1 class="text-2xl md:text-3xl font-bold mb-6">{aboutPage.header.title}</h1>
+      <p class="text-base text-gray-700">
         {aboutPage.header.subtitle}
       </p>
     </div>
 
     <!-- Main Content -->
-    <div class="space-y-8 text-lg text-gray-700">
+    <div class="space-y-8 text-base text-gray-700">
       {aboutPage.sections.map((section: any) => (
         <section class="space-y-4">
-          <h2 class="text-2xl text-black">{section.heading}</h2>
+          <h2 class="text-lg text-black">{section.heading}</h2>
           {section.paragraphs && section.paragraphs.map((paragraph: string) => (
             <p>{paragraph}</p>
           ))}
@@ -45,7 +45,7 @@ import aboutPage from '../data/aboutPage.json';
 
     <!-- Resume Download -->
     <div class="mt-12 pt-8 border-t border-gray-200">
-      <a href={aboutPage.resumeSection.file} download class="underline text-lg">
+      <a href={aboutPage.resumeSection.file} download class="underline text-base">
         {aboutPage.resumeSection.buttonText}
       </a>
     </div>

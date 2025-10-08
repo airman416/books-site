@@ -37,24 +37,24 @@ const postsByTopic = writingSections.map(section => {
     </div>
 
     <!-- Hero / Intro -->
-    <section class="mb-16">
-      <h1 class="text-4xl md:text-5xl font-bold mb-2">{homePage.hero.title}</h1>
-      <p class="text-lg md:text-xl mb-2 text-gray-700">
+    <section class="mb-12">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">{homePage.hero.title}</h1>
+      <p class="text-base md:text-lg mb-2 text-gray-700">
         {homePage.hero.subtitle}
       </p>
     </section>
 
     <!-- Writing Sections by Topic -->
     {postsByTopic.map((section) => (
-      <section class="mb-16">
-        <h2 class="text-2xl font-bold mb-4">{section.title}</h2>
+      <section class="mb-12">
+        <h2 class="text-lg font-bold mb-2">{section.title}</h2>
         <ul class="list-disc pl-6 space-y-3">
           {section.posts.map((post) => (
             <li>
               <a href={`/blog/${post.slug}`} class="group">
                 <div class="flex items-baseline gap-3">
-                  <span class="text-lg underline decoration-[#06402B]/30 decoration-1 underline-offset-4 group-hover:text-[#06402B] group-hover:decoration-[#06402B]">{post.data.title}</span>
-                  <span class="text-sm text-gray-500 flex-shrink-0">
+                  <span class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 group-hover:text-[#06402B] group-hover:decoration-[#06402B]">{post.data.title}</span>
+                  <span class="text-xs text-gray-500 flex-shrink-0">
                     {post.data.date.toLocaleDateString('en-US', { 
                       month: 'short', 
                       day: 'numeric',
@@ -70,8 +70,8 @@ const postsByTopic = writingSections.map(section => {
     ))}
 
     <!-- Newsletter -->
-    <section class="mb-8">
-      <p class="text-base text-gray-700 mb-2">
+    <section class="mt-18 mb-8">
+      <p class="text-sm text-gray-700 mb-2">
         {homePage.newsletter.description}
       </p>
       <div id="newsletter-form"></div>
@@ -79,7 +79,7 @@ const postsByTopic = writingSections.map(section => {
 
     <!-- Connect Icons -->
     <section class="mt-8">
-      <div class="flex flex-wrap gap-6 text-base items-center justify-center">
+      <div class="flex flex-wrap gap-6 text-sm items-center justify-center">
         {homePage.cta.links.map((link: any) => {
           // Map link labels to icons
           let icon = '';

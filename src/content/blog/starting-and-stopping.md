@@ -3,6 +3,7 @@ title: "Starting and Stopping"
 description: "Most advice tells you to never quit. That's wrong. Knowing when to stop is just as important as knowing when to start."
 date: 2025-01-15
 tags: ["startups", "decision-making"]
+topic: "Startups"
 ---
 
 Most advice tells you to never quit. That's wrong. Knowing when to stop is just as important as knowing when to start.

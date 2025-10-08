@@ -46,6 +46,21 @@
       }
     }
   },
+  "writingSections": [
+    {
+      "title": "Startups",
+      "topic": "Startups",
+      "maxPosts": 5
+    },
+    {
+      "title": "Productivity",
+      "topic": "Productivity",
+      "maxPosts": 5
+    }
+  ],
+  "newsletter": {
+    "description": "Get my latest writing and thoughts delivered to your inbox."
+  },
   "cta": {
     "heading": "Let's Connect",
     "description": "I'm always interested in meeting people working on hard problems. Whether you're starting something, investing in founders, or just exploring ideas, say hello.",
@@ -57,6 +72,10 @@
       {
         "label": "Connect on LinkedIn",
         "url": "https://linkedin.com/in/agr1"
+      },
+      {
+        "label": "Follow on TikTok",
+        "url": "https://tiktok.com/@armaanagrawal5"
       },
       {
         "label": "Download Resume",

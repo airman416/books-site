@@ -9,6 +9,7 @@ const blog = defineCollection({
     author: z.string().default('Armaan Agrawal'),
     image: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    topic: z.string().optional(),
   }),
 });
 

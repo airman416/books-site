@@ -15,40 +15,26 @@ const { Content } = await post.render();
 ---
 
 <Layout title={`${post.data.title} - Armaan Agrawal`} description={post.data.description}>
-  <main class="min-h-screen py-24 px-6">
-    <article class="max-w-4xl mx-auto">
+  <main class="w-full max-w-4xl mx-auto px-8 py-20">
+    <article>
       <!-- Back Link -->
       <div class="mb-8">
-        <a href="/blog" class="text-lg underline">← Back to Blog</a>
+        <a href="/blog" class="underline">← Back</a>
       </div>
 
       <!-- Article Header -->
       <header class="mb-12">
-        <div class="text-sm text-gray-600 mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          {post.data.title}
+        </h1>
+        
+        <div class="text-sm text-gray-500">
           {post.data.date.toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'long', 
             day: 'numeric' 
           })}
         </div>
-        
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-          {post.data.title}
-        </h1>
-        
-        <p class="text-xl text-gray-700 mb-6">
-          {post.data.description}
-        </p>
-        
-        {post.data.tags && post.data.tags.length > 0 && (
-          <div class="flex gap-2 flex-wrap">
-            {post.data.tags.map((tag) => (
-              <span class="text-sm bg-[#06402B] text-white px-3 py-1">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
       </header>
 
       <!-- Article Content -->
@@ -57,20 +43,8 @@ const { Content } = await post.render();
       </div>
 
       <!-- Article Footer -->
-      <footer class="mt-16 pt-12 border-t border-gray-200">
-        <div class="space-y-6">
-          <p class="text-lg">
-            Thanks for reading. If you have thoughts on this, reach out on 
-            <a href="https://x.com/airman416" target="_blank" rel="noopener noreferrer" class="underline">X</a> or 
-            <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener noreferrer" class="underline">LinkedIn</a>.
-          </p>
-          
-          <div class="flex gap-4">
-            <a href="/blog" class="bg-[#06402B] text-white px-6 py-3">
-              Read More Posts
-            </a>
-          </div>
-        </div>
+      <footer class="mt-16 pt-8 border-t border-gray-200">
+        <a href="/blog" class="underline">← Back to all posts</a>
       </footer>
     </article>
   </main>
@@ -102,7 +76,7 @@ const { Content } = await post.render();
 
   .prose h3 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     line-height: 1.4;
@@ -110,7 +84,7 @@ const { Content } = await post.render();
 
   .prose h4 {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: 1.4;
@@ -118,7 +92,7 @@ const { Content } = await post.render();
 
   .prose h5 {
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: 1.4;
@@ -126,7 +100,7 @@ const { Content } = await post.render();
 
   .prose h6 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: 1.4;

@@ -69,50 +69,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       import '../scripts/navColorAdapter.js';
     </script>
     
-    <!-- Footer Navigation -->
-    <footer class="bg-black text-white py-12 mt-24 footer-futura">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <!-- Name/Brand -->
-          <div>
-            <h3 class="text-2xl font-bold mb-2 keep-default-font">{siteSettings.footer.brandName}</h3>
-            <p class="text-sm opacity-80">{siteSettings.footer.tagline}</p>
-          </div>
-          
-          <!-- Navigation Links -->
-          <nav class="flex flex-col md:flex-row gap-6 text-sm">
-            {siteSettings.footer.navigation.map((link: any) => (
-              <a href={link.url} class="text-white opacity-80 hover:opacity-100">{link.label}</a>
-            ))}
-          </nav>
-          
-          <!-- Social Links & Resume -->
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-6 text-sm">
-              {siteSettings.footer.socialLinks.map((link: any) => (
-                <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-white opacity-80 hover:opacity-100">{link.label}</a>
-              ))}
-            </div>
-            <a href={siteSettings.footer.resumeLink.file} download class="text-sm text-white opacity-80 hover:opacity-100 underline">{siteSettings.footer.resumeLink.label}</a>
-          </div>
-        </div>
+    <!-- ConvertKit Inline Form -->
+    <script is:inline>
+      (function() {
+        const formContainer = document.getElementById('newsletter-form');
+        if (!formContainer) return;
         
-        <div class="mt-8 pt-8 border-t border-white border-opacity-20 text-sm opacity-60 text-center">
-          <p>&copy; {new Date().getFullYear()} {siteSettings.footer.copyrightName}. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-    
-    <style>
-      .footer-futura {
-        font-family: "futura-pt", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-      
-      .keep-default-font {
-        font-family: inherit !important;
-      }
-    </style>
+        // Create the inline form HTML
+        const formHTML = `
+          <form action="https://app.kit.com/forms/8646838/subscriptions" class="newsletter-form" method="post">
+            <div class="form-row">
+              <input 
+                type="email" 
+                name="email_address" 
+                placeholder="Enter your email" 
+                required 
+                class="email-input"
+              />
+              <button type="submit" class="submit-button">Subscribe</button>
+            </div>
+          </form>
+        `;
+        
+        formContainer.innerHTML = formHTML;
+      })();
+    </script>
   </body>
 </html>

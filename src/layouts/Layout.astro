@@ -6,10 +6,16 @@ import siteSettings from '../data/siteSettings.json';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = siteSettings.site.description } = Astro.props;
+const { 
+  title, 
+  description = siteSettings.site.description,
+  image = '/images/image.jpg'
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -18,17 +24,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content={siteSettings.site.title} />
+    <meta name="theme-color" content="#06402B" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO Meta Tags -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:alt" content={siteSettings.site.title} />
+    <meta property="og:site_name" content={siteSettings.site.title} />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={siteSettings.site.twitter} />
     <meta name="twitter:creator" content={siteSettings.site.twitter} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content={siteSettings.site.title} />
     
     <!-- Adobe Typekit Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css" />

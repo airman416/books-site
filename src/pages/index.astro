@@ -6,10 +6,13 @@ import homePage from '../data/homePage.json';
 
 const allPosts = await getCollection('blog');
 
+// Filter to only published posts
+const publishedPosts = allPosts.filter(post => post.data.published !== false);
+
 // Group posts by topic sections from CMS
 const writingSections = homePage.writingSections || [];
 const postsByTopic = writingSections.map(section => {
-  const posts = allPosts
+  const posts = publishedPosts
     .filter(post => post.data.topic === section.topic)
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, section.maxPosts);

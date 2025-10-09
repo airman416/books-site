@@ -5,7 +5,9 @@ import homePage from '../../data/homePage.json';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post) => ({
+  // Only generate pages for published posts
+  const publishedPosts = posts.filter(post => post.data.published !== false);
+  return publishedPosts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));

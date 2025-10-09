@@ -30,6 +30,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Published", name: "published", widget: "boolean", default: true, hint: "Toggle to show/hide this post on your website" }
       - { label: "Author", name: "author", widget: "string", default: "Armaan Agrawal" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }

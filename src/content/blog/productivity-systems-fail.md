@@ -2,6 +2,7 @@
 title: "Why Productivity Systems Fail"
 description: "Most productivity systems don't fail because they're bad. They fail because they ignore how humans actually work."
 date: 2025-01-22
+published: true
 tags: ["productivity", "psychology"]
 topic: "Productivity"
 ---

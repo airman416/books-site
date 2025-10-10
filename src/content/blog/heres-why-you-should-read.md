@@ -2,11 +2,12 @@
 title: Here's why you should read
 description: Why most people don't do it, and the importance of self-education
 date: 2025-10-10T08:41:00.000-04:00
-published: false
+published: true
 author: Armaan Agrawal
 tags:
   - reading
   - knowledge
+topic: On living good...
 ---
 \# Why Read?
 

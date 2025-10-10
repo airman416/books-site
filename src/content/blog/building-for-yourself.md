@@ -3,12 +3,12 @@ title: Building for Yourself First
 description: The best products often start as solutions to personal problems.
   Here's why that matters.
 date: 2025-02-05
-published: false
+published: true
 author: Armaan Agrawal
 tags:
   - startups
   - product
-topic: Startups
+topic: On life
 ---
 
 The best products often start as solutions to personal problems. Here's why that matters.

@@ -9,7 +9,7 @@ tags:
   - knowledge
 topic: On living good...
 ---
-\# Why Read?
+# Why Read?
 
 Every autobiography I've read of everyone I've looked up to emphasized how reading changed their lives.
 
@@ -21,7 +21,7 @@ I would argue that the reason humanity has been able to progress as far as it ha
 
 Reading allows you to see things from another person's perspective, across geography and across time. Isaac Newton once famously said, “If I have seen further it is by standing on the shoulders of giants.” You can't reinvent the wheel. We take a lot of things in our world for granted, like mobile phones, our electric grid, and language that has been developed over centuries by those before us. Reading is how you access that inheritance. Through books, you can learn directly from the greatest minds across history and geography. You can absorb lessons that took others lifetimes to discover, mistakes that cost fortunes to learn, and insights that emerged from decades of experience—all in a matter of hours. Given that we already depend on the accumulated knowledge of previous generations for everything around us, actively tapping into that knowledge through reading is the logical next step. It is how you consciously participate in humanity's greatest advantage: our ability to build upon what came before.
 
-\## Why Most People Don’t Read
+## Why Most People Don’t Read
 
 Apart from the overall decline of the education levels and the quality of education in the United States, reading has been on a decline because it does not provide immediate gratification. There are many books worth reading that are not necessarily easy reads. Since fundamental knowledge has had time to be consumed and synthesized, there is an abundance of short-form versions of that information available through explanations from others, or through the internet that may make information more accessible. This provides an immediate gratification. 
 
@@ -29,7 +29,7 @@ The problem with that is that this information is usually misrepresented. It's l
 
 Wrestling with a book and feeling dumb in the first chapter, or feeling like it's a boring book until you get to the midpoint and understand the point of what is being said is tough. It gets easier the more you do it. But it sure is tougher than watching a TikTok video, feeling educated,  then scrolling to the next video. The large dopamine you get from learning something you've never heard before or gaining a key insight that you can really apply to your life should be larger than the quick dopamine you get from a short-form video. That's usually what it comes down to.
 
-\# Self-education
+## Self-education
 
 This topic can be an entire book on its own. Formal schooling is something people have accepted as realities of life in the modern era. It had its place in the improvement of the general education level of the masses, but we have come to the point where its flaws have become more apparent.
 

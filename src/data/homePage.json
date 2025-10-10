@@ -20,6 +20,23 @@
   "newsletter": {
     "description": "Get my latest writing and thoughts delivered to your inbox."
   },
+  "moreEssays": {
+    "heading": "More essays",
+    "links": [
+      {
+        "title": "Building for Yourself First",
+        "url": "/blog/building-for-yourself"
+      },
+      {
+        "title": "Why Productivity Systems Fail",
+        "url": "/blog/productivity-systems-fail"
+      },
+      {
+        "title": "Starting and Stopping",
+        "url": "/blog/starting-and-stopping"
+      }
+    ]
+  },
   "cta": {
     "links": [
       {

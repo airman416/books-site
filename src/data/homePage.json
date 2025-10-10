@@ -2,85 +2,25 @@
   "hero": {
     "title": "Armaan Agrawal",
     "subtitle": "I build software and speak about what I learn along the way.",
-    "description": "I care about business and technology. I share what works and what doesn't—find me on TikTok, X, and my blog here.",
     "image": "/images/image.jpg",
-    "imageAlt": "Armaan Agrawal",
-    "primaryButton": {
-      "text": "Read My Writing",
-      "url": "/"
-    },
-    "secondaryButton": {
-      "text": "Connect With Me",
-      "url": "#connect"
-    }
-  },
-  "aboutPreview": {
-    "heading": "What I Do",
-    "paragraphs": [
-      "I'm a founder working on ideas at the intersection of technology and human behavior. My focus is on building products that help people work better and think clearer.",
-      "Before this, I spent time studying how teams operate, why some startups succeed while others fail, and what makes productivity systems actually stick. These questions still drive most of what I work on.",
-      "I write to understand things better. If you're working on similar problems or just want to exchange ideas, reach out."
-    ],
-    "link": {
-      "text": "More about me →",
-      "url": "/about"
-    }
-  },
-  "featuredWork": {
-    "heading": "Recent Work",
-    "workItems": [
-      {
-        "title": "Building in Public",
-        "description": "I'm currently working on tools that help founders make better decisions faster. The first version launches soon."
-      },
-      {
-        "title": "Productivity Research",
-        "description": "A year-long experiment testing different productivity systems on real teams. Compiling the findings into a series of essays."
-      }
-    ],
-    "latestWriting": {
-      "heading": "Latest Writing",
-      "viewAllLink": {
-        "text": "Read all posts →",
-        "url": "/"
-      }
-    }
+    "imageAlt": "Armaan Agrawal"
   },
   "writingSections": [
     {
-      "title": "Startups",
-      "topic": "Startups",
+      "title": "On Life",
+      "topic": "On life",
       "maxPosts": 5
     },
     {
-      "title": "Productivity",
-      "topic": "Productivity",
+      "title": "On Living Good",
+      "topic": "On living good...",
       "maxPosts": 5
     }
   ],
   "newsletter": {
     "description": "Get my latest writing and thoughts delivered to your inbox."
   },
-  "moreEssays": {
-    "heading": "More essays",
-    "links": [
-      {
-        "title": "Building for Yourself First",
-        "url": "/blog/building-for-yourself"
-      },
-      {
-        "title": "Why Productivity Systems Fail",
-        "url": "/blog/productivity-systems-fail"
-      },
-      {
-        "title": "Starting and Stopping",
-        "url": "/blog/starting-and-stopping"
-      }
-    ]
-  },
   "cta": {
-    "heading": "Let's Connect",
-    "description": "I'm always interested in meeting people working on hard problems. Whether you're starting something, investing in founders, or just exploring ideas, say hello.",
     "links": [
       {
         "label": "Follow on X",

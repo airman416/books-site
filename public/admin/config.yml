@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  # Use draft branch for saves to prevent automatic builds
+  publish_mode: editorial_workflow
 
 # Uncomment for local development
 # local_backend: true
@@ -18,6 +20,9 @@ markdown:
   shortcuts: true
   # Default to markdown for rich text fields
   default: true
+
+# Editorial workflow configuration
+publish_mode: editorial_workflow
 
 collections:
   # Blog Posts Collection

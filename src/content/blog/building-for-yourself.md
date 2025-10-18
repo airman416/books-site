@@ -9,6 +9,13 @@ tags:
   - startups
   - product
 topic: On life
+moreEssays:
+  heading: "More essays"
+  links:
+    - title: "Why Productivity Systems Fail"
+      url: "/blog/productivity-systems-fail"
+    - title: "Starting and Stopping"
+      url: "/blog/starting-and-stopping"
 ---
 
 The best products often start as solutions to personal problems. Here's why that matters.

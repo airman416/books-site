@@ -32,14 +32,29 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: false }
       - { label: "Published", name: "published", widget: "boolean", default: true, hint: "Toggle to show/hide this post on your website" }
-      - { label: "Author", name: "author", widget: "string", default: "Armaan Agrawal" }
+      - { label: "Author", name: "author", widget: "string", default: "Armaan Agrawal", required: false }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Topic", name: "topic", widget: "string", required: false, hint: "e.g., 'Startups', 'Productivity', 'Technology'" }
+      - label: "More Essays Section"
+        name: "moreEssays"
+        widget: "object"
+        required: false
+        hint: "Configure related essays to show at the bottom of this post"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string", default: "More essays", required: false }
+          - label: "Essay Links"
+            name: "links"
+            widget: "list"
+            required: false
+            hint: "Links to other essays shown at the bottom of this blog post"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "URL", name: "url", widget: "string", hint: "e.g., /blog/post-slug", required: false }
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -72,35 +87,38 @@ collections:
             name: "site"
             widget: "object"
             fields:
-              - { label: "Site Title", name: "title", widget: "string" }
-              - { label: "Site Description", name: "description", widget: "text" }
-              - { label: "Initials (top left logo)", name: "initials", widget: "string" }
-              - { label: "Twitter Handle", name: "twitter", widget: "string" }
+              - { label: "Site Title", name: "title", widget: "string", required: false }
+              - { label: "Site Description", name: "description", widget: "text", required: false }
+              - { label: "Initials (top left logo)", name: "initials", widget: "string", required: false }
+              - { label: "Twitter Handle", name: "twitter", widget: "string", required: false }
           - label: "Footer"
             name: "footer"
             widget: "object"
             fields:
-              - { label: "Brand Name", name: "brandName", widget: "string" }
-              - { label: "Tagline", name: "tagline", widget: "string" }
-              - { label: "Copyright Name", name: "copyrightName", widget: "string" }
+              - { label: "Brand Name", name: "brandName", widget: "string", required: false }
+              - { label: "Tagline", name: "tagline", widget: "string", required: false }
+              - { label: "Copyright Name", name: "copyrightName", widget: "string", required: false }
               - label: "Navigation Links"
                 name: "navigation"
                 widget: "list"
+                required: false
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string", required: false }
               - label: "Social Links"
                 name: "socialLinks"
                 widget: "list"
+                required: false
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string", required: false }
               - label: "Resume Link"
                 name: "resumeLink"
                 widget: "object"
+                required: false
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/" }
+                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/", required: false }
 
   # Home Page Content
   - name: "pages"
@@ -114,94 +132,93 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "text" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
               - label: "Primary Button"
                 name: "primaryButton"
                 widget: "object"
+                required: false
                 fields:
-                  - { label: "Text", name: "text", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string", required: false }
               - label: "Secondary Button"
                 name: "secondaryButton"
                 widget: "object"
+                required: false
                 fields:
-                  - { label: "Text", name: "text", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string", required: false }
           - label: "About Preview Section"
             name: "aboutPreview"
             widget: "object"
+            required: false
             fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Heading", name: "heading", widget: "string", required: false }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, required: false }
               - label: "Link"
                 name: "link"
                 widget: "object"
+                required: false
                 fields:
-                  - { label: "Text", name: "text", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string", required: false }
           - label: "Featured Work Section"
             name: "featuredWork"
             widget: "object"
+            required: false
             fields:
-              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string", required: false }
               - label: "Work Items"
                 name: "workItems"
                 widget: "list"
+                required: false
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Description", name: "description", widget: "text", required: false }
               - label: "Latest Writing"
                 name: "latestWriting"
                 widget: "object"
+                required: false
                 fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string", required: false }
                   - label: "View All Link"
                     name: "viewAllLink"
                     widget: "object"
+                    required: false
                     fields:
-                      - { label: "Text", name: "text", widget: "string" }
-                      - { label: "URL", name: "url", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string", required: false }
+                      - { label: "URL", name: "url", widget: "string", required: false }
           - label: "Writing Sections (by Topic)"
             name: "writingSections"
             widget: "list"
             required: false
             hint: "Configure sections to display blog posts by topic. Leave empty to show all recent posts."
             fields:
-              - { label: "Section Title", name: "title", widget: "string", hint: "e.g., 'Startups', 'Productivity'" }
-              - { label: "Topic Filter", name: "topic", widget: "string", hint: "Must match the topic field in blog posts" }
-              - { label: "Max Posts", name: "maxPosts", widget: "number", default: 5, min: 1, max: 10 }
+              - { label: "Section Title", name: "title", widget: "string", hint: "e.g., 'Startups', 'Productivity'", required: false }
+              - { label: "Topic Filter", name: "topic", widget: "string", hint: "Must match the topic field in blog posts", required: false }
+              - { label: "Max Posts", name: "maxPosts", widget: "number", default: 5, min: 1, max: 10, required: false }
           - label: "Newsletter Section"
             name: "newsletter"
             widget: "object"
+            required: false
             fields:
-              - { label: "Description", name: "description", widget: "text", hint: "Text shown above the newsletter signup form" }
-          - label: "More Essays Section"
-            name: "moreEssays"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", default: "More essays" }
-              - label: "Essay Links"
-                name: "links"
-                widget: "list"
-                hint: "Links to other essays shown at the bottom of blog posts"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string", hint: "e.g., /blog/post-slug" }
+              - { label: "Description", name: "description", widget: "text", hint: "Text shown above the newsletter signup form", required: false }
           - label: "Call-to-Action Section"
             name: "cta"
             widget: "object"
+            required: false
             fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Heading", name: "heading", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
               - label: "Links"
                 name: "links"
                 widget: "list"
+                required: false
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", required: false }
                   - { label: "URL", name: "url", widget: "string", required: false }
                   - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/", required: false }
 
@@ -212,16 +229,18 @@ collections:
           - label: "Header"
             name: "header"
             widget: "object"
+            required: false
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "text" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
           - label: "Content Sections"
             name: "sections"
             widget: "list"
+            required: false
             fields:
-              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string", required: false }
               - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, required: false }
               - { label: "Bullet Points", name: "bulletPoints", widget: "list", field: { label: "Point", name: "point", widget: "string" }, required: false }
               - { label: "Paragraphs After Bullets", name: "afterBullets", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, required: false }
@@ -230,11 +249,12 @@ collections:
                 widget: "list"
                 required: false
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - { label: "URL", name: "url", widget: "string", required: false }
           - label: "Resume Section"
             name: "resumeSection"
             widget: "object"
+            required: false
             fields:
-              - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/" }
+              - { label: "Button Text", name: "buttonText", widget: "string", required: false }
+              - { label: "File", name: "file", widget: "file", media_folder: "public", public_folder: "/", required: false }

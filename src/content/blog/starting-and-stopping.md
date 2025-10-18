@@ -9,6 +9,13 @@ tags:
   - startups
   - decision-making
 topic: Startups
+moreEssays:
+  heading: "More essays"
+  links:
+    - title: "Building for Yourself First"
+      url: "/blog/building-for-yourself"
+    - title: "Why Productivity Systems Fail"
+      url: "/blog/productivity-systems-fail"
 ---
 
 Most advice tells you to never quit. That's wrong. Knowing when to stop is just as important as knowing when to start.

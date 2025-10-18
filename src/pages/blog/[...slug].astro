@@ -16,14 +16,8 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-// Get all published posts for the More essays section
-const allPosts = await getCollection('blog');
-const publishedPosts = allPosts.filter(post => post.data.published !== false);
-// Filter out the current post and get up to 3 other published posts
-const moreEssays = publishedPosts
-  .filter(p => p.slug !== post.slug)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 3);
+// Get more essays configuration from the current post
+const moreEssaysConfig = post.data.moreEssays;
 ---
 
 <Layout title={`${post.data.title} - Armaan Agrawal`} description={post.data.description || post.data.title}>
@@ -55,14 +49,14 @@ const moreEssays = publishedPosts
       </div>
 
       <!-- More Essays -->
-      {moreEssays.length > 0 && (
+      {moreEssaysConfig && moreEssaysConfig.links && moreEssaysConfig.links.length > 0 && (
         <section class="mt-16 pt-8 border-t border-gray-200">
-          <h2 class="text-lg font-bold mb-4">{homePage.moreEssays.heading}</h2>
+          <h2 class="text-lg font-bold mb-4">{moreEssaysConfig.heading || "More essays"}</h2>
           <ul class="list-disc pl-6 space-y-2">
-            {moreEssays.map((essay) => (
+            {moreEssaysConfig.links.map((link) => (
               <li>
-                <a href={`/blog/${essay.slug}`} class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 hover:text-[#06402B] hover:decoration-[#06402B]">
-                  {essay.data.title}
+                <a href={link.url} class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 hover:text-[#06402B] hover:decoration-[#06402B]">
+                  {link.title}
                 </a>
               </li>
             ))}

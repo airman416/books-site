@@ -9,6 +9,13 @@ tags:
   - productivity
   - psychology
 topic: Productivity
+moreEssays:
+  heading: "More essays"
+  links:
+    - title: "Building for Yourself First"
+      url: "/blog/building-for-yourself"
+    - title: "Starting and Stopping"
+      url: "/blog/starting-and-stopping"
 ---
 
 Most productivity systems don't fail because they're bad. They fail because they ignore how humans actually work.

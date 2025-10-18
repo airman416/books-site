@@ -8,6 +8,13 @@ tags:
   - reading
   - knowledge
 topic: On living good...
+moreEssays:
+  heading: "More essays"
+  links:
+    - title: "Building for Yourself First"
+      url: "/blog/building-for-yourself"
+    - title: "Why Productivity Systems Fail"
+      url: "/blog/productivity-systems-fail"
 ---
 Here’s why reading changed my life.
 

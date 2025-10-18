@@ -1,6 +1,6 @@
 ---
 title: Here's why you should read
-description: Why most people don't do it, and the importance of self-education
+description: And why most people don't do it
 date: 2025-10-10T08:41:00.000-04:00
 published: true
 author: Armaan Agrawal
@@ -9,44 +9,46 @@ tags:
   - knowledge
 topic: On living good...
 ---
-# Why Read?
+Here’s why reading changed my life.
 
-Every autobiography I've read of everyone I've looked up to emphasized how reading changed their lives.
+Reading is like 
 
-Ben Franklin, the individual that set up America's first subscription library, served as a founding father, diplomat, inventor, scientist, printer, philosopher, and writer - helping draft the Declaration of Independence, securing French alliance during the Revolutionary War, and contributing to the Constitution while simultaneously inventing the lightning rod, bifocals, and the Franklin stove, wrote extensively about reading's impact in his autobiography.
+1. inventing a mind-reading device,
+2. inventing a time-machine,  
+3. getting on said time-machine and going back to 170 CE,
+4. using the mind-reading device to know exactly what Marcus Aurelius thought as he fought a war and lost eight of his children.
+5. realizing that his thoughts about loss, duty, and mortality are identical to yours and that human nature hasn't changed in 2,000 years.
 
-Franklin wrote that his library was one of his most successful projects because it not only solved his immediate problem of book access but also "made the common tradesmen and farmers as intelligent as most gentlemen from other countries."
+Ben Franklin, founder of the first subscription library in America, wrote that his library "made the common tradesmen and farmers as intelligent as most gentlemen from other countries."
 
-I would argue that the reason humanity has been able to progress as far as it has is solely due to reading. Spoken content only goes so far. Written content can go till the end of time, especially nowadays, that written content is also digital. There are books from 170 CE - Meditations written by the Roman Emperor Marcus Aurelius that we can still read and is in mass print today. People still find benefit in what he's written, and the reason it's still in print is because that knowledge is not available elsewhere. It's not that Marcus Aurelius was the smartest person alive during that period—it’s just that he wrote everything he thought down.
+![ben-franklin](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/250px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg)
 
-Reading allows you to see things from another person's perspective, across geography and across time. Isaac Newton once famously said, “If I have seen further it is by standing on the shoulders of giants.” You can't reinvent the wheel. We take a lot of things in our world for granted, like mobile phones, our electric grid, and language that has been developed over centuries by those before us. Reading is how you access that inheritance. Through books, you can learn directly from the greatest minds across history and geography. You can absorb lessons that took others lifetimes to discover, mistakes that cost fortunes to learn, and insights that emerged from decades of experience—all in a matter of hours. Given that we already depend on the accumulated knowledge of previous generations for everything around us, actively tapping into that knowledge through reading is the logical next step. It is how you consciously participate in humanity's greatest advantage: our ability to build upon what came before.
+Reading isn’t just to make you “smart” though.
 
-## Why Most People Don’t Read
+There are currently only two ways that direct information can be transmitted between humans—(1) speech and (2) written text. 
 
-Apart from the overall decline of the education levels and the quality of education in the United States, reading has been on a decline because it does not provide immediate gratification. There are many books worth reading that are not necessarily easy reads. Since fundamental knowledge has had time to be consumed and synthesized, there is an abundance of short-form versions of that information available through explanations from others, or through the internet that may make information more accessible. This provides an immediate gratification. 
+Speech is great—it’s instant. But it has limitations in speed, accuracy, and is limited to your time and geography. People can and will misquote you—it happens all the time. 
 
-The problem with that is that this information is usually misrepresented. It's like playing the telephone game. If each person in the chain of knowledge omits or misrepresents 10% of the information, by the time you reach the 5th person, you’ve only got 59% of the information left. Plus, In my experience, it's usually a lot more than 10% of the information that is cut out. The only way to avoid this issue is by reading the original source. 
+It’s like playing the telephone game. If each person in the chain of knowledge omits or misrepresents 10% of the information (due to personal bias,  misinformation, disinformation), by the time you reach the 5th person, you’ve only got 59% of the information left. Plus, In my experience, it's usually a lot more than 10% of the information that is cut out.  
 
-Wrestling with a book and feeling dumb in the first chapter, or feeling like it's a boring book until you get to the midpoint and understand the point of what is being said is tough. It gets easier the more you do it. But it sure is tougher than watching a TikTok video, feeling educated,  then scrolling to the next video. The large dopamine you get from learning something you've never heard before or gaining a key insight that you can really apply to your life should be larger than the quick dopamine you get from a short-form video. That's usually what it comes down to.
+Written text can’t be misrepresented unless it’s quoted externally. It takes a lot longer to write and a lot longer to consume in its entirety. Once it’s written though, people thousands of miles away or thousands of years ahead of you can still consume it.
 
-## Self-education
+We live in a society built by our ancestors over hundreds of years. The founding fathers of the United States built in checks and balances because they studied the fall of every republic in history. When we don't read why they did that—when we don't go to the original source—we see it as inefficient bureaucracy and try to streamline it. Then we're surprised when power consolidates and we end up with the same tyranny they were trying to prevent.
 
-This topic can be an entire book on its own. Formal schooling is something people have accepted as realities of life in the modern era. It had its place in the improvement of the general education level of the masses, but we have come to the point where its flaws have become more apparent.
+> When people lose the ability to read the full text—the fine print, the terms and conditions—history, autobiographies—fiction—textbooks, self-help books—they get taken advantage of.
 
-Learning must be practical. Education should solve real problems. This is why getting started with no knowledge and learning on the fly works so well. Education without real application is not only superficial, but also gets forgotten.
+This is what happens when we don't absorb knowledge from the original source, which is most often than not books. We misrepresent intentions and tear down solutions to problems we don't realize exist. We reinvent the wheel instead of advancing. History repeats itself because we refused to read what was already written.
 
-We are extremely fortunate that Information is abundant. There is no excuse called "I didn't know" anymore because that knowledge was one Google search away. Quick knowledge comes from Google. Deep knowledge comes from books and mentors.
+> Books are the alternative to learning the hard way.
 
-A school that I resonate with, and that has recently become popular, is Alpha School. It solves the traditional education issue by using LLMs to compress a full traditional day's academics into two hours. I like this method because it frees students to spend afternoons in development of life skills and passions. This format addresses the inefficiency of the traditional "teacher-in-front-of-classroom" model that has dominated education for 200 years. In fact, research has shown that children can learn 2-10 times faster than current methods allow, but this isn't achievable in conventional classrooms. 
+The only reason we've somewhat been fine is because of speech. This is what parents and teachers are essentially for, to pass on information that their parents and teachers told them. Only problem is you play the telephone game again.
 
-The key insight is that LLMs allow schools to scale the 1:1 tutoring method, where each student learns on their own pace, which is often far faster than schools allow currently.
+### How to read so it helps you
 
-It removes the competition aspect from where it doesn't need to exist. Competition is great—in sports, in business—but not in self-improvement or learning. It prevents you from asking the dumb questions, and not asking the dumb questions is how the fundamentals get lost. When everyone starts to pretend that they know everything, you get misunderstandings, broken designs, and bureaucracy.
+People seem to think that you have to pick up a single book and only read that until it's finished. This is rarely how I read. I have a decent attention span, but I can’t stick with a single book. I have to flip through books with multiple different topics. 
 
-1:1 tutoring mimics the greats. Socrates tutored Plato, who tutored Aristotle, who tutored Alexander the Great. I would argue it improves this process, because LLMs contain and condense all the knowledge that has ever existed—and make it as accessible as is needed.
+For me, it has to fit my frame of mind. For instance, there's a book I read in the morning. There's a book I read in the night. There's a book I read when I have a great attention span, there's a book I read when I want to feel motivated.
 
-In my personal experience, the knowledge I remember now comes from things I taught myself. I stopped taking notes in a classroom after middle school, because I realized I was going to teach it to myself again anyway. I saw people furiously taking down notes to match their instructor's taking speed, and forget to take the time to actually listen and fill in the gaps in their brain. The gaps are what matter. What is being omitted? Accidentally or on purpose?
+I also drop books very easily if a book is not interesting me, although I give it a chapter or two. I just close it and that gives me the freedom to pick a better book that is a better use of my time. 
 
-Self-education frees up your time. Forty hours of school a week doesn't leave any space to develop real life-long pursuits. Every year, it takes away children’s childhoods, the time when they develop and find a skill to double down on. By the time you graduate, you've done a lot of chemistry, math, and English, and then you realize, "Wait, I haven't really figured out what I'm really interested in." Then your parents force you to go to college and pick a major out of a whim. Basically, a semi-educated guess as to what you're going to do for the rest of your life. Then in college, you get a bit of freedom and you realize—I’m not actually interested in this. And through some sort of extracurricular or through meeting someone you figure out, by some stroke of luck, what you'd rather do. Then it's too late, and it costs you tuition money.
-
-It worked in the 1900s because most people didn't have that many options, and you had to suck it up in order to make ends meet. Fortunately, now we live in a world of abundance, and not having the freedom of exploration is going to put you behind other people that do.
+I've read a lot of great books throughout my life. I’d love to list all of them, but I’d love to give you the serendipity of finding a great book yourself. I’m going to list some of my favorites down here, and will keep updating it with more.

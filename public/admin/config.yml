@@ -1,8 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-  # Use draft branch for saves to prevent automatic builds
-  publish_mode: editorial_workflow
 
 # Uncomment for local development
 # local_backend: true
@@ -20,9 +18,6 @@ markdown:
   shortcuts: true
   # Default to markdown for rich text fields
   default: true
-
-# Editorial workflow configuration
-publish_mode: editorial_workflow
 
 collections:
   # Blog Posts Collection
@@ -199,7 +194,6 @@ collections:
             fields:
               - { label: "Section Title", name: "title", widget: "string", hint: "e.g., 'Startups', 'Productivity'", required: false }
               - { label: "Topic Filter", name: "topic", widget: "string", hint: "Must match the topic field in blog posts", required: false }
-              - { label: "Max Posts", name: "maxPosts", widget: "number", default: 5, min: 1, max: 10, required: false }
           - label: "Newsletter Section"
             name: "newsletter"
             widget: "object"

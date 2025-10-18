@@ -14,13 +14,18 @@ const writingSections = homePage.writingSections || [];
 const postsByTopic = writingSections.map(section => {
   const posts = publishedPosts
     .filter(post => post.data.topic === section.topic)
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-    .slice(0, section.maxPosts);
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
   return {
     title: section.title,
     posts
   };
 }).filter(section => section.posts.length > 0);
+
+// Get posts that don't match any topic filter
+const usedTopics = writingSections.map(section => section.topic);
+const ungroupedPosts = publishedPosts
+  .filter(post => !usedTopics.includes(post.data.topic))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <Layout title={`${homePage.hero.title}`} description={homePage.hero.subtitle}>
@@ -71,6 +76,30 @@ const postsByTopic = writingSections.map(section => {
         </ul>
       </section>
     ))}
+
+    <!-- Ungrouped Posts (no topic match) -->
+    {ungroupedPosts.length > 0 && (
+      <section class="mb-12">
+        <ul class="list-disc pl-6 space-y-3">
+          {ungroupedPosts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}`} class="group">
+                <div class="flex items-baseline gap-3">
+                  <span class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 group-hover:text-[#06402B] group-hover:decoration-[#06402B]">{post.data.title}</span>
+                  <span class="text-xs text-gray-500 flex-shrink-0">
+                    {post.data.date.toLocaleDateString('en-US', { 
+                      month: 'short', 
+                      day: 'numeric',
+                      year: 'numeric' 
+                    })}
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     <!-- Newsletter -->
     <section class="mt-18 mb-8">

@@ -2,15 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-# Branch-specific build settings
-[context.production]
-  command = "npm run build"
-  publish = "dist"
-
-[context.draft]
-  command = "echo 'Skipping build for draft branch'"
-  publish = "dist"
-
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"

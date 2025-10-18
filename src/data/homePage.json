@@ -8,13 +8,11 @@
   "writingSections": [
     {
       "title": "On Life",
-      "topic": "On life",
-      "maxPosts": 5
+      "topic": "On life"
     },
     {
       "title": "On Living Good",
-      "topic": "On living good...",
-      "maxPosts": 5
+      "topic": "On living good..."
     }
   ],
   "newsletter": {

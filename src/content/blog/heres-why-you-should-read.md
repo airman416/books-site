@@ -1,5 +1,5 @@
 ---
-title: Here's why you should read
+title: Why you should read
 description: And why most people don't do it
 date: 2025-10-10T08:41:00.000-04:00
 published: true

@@ -3,7 +3,7 @@
 @theme {
   /* Color Palette */
   --color-green: #06402B;
-  --color-black: #000000;
+  --color-black: #161717;
   --color-white: #FFFFFF;
   
   /* Font Families */
@@ -47,9 +47,13 @@ a {
   transition: none;
 }
 
-/* Black text turns green on hover */
+/* Black text gets light green highlight and underline on hover */
 a:not(.text-white):hover {
-  color: var(--color-green);
+  background-color: rgba(6, 64, 43, 0.1);
+  text-decoration: underline;
+  text-decoration-color: var(--color-green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 /* White text turns bold on hover */
@@ -64,6 +68,17 @@ button {
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+/* Text selection highlighting */
+::selection {
+  background-color: rgba(6, 64, 43, 0.2);
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(6, 64, 43, 0.2);
+  color: inherit;
 }
 
 /* Newsletter Form Styling */

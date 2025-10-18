@@ -15,9 +15,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
+
+// Get all published posts for the More essays section
+const allPosts = await getCollection('blog');
+const publishedPosts = allPosts.filter(post => post.data.published !== false);
+// Filter out the current post and get up to 3 other published posts
+const moreEssays = publishedPosts
+  .filter(p => p.slug !== post.slug)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
 ---
 
-<Layout title={`${post.data.title} - Armaan Agrawal`} description={post.data.description}>
+<Layout title={`${post.data.title} - Armaan Agrawal`} description={post.data.description || post.data.title}>
   <main class="w-full max-w-4xl mx-auto px-8 py-20">
     <article>
       <!-- Back Link -->
@@ -46,18 +55,20 @@ const { Content } = await post.render();
       </div>
 
       <!-- More Essays -->
-      <section class="mt-16 pt-8 border-t border-gray-200">
-        <h2 class="text-lg font-bold mb-4">{homePage.moreEssays.heading}</h2>
-        <ul class="list-disc pl-6 space-y-2">
-          {homePage.moreEssays.links.map((link: any) => (
-            <li>
-              <a href={link.url} class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 hover:text-[#06402B] hover:decoration-[#06402B]">
-                {link.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {moreEssays.length > 0 && (
+        <section class="mt-16 pt-8 border-t border-gray-200">
+          <h2 class="text-lg font-bold mb-4">{homePage.moreEssays.heading}</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            {moreEssays.map((essay) => (
+              <li>
+                <a href={`/blog/${essay.slug}`} class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 hover:text-[#06402B] hover:decoration-[#06402B]">
+                  {essay.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <!-- Newsletter -->
       <section class="mt-12 pt-8 border-t border-gray-200">
@@ -73,7 +84,7 @@ const { Content } = await post.render();
 <style is:global>
   /* Prose styling for blog content */
   .prose {
-    color: #000000;
+    color: #161717;
     max-width: none;
   }
 
@@ -224,7 +235,7 @@ const { Content } = await post.render();
 
   /* Images */
   .prose img {
-    margin: 2rem 0;
+    margin: 2rem auto;
     max-width: 100%;
     height: auto;
     display: block;

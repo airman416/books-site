@@ -28,7 +28,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Published", name: "published", widget: "boolean", default: true, hint: "Toggle to show/hide this post on your website" }
       - { label: "Author", name: "author", widget: "string", default: "Armaan Agrawal" }

@@ -57,7 +57,7 @@ function updateInitialsColor() {
   navContainer.style.visibility = originalVisibility;
   
   if (!elementBelow) {
-    initials.classList.add('text-black');
+    initials.classList.add('text-[#161717]');
     initials.classList.remove('text-white');
     return;
   }
@@ -95,7 +95,7 @@ function updateInitialsColor() {
   
   if (!bgColor) {
     // Default to white background if we can't determine
-    initials.classList.add('text-black');
+    initials.classList.add('text-[#161717]');
     initials.classList.remove('text-white');
     return;
   }
@@ -103,7 +103,7 @@ function updateInitialsColor() {
   // Parse RGB values
   const rgb = bgColor.match(/\d+/g);
   if (!rgb || rgb.length < 3) {
-    initials.classList.add('text-black');
+    initials.classList.add('text-[#161717]');
     initials.classList.remove('text-white');
     return;
   }
@@ -118,10 +118,10 @@ function updateInitialsColor() {
   // If background is dark (luminance < 0.65), use white text
   // Made more sensitive to catch darker backgrounds
   if (luminance < 0.65) {
-    initials.classList.remove('text-black');
+    initials.classList.remove('text-[#161717]');
     initials.classList.add('text-white');
   } else {
-    initials.classList.add('text-black');
+    initials.classList.add('text-[#161717]');
     initials.classList.remove('text-white');
   }
 }

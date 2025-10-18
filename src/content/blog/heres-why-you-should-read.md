@@ -7,14 +7,14 @@ author: Armaan Agrawal
 tags:
   - reading
   - knowledge
-topic: On living good...
+topic: Rants
 moreEssays:
-  heading: "More essays"
+  heading: More essays
   links:
-    - title: "Building for Yourself First"
-      url: "/blog/building-for-yourself"
-    - title: "Why Productivity Systems Fail"
-      url: "/blog/productivity-systems-fail"
+    - title: Building for Yourself First
+      url: /blog/building-for-yourself
+    - title: Why Productivity Systems Fail
+      url: /blog/productivity-systems-fail
 ---
 Here’s why reading changed my life.
 

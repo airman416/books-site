@@ -24,7 +24,7 @@ const postsByTopic = writingSections.map(section => {
 // Get posts that don't match any topic filter
 const usedTopics = writingSections.map(section => section.topic);
 const ungroupedPosts = publishedPosts
-  .filter(post => !usedTopics.includes(post.data.topic))
+  .filter(post => !post.data.topic || !usedTopics.includes(post.data.topic))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 

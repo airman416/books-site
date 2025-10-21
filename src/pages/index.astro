@@ -61,7 +61,7 @@ const ungroupedPosts = publishedPosts
             <li>
               <a href={`/blog/${post.slug}`} class="group">
                 <div class="flex items-baseline gap-3">
-                  <span class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 group-hover:text-[#06402B] group-hover:decoration-[#06402B]">{post.data.title}</span>
+                  <span class="text-base group-hover:text-[#06402B]">{post.data.title}</span>
                   <span class="text-xs text-gray-500 flex-shrink-0">
                     {post.data.date.toLocaleDateString('en-US', { 
                       month: 'short', 
@@ -85,7 +85,7 @@ const ungroupedPosts = publishedPosts
             <li>
               <a href={`/blog/${post.slug}`} class="group">
                 <div class="flex items-baseline gap-3">
-                  <span class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 group-hover:text-[#06402B] group-hover:decoration-[#06402B]">{post.data.title}</span>
+                  <span class="text-base group-hover:text-[#06402B]">{post.data.title}</span>
                   <span class="text-xs text-gray-500 flex-shrink-0">
                     {post.data.date.toLocaleDateString('en-US', { 
                       month: 'short', 
@@ -136,7 +136,7 @@ const ungroupedPosts = publishedPosts
               href={link.url} 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="underline"
+              class=""
               aria-label={ariaLabel}
               title={ariaLabel}
             >
@@ -146,7 +146,7 @@ const ungroupedPosts = publishedPosts
             <a 
               href={link.file} 
               download 
-              class="underline"
+              class=""
               aria-label={ariaLabel}
               title={ariaLabel}
             >

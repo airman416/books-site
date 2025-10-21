@@ -5,6 +5,7 @@
   --color-green: #06402B;
   --color-black: #161717;
   --color-white: #FFFFFF;
+  --color-red: #DC2626;
   
   /* Font Families */
   --font-family-abril: 'abril-display', serif;
@@ -45,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Link styling with color paradigms */
 a {
   transition: none;
+  text-decoration: none;
 }
 
 /* Black text gets light green highlight and underline on hover */
@@ -130,6 +132,28 @@ html {
 
 .newsletter-form .submit-button:hover {
   background-color: #054a2e;
+}
+
+/* Success and Error Messages */
+.success-message {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  font-family: var(--font-family-abril);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.error-message {
+  background: var(--color-white);
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-family-abril);
+  font-size: 1rem;
 }
 
 /* Mobile responsive */

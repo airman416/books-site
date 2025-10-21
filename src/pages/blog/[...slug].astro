@@ -56,7 +56,7 @@ const blogPostSchema = {
     <article>
       <!-- Back Link -->
       <div class="mb-8">
-        <a href="/" class="underline">← Back</a>
+        <a href="/">← Back</a>
       </div>
 
       <!-- Article Header -->
@@ -86,7 +86,7 @@ const blogPostSchema = {
           <ul class="list-disc pl-6 space-y-2">
             {moreEssaysConfig.links.map((link: { title: string; url: string }) => (
               <li>
-                <a href={link.url} class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 hover:text-[#06402B] hover:decoration-[#06402B]">
+                <a href={link.url} class="text-base hover:text-[#06402B]">
                   {link.title}
                 </a>
               </li>

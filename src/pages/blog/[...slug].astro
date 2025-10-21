@@ -56,7 +56,9 @@ const blogPostSchema = {
     <article>
       <!-- Back Link -->
       <div class="mb-8">
-        <a href="/">← Back</a>
+        <a href="/" class="group">
+          <span class="text-base group-hover:text-[#06402B]">← Back</span>
+        </a>
       </div>
 
       <!-- Article Header -->
@@ -86,8 +88,8 @@ const blogPostSchema = {
           <ul class="list-disc pl-6 space-y-2">
             {moreEssaysConfig.links.map((link: { title: string; url: string }) => (
               <li>
-                <a href={link.url} class="text-base hover:text-[#06402B]">
-                  {link.title}
+                <a href={link.url} class="group">
+                  <span class="text-base group-hover:text-[#06402B]">{link.title}</span>
                 </a>
               </li>
             ))}
@@ -246,16 +248,17 @@ const blogPostSchema = {
 
   /* Blockquotes */
   .prose blockquote {
-    border-left: 4px solid #06402B;
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: #4b5563;
-    font-size: 1rem;
+    border-left: 4px solid #06402B !important;
+    padding-left: 1.5rem !important;
+    margin: 2rem 0 !important;
+    font-style: italic !important;
+    color: #4b5563 !important;
+    font-size: 1.25rem !important;
   }
 
   .prose blockquote p {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
+    font-size: inherit !important;
   }
 
   /* Images */

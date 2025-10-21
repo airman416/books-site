@@ -136,21 +136,21 @@ const ungroupedPosts = publishedPosts
               href={link.url} 
               target="_blank" 
               rel="noopener noreferrer" 
-              class=""
+              class="group"
               aria-label={ariaLabel}
               title={ariaLabel}
             >
-              {icon}
+              <span class="text-sm group-hover:text-[#06402B]">{icon}</span>
             </a>
           ) : (
             <a 
               href={link.file} 
               download 
-              class=""
+              class="group"
               aria-label={ariaLabel}
               title={ariaLabel}
             >
-              {icon}
+              <span class="text-sm group-hover:text-[#06402B]">{icon}</span>
             </a>
           );
         })}

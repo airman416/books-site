@@ -35,7 +35,9 @@ import aboutPage from '../data/aboutPage.json';
             <div class="flex flex-wrap gap-6 pt-4">
               {section.socialLinks.map((link: any) => (
                 <a href={link.url} target="_blank" rel="noopener noreferrer" 
-                   class="underline">{link.label}</a>
+                   class="group">
+                  <span class="text-base group-hover:text-[#06402B] underline">{link.label}</span>
+                </a>
               ))}
             </div>
           )}
@@ -45,8 +47,8 @@ import aboutPage from '../data/aboutPage.json';
 
     <!-- Resume Download -->
     <div class="mt-12 pt-8 border-t border-gray-200">
-      <a href={aboutPage.resumeSection.file} download class="underline text-base">
-        {aboutPage.resumeSection.buttonText}
+      <a href={aboutPage.resumeSection.file} download class="group">
+        <span class="text-base group-hover:text-[#06402B] underline">{aboutPage.resumeSection.buttonText}</span>
       </a>
     </div>
   </main>

@@ -35,6 +35,9 @@ body {
   color: var(--color-black);
   background-color: var(--color-white);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,17 +48,37 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Link styling with color paradigms */
 a {
-  transition: none;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(6, 64, 43, 0.2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: text-decoration-color 0.4s ease;
+}
+
+/* Add smooth transitions for spans within links */
+a span {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Black text gets light green highlight and underline on hover */
 a:not(.text-white):hover {
-  background-color: rgba(6, 64, 43, 0.1);
   text-decoration: underline;
   text-decoration-color: var(--color-green);
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 6px; /* Move underline below the highlight box */
+}
+
+/* Apply highlight only to main text elements within links (not dates) */
+a:not(.text-white):hover span:not(.text-gray-500),
+a.group:hover span:not(.text-gray-500) {
+  background-color: rgba(6, 64, 43, 0.08);
+  box-shadow: 0 0 0 1px rgba(6, 64, 43, 0.05);
+}
+
+/* Ensure dates don't get underlined */
+a:not(.text-white):hover span.text-gray-500,
+a.group:hover span.text-gray-500 {
+  text-decoration: none;
 }
 
 /* White text turns bold on hover */

@@ -59,18 +59,18 @@ const ungroupedPosts = publishedPosts
         <ul class="list-disc pl-6 space-y-3">
           {section.posts.map((post) => (
             <li>
-              <a href={`/blog/${post.slug}`} class="group">
-                <div class="flex items-baseline gap-3">
+              <div class="flex items-baseline gap-3">
+                <a href={`/blog/${post.slug}`} class="group">
                   <span class="text-base group-hover:text-[#06402B]">{post.data.title}</span>
-                  <span class="text-xs text-gray-500 flex-shrink-0">
-                    {post.data.date.toLocaleDateString('en-US', { 
-                      month: 'short', 
-                      day: 'numeric',
-                      year: 'numeric' 
-                    })}
-                  </span>
-                </div>
-              </a>
+                </a>
+                <span class="text-xs text-gray-500 flex-shrink-0">
+                  {post.data.date.toLocaleDateString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric',
+                    year: 'numeric' 
+                  })}
+                </span>
+              </div>
             </li>
           ))}
         </ul>
@@ -83,18 +83,18 @@ const ungroupedPosts = publishedPosts
         <ul class="list-disc pl-6 space-y-3">
           {ungroupedPosts.map((post) => (
             <li>
-              <a href={`/blog/${post.slug}`} class="group">
-                <div class="flex items-baseline gap-3">
+              <div class="flex items-baseline gap-3">
+                <a href={`/blog/${post.slug}`} class="group">
                   <span class="text-base group-hover:text-[#06402B]">{post.data.title}</span>
-                  <span class="text-xs text-gray-500 flex-shrink-0">
-                    {post.data.date.toLocaleDateString('en-US', { 
-                      month: 'short', 
-                      day: 'numeric',
-                      year: 'numeric' 
-                    })}
-                  </span>
-                </div>
-              </a>
+                </a>
+                <span class="text-xs text-gray-500 flex-shrink-0">
+                  {post.data.date.toLocaleDateString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric',
+                    year: 'numeric' 
+                  })}
+                </span>
+              </div>
             </li>
           ))}
         </ul>

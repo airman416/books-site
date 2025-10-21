@@ -11,6 +11,13 @@ const blog = defineCollection({
     tags: z.array(z.string()).optional(),
     topic: z.string().optional(),
     published: z.boolean().default(true),
+    moreEssays: z.object({
+      heading: z.string().optional(),
+      links: z.array(z.object({
+        title: z.string(),
+        url: z.string()
+      })).optional()
+    }).optional(),
   }),
 });
 

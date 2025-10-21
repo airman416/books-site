@@ -18,9 +18,40 @@ const { Content } = await post.render();
 
 // Get more essays configuration from the current post
 const moreEssaysConfig = post.data.moreEssays;
+
+// Generate schema.org data for the blog post
+const blogPostSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "description": post.data.description || post.data.title,
+  "image": post.data.image ? `https://armaanagrawal.com${post.data.image}` : "https://armaanagrawal.com/images/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": post.data.author || "Armaan Agrawal",
+    "url": "https://armaanagrawal.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Armaan Agrawal",
+    "url": "https://armaanagrawal.com"
+  },
+  "datePublished": post.data.date.toISOString(),
+  "dateModified": post.data.date.toISOString(),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://armaanagrawal.com/blog/${post.slug}`
+  },
+  "url": `https://armaanagrawal.com/blog/${post.slug}`,
+  "articleSection": post.data.topic || "General",
+  "keywords": post.data.tags || []
+};
 ---
 
 <Layout title={`${post.data.title} - Armaan Agrawal`} description={post.data.description || post.data.title}>
+  <!-- Schema.org Structured Data for Blog Post -->
+  <script type="application/ld+json" set:html={JSON.stringify(blogPostSchema)}></script>
+  
   <main class="w-full max-w-4xl mx-auto px-8 py-20">
     <article>
       <!-- Back Link -->
@@ -53,7 +84,7 @@ const moreEssaysConfig = post.data.moreEssays;
         <section class="mt-16 pt-8 border-t border-gray-200">
           <h2 class="text-lg font-bold mb-4">{moreEssaysConfig.heading || "More essays"}</h2>
           <ul class="list-disc pl-6 space-y-2">
-            {moreEssaysConfig.links.map((link) => (
+            {moreEssaysConfig.links.map((link: { title: string; url: string }) => (
               <li>
                 <a href={link.url} class="text-base underline decoration-[#06402B]/30 decoration-1 underline-offset-4 hover:text-[#06402B] hover:decoration-[#06402B]">
                   {link.title}

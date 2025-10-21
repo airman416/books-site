@@ -25,7 +25,7 @@ const blogPostSchema = {
   "@type": "BlogPosting",
   "headline": post.data.title,
   "description": post.data.description || post.data.title,
-  "image": post.data.image ? `https://armaanagrawal.com${post.data.image}` : "https://armaanagrawal.com/images/og-image.webp",
+  "image": post.data.image ? `https://armaanagrawal.com${post.data.image}` : "https://armaanagrawal.com/images/og-image.jpg",
   "author": {
     "@type": "Person",
     "name": post.data.author || "Armaan Agrawal",

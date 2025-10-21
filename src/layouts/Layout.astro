@@ -12,7 +12,7 @@ interface Props {
 const { 
   title, 
   description = siteSettings.site.description,
-  image = '/images/og-image.jpg'
+  image = '/images/og-image.png'
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
@@ -50,7 +50,7 @@ const absoluteImageURL = ogImageURL.toString();
     <meta name="apple-mobile-web-app-title" content={siteSettings.site.title} />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="apple-touch-icon" href="/images/og-image.jpg" />
+    <link rel="apple-touch-icon" href="/images/og-image.png" />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />

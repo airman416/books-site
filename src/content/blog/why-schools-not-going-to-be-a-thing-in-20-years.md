@@ -1,5 +1,5 @@
 ---
-title: Why school's not going to be a thing in 20 years
+title: Traditional school won't be a thing in 20 years
 description: ""
 date: 2025-10-18T06:44:00.000-04:00
 published: true

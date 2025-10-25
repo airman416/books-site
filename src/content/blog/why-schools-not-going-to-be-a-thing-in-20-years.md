@@ -5,15 +5,13 @@ date: 2025-10-18T06:44:00.000-04:00
 published: true
 author: Armaan Agrawal
 tags:
-  - Rants
-topic: Rants
+  - Essays
+topic: Essays
 moreEssays:
   heading: More essays
   links:
     - title: Here's why you should read
       url: /blog/heres-why-you-should-read
-    - title: Building for Yourself First
-      url: /blog/building-for-yourself
 ---
 
 Formal schooling is something people have accepted as realities of life in the modern era. It had its place in the improvement of the general education level of the masses, but we have come to the point where its flaws have become more apparent.

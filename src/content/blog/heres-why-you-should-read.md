@@ -1,5 +1,5 @@
 ---
-title: Why you should read
+title: Reading is humanity's premier information transfer
 description: And why most people don't do it
 date: 2025-10-10T08:41:00.000-04:00
 published: true

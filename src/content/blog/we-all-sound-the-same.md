@@ -17,6 +17,8 @@ More dramatic to me though, is the way that people think and speak.
 
 Orwell called it *“groupthink”*—a phenomenon characterized by suppression of dissent, illusion of unanimity, self-censorship, and overconfidence in group decisions.
 
+![](/images/screenshot-2025-10-25-at-4.40.39 pm.png)
+
 LLMs and short-form content exacerbate groupthink. As people rely on AI to think, or consume AI-generated content, they subconsciously absorb the reasoning patterns built into its training data. The reality is that training data kills the fringes of thought, a.k.a the most original ideas and focuses on mass media. How do the MAJORITY of people speak, construct sentences, and what would MOST people think is sound advice?
 
 It is a self-fulfilling prophecy. Something that may have been partly sound (early LLMs) gets copied over into an artifact on the internet, or into someone’s brain. 

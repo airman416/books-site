@@ -1,5 +1,5 @@
 ---
-title: We all sound the same
+title: TikTok and ChatGPT made us all sound the same (and what to do about it)
 date: 2025-10-25T15:17:00.000-04:00
 published: true
 author: Armaan Agrawal

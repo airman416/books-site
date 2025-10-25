@@ -13,8 +13,9 @@ moreEssays:
     - title: Here's why you should read
       url: /blog/heres-why-you-should-read
 ---
-
 Formal schooling is something people have accepted as realities of life in the modern era. It had its place in the improvement of the general education level of the masses, but we have come to the point where its flaws have become more apparent.
+
+![](https://gradelink.com/wp-content/uploads/2019/07/OldSchoolClassroom-1080x675.jpg)
 
 Learning must be practical. Education should solve real problems. This is why getting started with no knowledge and learning on the fly works so well. Education without real application is not only superficial, but also gets forgotten.
 
@@ -43,4 +44,3 @@ By the time you graduate, you've done a lot of chemistry, math, and English, and
 Then in college, you get a bit of freedom and you realize—I’m not actually interested in this. And through some sort of extracurricular or through meeting someone you figure out, by some stroke of luck, what you'd rather do. Then it's too late, and it costs you tuition money.
 
 It worked in the 1900s because most people didn't have that many options, and you had to suck it up in order to make ends meet. Fortunately, now we live in a world of abundance, and not having the freedom of exploration is going to put you behind other people that do.
-

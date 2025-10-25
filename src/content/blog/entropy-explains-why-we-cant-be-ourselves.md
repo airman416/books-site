@@ -17,6 +17,8 @@ It is the job of the universe to bring things back to chaos—increase entropy.
 
 It takes a conscious effort to resist it and build something worthwhile and orderly. You can see this through the natural process of decomposition, diffusion, erosion wearing down mountains, relationships drifting apart without attention, skills atrophying without practice, and organizations dissolving into dysfunction without deliberate structure and maintenance. This is the second law of thermodynamics, that the entropy of an isolated system will always stay the same or increase. 
 
+![](https://miro.medium.com/v2/resize:fit:1400/1*is9wM_IjuWNIBKhxNV_wWg.jpeg)
+
 Now you might think that if the universe is automatically going towards a disorder, then how were complex creatures like animals, humans created? The key in the definition is “isolated system.” 
 
 Earth was able to be different because simple self-replicating molecules that could capture and use energy at a survival advantage. Over billions of years, natural selection favored sophisticated ways of harvesting the sun’s energy—leading to the complex biological machinery we see today. 

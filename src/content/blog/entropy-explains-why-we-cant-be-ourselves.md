@@ -3,12 +3,15 @@ title: Entropy explains why we can't be ourselves
 date: 2025-10-25T14:42:00.000-04:00
 published: true
 author: Armaan Agrawal
+tags:
+  - entropy
+  - essays
 topic: Essays
 moreEssays:
   heading: More essays
   links:
     - url: /blog/heres-why-you-should-read/
-      title: ""
+      title: Here's why you should read
 ---
 It is the job of the universe to bring things back to chaos—increase entropy. 
 

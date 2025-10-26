@@ -8,6 +8,11 @@ tags:
 topic: Essays
 moreEssays:
   heading: More essays
+  links:
+    - url: /blog/we-all-sound-the-same/
+      title: TikTok and ChatGPT made us all sound the same (and what to do about it)
+    - title: Reading is humanity's premier information transfer
+      url: /blog/heres-why-you-should-read/
 ---
 The undesired effect of large language models, their training data, and media, which is further becoming short-form, is that it homogenizes thought.
 

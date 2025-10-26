@@ -27,13 +27,13 @@ Earth was able to be different because simple self-replicating molecules that co
 
 Just like Earth needs the sun's energy to sustain complex life, you need constant energy inputs to avoid becoming average. This doesn't just include food, it includes high-quality information such as books, conversations with accomplished people, challenging experiences, exercise, sleep, nutrition, mental stimulation by stepping out of the comfort zone. 
 
-Most people operate on low-quality inputs such as mindless scrolling, gossip, processed thoughts from others without their own input.
+Low-quality inputs corrode this. Here are a few examples: mindless scrolling, gossip, and processed thoughts from others without pushback. Consuming without creating, reacting without reflecting, repeating without questioning are signs of a society that is falling into entropy. 
 
-This leads to entropy in their thinking and capabilities, thus making them more average. In essence, they put themselves in their own “isolated system,“ which makes the definition ring more true than ever. 
+Choose passive consumption over active engagement and you build your own isolated system. Cut yourself off from challenging ideas and meaningful friction, and you drift toward intellectual equilibrium with your environment—the universe's definition of average.
 
-They stop learning, they surround themselves with similar thinkers—an echo chamber—avoid discomfort, and gradually decay into predictable patterns. Their skills eventually atrophy, their curiosity dies, their relationships stagnate. Just like a world without the input of a kind and powerful sun, everything slowly deteriorates and starts to smooth itself into its surroundings. 
+Without awareness and active effort to resist entropification, people stop learning. They surround themselves with similar thinkers—an echo chamber—avoid discomfort, and gradually decay into predictable patterns. Their skills eventually atrophy, their curiosity dies, their relationships stagnate. Just like a world without the input of a kind and powerful sun, everything slowly deteriorates and starts to smooth itself into its surroundings. 
 
-The important thing to note that must be made here is that increasing entropy isn't the process of destruction. It isn't love (order). It isn't hate, (complete chaos). It is just diffusion—apathy, or mediocrity. 
+An important thing to note here is that increasing entropy isn't the process of destruction. It isn't complete chaos. Neither is it order. It is just diffusion—apathy, or mediocrity. 
 
 > The universe's default is mediocrity. 
 

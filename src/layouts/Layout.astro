@@ -15,7 +15,18 @@ const {
   image = '/images/og-image.png'
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = new URL(image, Astro.site);
+
+// Determine if CDN is enabled and construct image URL
+const cdnEnabled = siteSettings.cdn?.enabled || false;
+const cdnBaseUrl = siteSettings.cdn?.baseUrl || '';
+
+// Use CDN URL if enabled, otherwise use local path
+// CDN has images at root level, so we extract just the filename
+const imagePath = cdnEnabled && cdnBaseUrl && image.startsWith('/')
+  ? `${cdnBaseUrl}${image.replace('/images/', '/')}`
+  : image;
+
+const ogImageURL = new URL(imagePath, Astro.site);
 
 // Ensure absolute URL for OG image (critical for iMessage)
 const absoluteImageURL = ogImageURL.toString();
@@ -50,7 +61,7 @@ const absoluteImageURL = ogImageURL.toString();
     <meta name="apple-mobile-web-app-title" content={siteSettings.site.title} />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="apple-touch-icon" href="/images/og-image.png" />
+    <link rel="apple-touch-icon" href={imagePath} />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />

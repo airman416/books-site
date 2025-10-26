@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import homePage from '../data/homePage.json';
+import { getImageUrl } from '../utils/imageUtils';
 
 const allPosts = await getCollection('blog');
 
@@ -34,7 +35,7 @@ const ungroupedPosts = publishedPosts
     <div class="mb-6">
       <div class="w-32 h-32 md:w-40 md:h-40 overflow-hidden">
         <Image 
-          src={homePage.hero.image} 
+          src={getImageUrl(homePage.hero.image)} 
           alt={homePage.hero.imageAlt}
           width={160}
           height={160}

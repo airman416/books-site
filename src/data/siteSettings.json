@@ -5,6 +5,10 @@
     "initials": "A.A.",
     "twitter": "@airman416"
   },
+  "cdn": {
+    "baseUrl": "https://pub-8c3cb37dcf064449a354151a885b5892.r2.dev",
+    "enabled": true
+  },
   "footer": {
     "brandName": "Armaan Agrawal",
     "tagline": "Startups, Productivity, Business, Technology",

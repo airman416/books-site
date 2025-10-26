@@ -1,0 +1,38 @@
+name: Sync Images to CDN
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/images/**'
+
+jobs:
+  sync-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials for Cloudflare R2
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          aws-endpoint-url: https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      
+      - name: Sync images to Cloudflare R2
+        run: |
+          aws s3 sync public/images/ s3://armaanagrawal-images/ \
+            --exclude "*" \
+            --include "*.jpg" \
+            --include "*.png" \
+            --include "*.jpeg" \
+            --include "*.gif" \
+            --include "*.webp" \
+            --delete
+      
+      - name: Summary
+        run: |
+          echo "✅ Images synced to Cloudflare R2 successfully!"
+          echo "CDN URL: https://pub-8c3cb37dcf064449a354151a885b5892.r2.dev"

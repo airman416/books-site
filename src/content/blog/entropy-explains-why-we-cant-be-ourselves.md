@@ -12,6 +12,8 @@ moreEssays:
   links:
     - url: /blog/heres-why-you-should-read/
       title: Here's why you should read
+    - url: /blog/we-all-sound-the-same/
+      title: TikTok and ChatGPT made us all sound the same (and what to do about it)
 ---
 It is the job of the universe to bring things back to chaos—increase entropy. 
 

@@ -11,6 +11,12 @@
       "topic": "Essays"
     }
   ],
+  "challengeQuiz": {
+    "show": false,
+    "text": "Take the challenge quiz to see if an unconventional path is right for you.",
+    "linkText": "Take the quiz",
+    "url": "/30du"
+  },
   "newsletter": {
     "description": "Get my latest writing and thoughts delivered to your inbox."
   },

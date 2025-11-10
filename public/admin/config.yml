@@ -194,6 +194,16 @@ collections:
             fields:
               - { label: "Section Title", name: "title", widget: "string", hint: "e.g., 'Startups', 'Productivity'", required: false }
               - { label: "Topic Filter", name: "topic", widget: "string", hint: "Must match the topic field in blog posts", required: false }
+          - label: "Challenge Quiz Section"
+            name: "challengeQuiz"
+            widget: "object"
+            required: false
+            hint: "Display a link to the challenge quiz below essays and above newsletter"
+            fields:
+              - { label: "Show", name: "show", widget: "boolean", default: false, hint: "Toggle to show/hide the challenge quiz link" }
+              - { label: "Text", name: "text", widget: "string", hint: "Text to display before the link", required: false }
+              - { label: "Link Text", name: "linkText", widget: "string", hint: "Text for the clickable link", required: false }
+              - { label: "Link URL", name: "url", widget: "string", default: "/30du", hint: "URL to the challenge quiz page", required: false }
           - label: "Newsletter Section"
             name: "newsletter"
             widget: "object"

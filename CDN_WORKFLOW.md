@@ -1,6 +1,53 @@
 # CDN Workflow for CMS Image Uploads
 
-This guide explains how to handle images uploaded through the CMS to work with your Cloudflare R2 CDN.
+## ⚠️ Important: CORS Setup Required
+
+If you see CORS errors when loading images from your CDN, you need to configure CORS on your Cloudflare R2 bucket.
+
+### Quick Fix:
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+2. Navigate to **R2** → your bucket (`armaanagrawal-images`)
+3. Click on **Settings** tab
+4. Scroll to **CORS Policy** section
+5. Click **Edit** or **Add CORS Policy**
+6. Add this configuration:
+
+```json
+[
+  {
+    "AllowedOrigins": ["*"],
+    "AllowedMethods": ["GET"],
+    "AllowedHeaders": ["*"],
+    "ExposeHeaders": ["ETag"],
+    "MaxAgeSeconds": 3600
+  }
+]
+```
+
+7. Click **Save**
+
+**More secure option** (recommended for production):
+
+```json
+[
+  {
+    "AllowedOrigins": [
+      "https://armaanagrawal.com",
+      "https://www.armaanagrawal.com",
+      "http://localhost:4321"
+    ],
+    "AllowedMethods": ["GET"],
+    "AllowedHeaders": ["*"],
+    "ExposeHeaders": ["ETag"],
+    "MaxAgeSeconds": 3600
+  }
+]
+```
+
+This restricts access to only your domains.
+
+---
 
 ## Current Setup
 

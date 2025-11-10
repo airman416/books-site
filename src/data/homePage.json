@@ -12,7 +12,7 @@
     }
   ],
   "challengeQuiz": {
-    "show": false,
+    "show": true,
     "text": "Take the challenge quiz to see if an unconventional path is right for you.",
     "linkText": "Take the quiz",
     "url": "/30du"

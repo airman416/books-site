@@ -9,6 +9,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # PostHog API key is a public key meant for client-side use, not a secret
+  SECRETS_SCAN_OMIT_KEYS = "POSTHOG_API_KEY"
 
 [[headers]]
   for = "/*"

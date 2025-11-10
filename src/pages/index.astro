@@ -53,6 +53,17 @@ const ungroupedPosts = publishedPosts
       </p>
     </section>
 
+    <!-- Challenge Quiz Section -->
+    {homePage.challengeQuiz?.show && (
+      <section class="mb-12">
+        <p class="text-base md:text-lg mb-2 text-gray-700">
+          <a href={homePage.challengeQuiz.url || '/30du'} class="group">
+            <span>{homePage.challengeQuiz.linkText || homePage.challengeQuiz.text}</span>
+          </a>
+        </p>
+      </section>
+    )}
+
     <!-- Writing Sections by Topic -->
     {postsByTopic.map((section) => (
       <section class="mb-12">
@@ -99,17 +110,6 @@ const ungroupedPosts = publishedPosts
             </li>
           ))}
         </ul>
-      </section>
-    )}
-
-    <!-- Challenge Quiz Section -->
-    {homePage.challengeQuiz?.show && (
-      <section class="mb-12">
-        <p class="text-base md:text-lg mb-2 text-gray-700">
-          <a href={homePage.challengeQuiz.url || '/30du'} class="group">
-            <span>{homePage.challengeQuiz.text}</span>
-          </a>
-        </p>
       </section>
     )}
 

@@ -13,8 +13,9 @@
   ],
   "challengeQuiz": {
     "show": true,
-    "text": "Take the challenge quiz to see if an unconventional path is right for you.",
-    "url": "/30du"
+    "text": "",
+    "url": "/30du",
+    "linkText": "Take the challenge quiz to see if an unconventional path is right for you."
   },
   "newsletter": {
     "description": "Get my latest writing and thoughts delivered to your inbox."

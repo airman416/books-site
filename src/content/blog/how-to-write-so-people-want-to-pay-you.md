@@ -4,6 +4,9 @@ description: Anyone can sound like an expert
 date: 2025-12-03T09:11:00.000-05:00
 published: true
 author: Armaan Agrawal
+tags:
+  - Essays
+topic: Essays
 moreEssays:
   heading: More essays
   links:

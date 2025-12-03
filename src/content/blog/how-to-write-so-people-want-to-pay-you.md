@@ -38,28 +38,22 @@ In the many years of human content—books, plays, speeches, stories, songs—th
 
 Well, why do these pieces of content get remembered? 
 
-It is because they make us _feel something_. 
+It is because they make us *feel something*. 
 
-It turns out that there are only a few ways for us to get to _feel something_. 
+It turns out that there are only a few ways for us to get to *feel something*. 
 
 So in fact, structure is the subconscious language that speaks universally to the human heart. 
 
 Anyone can learn to command this language—whether it is to:
 
-  1. Feel heard
-
-  2. Not stumble over your words
-
-  3. Command presence
-
-  4. Articulate complex but valuable ideas in a way that people are drawn to it
-
-
-
+1. Feel heard
+2. Not stumble over your words
+3. Command presence
+4. Articulate complex but valuable ideas in a way that people are drawn to it
 
 After studying writers like Dan Koe, Paul Graham, Jordan Peterson, and writing over 100,000 words across Quora and my blog (including draft content), here’s what I’ve found that WORKS.
 
-* * *
+- - -
 
 ### Screw grammar. Get your idea across.
 
@@ -69,30 +63,17 @@ In the real world, nobody cares about whether you used the right punctuation, gr
 
 Give people a chance to read the writing you worked so hard on. Here are a few things I’ve noticed most great writers. It applies primarily to informal essays, and content meant to drive action—copywriting.
 
-  * Short sentences
-
-  * Whitespace
-
-  * EMPHASIS—through capitalization or italics
-
-  * Rhetorical questions
-
-  * Simple words no jargon (buzzwords turn people off, be down-to-earth)
-
-  * Use ellipses…
-
-  * Extenddddd your words for emphasis 
-
-  * Don’t be afraid to use passive voice
-
-  * Create concise, quotable ideas
-
-  * Cut ~~out~~ ~~as many~~ useless words ~~as possible~~
-
-  * Make it airy, spaced out and easy to read! (Have you ever opened a book, see giant paragraphs and immediately start skimming?)
-
-
-
+* Short sentences
+* Whitespace
+* EMPHASIS—through capitalization or italics
+* Rhetorical questions
+* Simple words no jargon (buzzwords turn people off, be down-to-earth)
+* Use ellipses…
+* Extenddddd your words for emphasis 
+* Don’t be afraid to use passive voice
+* Create concise, quotable ideas
+* Cut ~~out~~ ~~as many~~ useless words ~~as possible~~
+* Make it airy, spaced out and easy to read! (Have you ever opened a book, see giant paragraphs and immediately start skimming?)
 
 Make your writing appealing to read and reward your reader by letting them make vertical progress. 
 
@@ -100,49 +81,37 @@ Focus on conversational rather than grammatically correct. You’re not getting 
 
 In fact, never write above a sixth-grade level. Google what an F-K score is (trust me).
 
-* * *
+- - -
 
-## The Two Frameworks for Persuasive Writing 
+## The Two Frameworks for Persuasive Writing
 
 There are two meta-frameworks that I’ve found that encapsulate all the other structures that great writers use to get their ideas across.
 
 Can you guess which one I’m using right now?
 
-###  **1\. Problem-Centric Framework**
+### **1. Problem-Centric Framework**
 
  **“You’re in pain and don’t realize how bad it is.”**
 
 #### Problem - Amplify - Solution
 
-  1. Identify the problem
-
-  2. Intensify the pain/frustration, 
-
-  3. Deliver your solution. 
-
-
-
+1. Identify the problem
+2. Intensify the pain/frustration, 
+3. Deliver your solution. 
 
 Works best when your audience already knows they have a problem but hasn’t acted yet.
 
 [Dan Koe PAS Example #1](https://letters.thedankoe.com/p/the-social-matrix-how-the-1-elites)
 
-* * *
+- - -
 
-####  **QUEST - Qualify, Understand, Educate, Stimulate, Transition**
+#### **QUEST - Qualify, Understand, Educate, Stimulate, Transition**
 
-  1. Qualify your reader (make them feel it’s for them)
-
-  2. Show you Understand their situation
-
-  3. Educate on why this matters
-
-  4. Stimulate desire for change
-
-  5. Transition them to action (CTA)
-
-
-
+1. Qualify your reader (make them feel it’s for them)
+2. Show you Understand their situation
+3. Educate on why this matters
+4. Stimulate desire for change
+5. Transition them to action (CTA)
 
 The Q and U are most important here. 
 
@@ -154,24 +123,18 @@ Good examples of this:
 
 [Dan Koe QUEST Example #1 ](https://letters.thedankoe.com/p/how-to-use-ai-better-than-99-of-people)
 
-* * *
+- - -
 
-### 2\. Outcome-Centric Framework
+### 2. Outcome-Centric Framework
 
  **“Something amazing exists, and you don’t have it yet.”**
 
-####  **AIDA (Attention, Interest, Desire, Action)**
+#### **AIDA (Attention, Interest, Desire, Action)**
 
-  1. Hook their Attention (surprising stat, bold claim, relatable scenario)
-
-  2. Deepen Interest by connecting to their situation, showing you understand them
-
-  3. Make them Desire the outcome. Paint the after-state, show social proof, create FOMO
-
-  4. Clear Action step to make change (including CTA)
-
-
-
+1. Hook their Attention (surprising stat, bold claim, relatable scenario)
+2. Deepen Interest by connecting to their situation, showing you understand them
+3. Make them Desire the outcome. Paint the after-state, show social proof, create FOMO
+4. Clear Action step to make change (including CTA)
 
 This works best for copywriting. You’re not giving away the sauce here, you want them to take the desired action in the CTA.
 
@@ -181,18 +144,13 @@ This works best for copywriting. You’re not giving away the sauce here, you wa
 
 [Famous Dollar Bill ad](https://swiped.co/file/famous-dollar-letter-by-gary-halbert/) (SO GOOD).
 
-* * *
+- - -
 
-####  **BAB - Before, After, Bridge**
+#### **BAB - Before, After, Bridge**
 
-  1. Paint the current state (before)
-
-  2. Show the transformed future (after)
-
-  3. Then explain how to get there (bridge). 
-
-
-
+1. Paint the current state (before)
+2. Show the transformed future (after)
+3. Then explain how to get there (bridge). 
 
 Highly effective for transformation-focused content because people viscerally feel the gap between where they are and where they want to be.
 
@@ -204,18 +162,13 @@ Highly effective for transformation-focused content because people viscerally fe
 
 Every framework I’ve described here creates **gap tension** :
 
-  * Current painful state ↔ Desired better state
-
-  * What they know ↔ What they need to know
-
-  * Where they are ↔ Where they want to be
-
-
-
+* Current painful state ↔ Desired better state
+* What they know ↔ What they need to know
+* Where they are ↔ Where they want to be
 
 But wait, I’m not done:
 
-* * *
+- - -
 
 ## Story Frameworks
 
@@ -223,7 +176,7 @@ The above frameworks are not just ways to throw information at your audience. To
 
 All stories you read will follow one of the following frameworks, developed and retold over centuries.
 
-### 1\. Underdog/Rags to Riches
+### 1. Underdog/Rags to Riches
 
  **“Started in a garage with $200. Now we’re the #3 coffee roaster in America.”**
 
@@ -233,55 +186,55 @@ It’s not a coincidence.
 
 Relate with the audience who might be in the “Before” stage, show the result (After), and show how to get there (Bridge).
 
-* * *
+- - -
 
-###  **2\. David vs. Goliath/Overcoming the Monster**
+### **2. David vs. Goliath/Overcoming the Monster**
 
 **“Big Tech was selling your data. We built the first truly private messenger.”**
 
 This one sounds like PAS, just missing the A (Amplify) stage.
 
-* * *
+- - -
 
-### 3\. Mission/Quest
+### 3. Mission/Quest
 
  **“Making a backpack tough enough to survive all four years of college without falling apart.”**
 
 I wish this one fit the QUEST framework. I really do. But it’s more like AIDA.
 
-* * *
+- - -
 
-### 4\. Transformation 
+### 4. Transformation
 
 **“Sarah went from 3 hours of sleep to running marathons. Her secret? Our sleep protocol.”**
 
 This also sounds like BAB.
 
-* * *
+- - -
 
-### 5\. Discovery/Voyage
+### 5. Discovery/Voyage
 
  **“Spent 2 years in Japanese kitchens. Brought back the knife that changed Western cooking.”**
 
 This one sounds like AIDA.
 
-* * *
+- - -
 
-### 6\. Comedy
+### 6. Comedy
 
  **“Our CEO wore the prototype backwards on live TV. It became our best-selling design.”**
 
 Outlier.
 
-* * *
+- - -
 
-### 7\. Tragedy
+### 7. Tragedy
 
  **“Lost my brother to distracted driving. Built the app that’s now required in 12 school districts.”**
 
 PAS/QUEST.
 
-* * *
+- - -
 
 ## What do I do with this information?
 
@@ -299,39 +252,27 @@ Let people feel that through your writing.
 
 Once you have a single person in mind, write out the following:
 
-  1. What is their problem? How bad is it? What fixes it? (PAS)
-
-  2. What might grab their attention? Why should they care? What do they want? What do you want them to do? (AIDA)
-
-  3. Who is this for? What do they struggle with? What do they need to know? What do they want? What should they do? (QUEST)
-
-  4. Where are they now? Where could they be? How do they get there? (BAB)
-
-
-
+1. What is their problem? How bad is it? What fixes it? (PAS)
+2. What might grab their attention? Why should they care? What do they want? What do you want them to do? (AIDA)
+3. Who is this for? What do they struggle with? What do they need to know? What do they want? What should they do? (QUEST)
+4. Where are they now? Where could they be? How do they get there? (BAB)
 
 Once you’re done with this, judge which one is the most compelling. 
 
 If you’re struggling to decide, continue…
 
-* * *
+- - -
 
 ### Purpose and Context
 
 Why are YOU writing? Why are THEY reading?
 
-  1. Selling something or driving action? Do you think the reader will benefit? (AIDA)
+1. Selling something or driving action? Do you think the reader will benefit? (AIDA)
+2. Reader already knows they have a problem (but maybe don’t know how bad, or don’t have a solution). Are you trying to demonstrate the value of your information? (PAS)
+3. Are you trying to build an audience? Audience is really specific and you can relate to them? (QUEST)
+4. Do you have a great transformation you can show off? Do you think the method will benefit the reader? (BAB)
 
-  2. Reader already knows they have a problem (but maybe don’t know how bad, or don’t have a solution). Are you trying to demonstrate the value of your information? (PAS)
-
-  3. Are you trying to build an audience? Audience is really specific and you can relate to them? (QUEST)
-
-  4. Do you have a great transformation you can show off? Do you think the method will benefit the reader? (BAB)
-
-
-
-
-* * *
+- - -
 
 ### Now what?
 
@@ -341,7 +282,7 @@ In the meantime, pick something you’ve already written. Grab a notebook or ope
 
 Which set of answers is the most compelling?
 
-Outline the framework you think works best. Don’t write like a brain dump, this isn’t free-writing! Free-writing has its time and place, and I love it for getting ideas out. But this is writing to get people to _feel_ something. 
+Outline the framework you think works best. Don’t write like a brain dump, this isn’t free-writing! Free-writing has its time and place, and I love it for getting ideas out. But this is writing to get people to *feel* something. 
 
 Get the first draft out as fast as you can and let it marinate. 
 
@@ -363,22 +304,15 @@ This helps you improve upon the audience and context portion of your writing, an
 
 To recap:
 
-  1. Answer the questions in the **Audience, Purpose, Context** section.
-
-  2. Decide which framework is the most compelling.
-
-  3. Get a first draft following the outline out. Don’t censor yourself at this stage.
-
-  4. Take a break. Consume other high-quality writing.
-
-  5. Come back and edit further.
-
-
-
+1. Answer the questions in the **Audience, Purpose, Context** section.
+2. Decide which framework is the most compelling.
+3. Get a first draft following the outline out. Don’t censor yourself at this stage.
+4. Take a break. Consume other high-quality writing.
+5. Come back and edit further.
 
 This leads to my next point:
 
-* * *
+- - -
 
 ### Swipe File
 
@@ -408,7 +342,7 @@ Statistics. Anything that stands out, organized by topic.
 
 Quotes. Great quotes could launch a whole article by themselves. Don’t go crazy though, and once again organize by topic because a lot of quotes repeat themselves in different ways. Pick and choose the most punchy ones.
 
-* * *
+- - -
 
 ### Be candid.
 
@@ -422,7 +356,7 @@ Honesty also helps you win customers over the competitor. You allow customers to
 
 You create confidence for the customer to pick you, between two identical goods.
 
-* * *
+- - -
 
 ### That’s it for this guide.
 
@@ -434,17 +368,14 @@ If anything is unclear, please let me know in the comments. I publish so that my
 
 — Armaan
 
-Proofread by 
+Proofread by [Akshita Virdy](https://open.substack.com/users/411702742-akshita-virdy?utm_source=mentions)
 
-[Akshita Virdy](https://open.substack.com/users/411702742-akshita-virdy?utm_source=mentions)
+Check out her stuff, she writes too!
 
-. Check out her stuff, she writes too!
-
-* * *
+- - -
 
 # About me and this newsletter.
 
 I am a builder and writer. My background is in computer science but, as a generalist, I leverage my skills in the field of business. My builder side is more apparent on my [X profile](https://x.com/airman416). 
 
-This newsletter is designed to help me document, and help you learn long-lasting skills. I do not write about get-rich-quick schemes. I write about my journey in wealth creation, and practical guides on living well.  
-
+This newsletter is designed to help me document, and help you learn long-lasting skills. I do not write about get-rich-quick schemes. I write about my journey in wealth creation, and practical guides on living well.

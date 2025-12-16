@@ -8,17 +8,17 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Read the privacy markdown file
-const privacyMarkdown = await readFile(
-  join(__dirname, '../../../stageai-privacy.md'),
+// Read the terms markdown file
+const termsMarkdown = await readFile(
+  join(__dirname, '../../../stageai-terms.md'),
   'utf-8'
 );
 
 // Convert markdown to HTML
-const privacyHTML = await marked(privacyMarkdown);
+const termsHTML = await marked(termsMarkdown);
 ---
 
-<Layout title="Privacy Policy - Stage AI" description="Privacy Policy for Stage AI - AI Home Design">
+<Layout title="Terms of Service - Stage AI" description="Terms of Service for Stage AI - AI Home Design">
   <main class="w-full max-w-4xl mx-auto px-8 py-20">
     <!-- Back Link -->
     <div class="mb-8">
@@ -27,19 +27,19 @@ const privacyHTML = await marked(privacyMarkdown);
       </a>
     </div>
 
-    <!-- Privacy Policy Content -->
+    <!-- Terms of Service Content -->
     <article>
       <header class="mb-12">
-        <h1 class="text-2xl md:text-3xl font-bold mb-4">Privacy Policy</h1>
+        <h1 class="text-2xl md:text-3xl font-bold mb-4">Terms of Service</h1>
       </header>
 
-      <div class="prose prose-lg max-w-none" set:html={privacyHTML} />
+      <div class="prose prose-lg max-w-none" set:html={termsHTML} />
     </article>
   </main>
 </Layout>
 
 <style is:global>
-  /* Prose styling for privacy policy content */
+  /* Prose styling for terms of service content */
   .prose {
     color: #161717;
     max-width: none;
@@ -63,6 +63,14 @@ const privacyHTML = await marked(privacyMarkdown);
 
   .prose h3 {
     font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .prose h4 {
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -114,6 +122,11 @@ const privacyHTML = await marked(privacyMarkdown);
   .prose em {
     font-style: italic;
   }
-</style>
 
+  .prose hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 3rem 0;
+  }
+</style>
 

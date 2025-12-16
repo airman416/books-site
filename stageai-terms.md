@@ -1,5 +1,3 @@
-Below is a plain‑language but fairly robust Terms of Service you can adapt for Staged AI. This is not legal advice; have a lawyer review it before publishing.
-
 ***
 
 TERMS OF SERVICE  

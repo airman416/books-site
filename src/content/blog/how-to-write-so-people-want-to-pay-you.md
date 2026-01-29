@@ -2,7 +2,7 @@
 title: How to write so people want to pay you
 description: Anyone can sound like an expert
 date: 2025-12-03T09:11:00.000-05:00
-published: true
+published: false
 author: Armaan Agrawal
 tags:
   - Essays

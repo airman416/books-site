@@ -60,7 +60,7 @@ Darwin used his daily walks, specifically on a path at his home known as the San
 
 ### Shonda Rhimes’ 5-mile run
 
-Shonda Rhimes uses a metaphorical "5-mile run" to describe the intense, disciplined, and often exhausting daily effort required to achieve a state of "flow" in writing. She runs through a bunch of garbage before you get to the good stuff. Repetition, ability to tolerate boredom.. Original quote: https://www.goodreads.com/quotes/10048754-writing-is-the-hum-writing-is-laying-track-writing-is
+Shonda Rhimes uses a metaphorical "5-mile run" to describe the intense, disciplined, and often exhausting daily effort required to achieve a state of "flow" in writing. She runs through a bunch of garbage before you get to the good stuff. Repetition, ability to tolerate boredom.. [Original quote.](https://www.goodreads.com/quotes/10048754-writing-is-the-hum-writing-is-laying-track-writing-is)
 
 ### Paul Graham on productive procrastination
 

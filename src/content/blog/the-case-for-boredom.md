@@ -13,17 +13,24 @@ Boredom is when our brain wanders, and when it’s used to having direction it c
 
 ## Point 1: Repetitions
 
-Your ability to tolerate boredom will repeating the same action determines your odds of success. Life is not a chess game where knowing a better opening or next move is going to get you to win. More likely, it’s battering the opponent with pieces and trying different things over and over again until you win. Just to stay in the game, and squeeze out more iterations than the next person can increase your odds of success significantly.
+Your ability to tolerate boredom will repeating the same action determines your odds of success. Life is not a chess game where knowing a better opening or next move is going to get you to win. 
+
+More likely, it’s battering the opponent with pieces and trying different things over and over again until you win. Just to stay in the game, and squeeze out more iterations than the next person can increase your odds of success significantly.
+
 Why? Conviction to believe in the slow feedback loop: a seed you plant today won’t get you a plant over night. As long as you make it to summer, you’ll do great. Most people quit when, by day 7, they see no immediate benefits to what they’re doing. Think in the long run, tolerate the boredom and like the work for the work.
+
 Therefore, do you enjoy the work enough to be able to put the reps in? The work doesn’t have to be inherently enjoyable. In fact, it’s better if it’s not—where there’s muck there’s brass. Work that people like doesn’t pay well.
+
 Of course, don’t do work that you hate. This follows the same rules as the ones Cal Newport introduced in “So Good They Can’t Ignore You”: there must be the opportunity to grow or get highly skilled, it shouldn’t be useless or actively hurt the world, and you shouldn’t work with people you really dislike. If your work doesn’t match any of these three conditions, then repetitions is the only thing stopping you.
 
 ## Point 2: Silence
 
 If you’re engrossed in your work all the time, you’re not giving your brain the time it needs to rest, process and take an idea further. You end up doing work instead of thinking about why that work needed to be done.
 But it’s not just about being engrossed in work, it’s about being engrossed in your phone.
+
 The most compelling reason to get off your phone is that life-changing epiphanies only occur in times of silence (during downtime) such as in the shower, on a walk, while staring at a wall. You won’t find what you’re looking for on TikTok.
 Think of your brain’s information diet. If you won’t feed yourself junk, why feed yourself crap information?
+
 This doesn’t mean you have to cut yourself off. Even getting 20 quality minutes of undistracted silence a day could make a night and day difference after just a few days. I beg, you just try it. It gets easier as you do it more often. Here are some ways to do it and examples of successful people doing it.
 
 ## Solution:

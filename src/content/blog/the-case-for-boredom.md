@@ -67,8 +67,7 @@ Shonda Rhimes uses a metaphorical "5-mile run" to describe the intense, discipli
 Use good procrastination. You have to ignore things that the world thinks is important. Think about big ideas if the idea you’re working on isn’t interesting to you in the moment. Don’t put yourself on your phone or think about easier ideas like what clothes to wear for the day (bad procrastination). 
 Try procrastinating by giving yourself a moment of silence and let your mind wander.
 
-> "I wasn't the fastest guy in the world. I wouldn't have done well in an Olympiad or a math contest. But I like to ponder. And pondering things, just sort of thinking about it and thinking about it, turns out to be a pretty good approach:
-- Jim Simons
+> "I wasn't the fastest guy in the world. I wouldn't have done well in an Olympiad or a math contest. But I like to ponder. And pondering things, just sort of thinking about it and thinking about it, turns out to be a pretty good approach: — Jim Simons
 
 Give it a shot today, I believe in you.
 

@@ -1,7 +1,7 @@
 ---
 title: Entropy explains why we can't be ourselves
 date: 2025-10-25T14:42:00.000-04:00
-published: true
+published: false
 author: Armaan Agrawal
 tags:
   - entropy

@@ -16,7 +16,7 @@ moreEssays:
 
 In the classic Prisoner's Dilemma game, two individuals must decide whether to cooperate with each other or betray each other (defect). 
 
-![](https://www.britannica.com/science/game-theory/The-prisoners-dilemma)
+![](https://cdn.britannica.com/55/91955-050-F444D10D/dilemma-prisoners-participants-game-theory-communication-strategy.jpg)
 
 The catch is that while mutual cooperation yields a good outcome for both, a player can get an even better outcome by defecting if the other player cooperates. 
 

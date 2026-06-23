@@ -1,5 +1,5 @@
 ---
-title: Simple fix
+title: Simple counterintuitive fix
 date: 2026-06-23T11:33:00.000-04:00
 published: true
 author: Armaan Agrawal
@@ -9,11 +9,11 @@ topic: Essays
 moreEssays:
   heading: More essays
   links:
+    - url: https://essays.armaanagrawal.com/blog/what-i-learned-from-the-go-giver-give-take-and-the-iterated-prisoners-dilemma/
+      title: The Iterated Prisoner's Dilemma
     - url: https://essays.armaanagrawal.com/blog/the-case-for-boredom/
       title: The Case for Boredom
 ---
-Hey Bob,
-
 Chances are, you're a selfish person. And rightfully so! 
 
 Who's going to look out for you, if not you?

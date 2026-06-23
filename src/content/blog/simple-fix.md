@@ -87,7 +87,9 @@ An “otherish giver” sees an opportunity
 
 Favors rarely cost the exact same amount they are worth.
 
-An introduction to a hiring manager might cost you five minutes of typing, but it could secure the other person a career-defining role. If you demand a favor of equal value in return before you make the introduction, that massive value is never created.
+An introduction to a hiring manager might cost you five minutes of typing, but it could secure the other person a career-defining role. 
+
+If you demand a favor of equal value in return before you make the introduction, that massive value is never created.
 
 - - -
 
@@ -101,7 +103,7 @@ You don’t do mental calculations before you help someone - but you also don’
 
 From Think Like a Monk by Jay Shetty:
 
-“‘Jay, I’m the one who needs help! I have so much to figure out before I can devote myself to helping others.’ It’s true. It’s hard to think about selflessness when we are struggling. And yet that is exactly what I learned as a monk.”
+> “‘Jay, I’m the one who needs help! I have so much to figure out before I can devote myself to helping others.’ It’s true. It’s hard to think about selflessness when we are struggling. And yet that is exactly what I learned as a monk.”
 
 Chicken and egg problem. You wanna give first or get first?
 
@@ -123,7 +125,7 @@ Just give it a shot before you discard it.
 
 - - -
 
-If I convinced you, start today (and let me know on X @armaanagrawal_). 
+If I convinced you, start today (and let me know on X ([@armaanagrawal_](https://x.com/armaanagrawal_)). 
 
 See how you can helpful—proactively—not just when someone asks you for a favor.
 

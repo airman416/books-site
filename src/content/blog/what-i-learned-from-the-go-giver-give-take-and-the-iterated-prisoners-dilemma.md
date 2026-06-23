@@ -12,10 +12,11 @@ moreEssays:
     - title: "Simple counterintuitive fix "
       url: https://essays.armaanagrawal.com/blog/simple-fix/
 ---
+## The Iterated Prisoner's Dilemma.
 
-### The Iterated Prisoner's Dilemma.
+In the classic Prisoner's Dilemma game, two individuals must decide whether to cooperate with each other or betray each other (defect). 
 
-In the Prisoner's Dilemma, two individuals must decide whether to cooperate with each other or betray each other (defect). 
+![](https://www.britannica.com/science/game-theory/The-prisoners-dilemma)
 
 The catch is that while mutual cooperation yields a good outcome for both, a player can get an even better outcome by defecting if the other player cooperates. 
 
@@ -39,7 +40,7 @@ Tit-for-Tat was highly successful because it was "nice" (it never started a figh
 
 However, as researchers continued to study these models, they discovered a fatal flaw in Tit-for-Tat: it is completely vulnerable to "noise."
 
-### The Defection Spiral (The "Death Spiral")
+## The Defection Spiral (The "Death Spiral")
 
 In Axelrod's original tournament, the environment was perfect. Every move was executed flawlessly and communicated perfectly.
 
@@ -100,7 +101,7 @@ When two strict Tit-for-Tat players interact in a noisy environment, a single mi
 
 Because strict Tit-for-Tat cannot correct mistakes, a single error plunges the relationship into an unending defection spiral (often called a "death spiral"). Both players will alternate defecting against each other endlessly, destroying all potential value in the relationship.
 
-### The Mathematical Value of Forgiveness
+## The Mathematical Value of Forgiveness
 
 To solve the vulnerability to noise, game theorists discovered that the most successful strategies require a mechanism for unprompted forgiveness.
 
@@ -111,6 +112,7 @@ If the opponent defects, Generous Tit-for-Tat usually retaliates by defecting. H
 This built-in forgiveness—which in human terms translates to "giving without keeping score" or "letting it slide"—acts as a circuit breaker for the defection spiral.
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -169,4 +171,6 @@ This built-in forgiveness—which in human terms translates to "giving without k
 </body>
 </html>
 
-By occasionally absorbing a perceived loss without retaliating, the generous strategy breaks the cycle of punishment and resets the relationship back to mutual cooperation. While the generous player risks being taken advantage of in a single round, the mathematical reality is that the long-term gains of restoring a cooperative relationship massively outweigh the short-term cost of the unreciprocated favor.
+By occasionally absorbing a perceived loss without retaliating, the generous strategy breaks the cycle of punishment and resets the relationship back to mutual cooperation. 
+
+While the generous player risks being taken advantage of in a single round, the mathematical reality is that the long-term gains of restoring a cooperative relationship massively outweigh the short-term cost of the unreciprocated favor.

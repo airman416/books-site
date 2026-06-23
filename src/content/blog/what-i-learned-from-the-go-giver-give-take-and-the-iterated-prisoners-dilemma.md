@@ -367,5 +367,3 @@ The five laws are as follows:
 **The Law of Receptivity: To give effectively, one must also be open to receiving**
 
 If this article helped you, start with this: give me a follow on X @armaanagrawal_ (I respond to all DMs) and share this article to someone that needs to really needs to read it!
-
-.

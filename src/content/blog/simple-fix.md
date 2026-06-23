@@ -14,17 +14,17 @@ moreEssays:
     - url: https://essays.armaanagrawal.com/blog/the-case-for-boredom/
       title: The Case for Boredom
 ---
-Chances are, you're a selfish person. And rightfully so! 
+Chances are, you're a selfish person. And rightfully so!
 
-Who's going to look out for you, if not you?
+Life is hard and there is no free lunch.
 
-Let me change your mind today.
+There's a counterintuitive way to fix this. 
 
-There's a counterintuitive way to get more & get your entire network to look after you, instead of being in the dark fending for yourself.
+You can stop white-knuckling your way through life & get your entire network to help you instead.
 
 - - -
 
-In fact, I 
+In fact, I, a 22 year-old early-career-in-tech individual
 
 * landed a job (and many interviews)
 * made multiple great connections
@@ -32,25 +32,7 @@ In fact, I
 
 By using this technique.
 
-All it takes is for you to give more, by default, without counting favors.
-
-- - -
-
-Giving is a state of being, not an action. And it's important that you do it first. 
-
-The reason is, giving increases the size of the pie for everyone. 
-
-Instead of playing a Tit-for-Tat (zero-sum game), you create more value for everyone (positive-sum game).
-
-This is how capitalism works.
-
-When Elon Musk created SpaceX and became a trillionaire, that didn't make the rest of humanity a trillion dollars poorer. 
-
-Think about the engineers, technicians, metal refiners—no, imagine the HR team at a rocket company. Those roles wouldn't exist without Elon. 
-
-Imagine the people in rural locations that now get internet due to StarLink.
-
-The size of the pie has increased for everyone, and that's why Elon can ask people for favors and not get them declined...
+The people who get the most are the ones you give \*before\* they know what they'll get back.
 
 - - -
 
@@ -76,8 +58,6 @@ However, by creating the tool, I:
 - - -
 
 Put another way, giving lets you create an environment where 1 + 1 > 2.
-
- In fact, MUCH greater than 2.
 
 Adam Grant says it best in his book *Give & Take*:
 
@@ -113,10 +93,6 @@ If you wait till you get - you’re letting the universe take you along for a ri
 
 If you give first, you exert just a little bit of control & invite a little bit more luck into your life.
 
-There’s a Tibetan practice called Tonglen (“giving and taking.”) You breathe in others’ suffering, breathe out relief to them. And you do it especially when you’re struggling.
-
-The monks do it when they’re sick, grieving, afraid. The point isn’t to pretend you’re fine, but to interrupt the reflex of turning inward when things get hard.
-
 **Counter objection: But how does that matter? At the end of the day isn’t it about me and what I get? I’m the one struggling.**
 
 Now if you’re truly struggling (e.g. I can’t afford dinner today), this advice doesn’t apply to you. But chances are, you’re stressed about rent, anxious about career, worried about the future.
@@ -125,11 +101,23 @@ That’s real, but it’s not the same thing. And somewhere between “I can’t
 
 Just give it a shot before you discard it.
 
+**Objection: I tried giving and it didn't pay off.**
+
+Sometimes it won't, and that's why the "give" shouldn't be huge in the beginning.
+
+Start small and scale it up.
+
+Then you know who's willing to build a long-term relationship based on trust.
+
+It works when giving is the default. 
+
+If you give to 10 people and 2 become champions for you, that beats giving to 0.
+
 - - -
 
-If I convinced you, start today (and let me know on X ([@armaanagrawal_](https://x.com/armaanagrawal_)). 
+Next time you see someone (even a stranger) asking for help, you don't need to build them a whole tool like a did for Sam (that's risky), but at least send them a useful message.
 
-See how you can helpful—proactively—not just when someone asks you for a favor.
+See how you can helpful, proactively, not just when someone asks you for a favor.
 
 Don't see how you can get something back. 
 

@@ -32,7 +32,7 @@ In fact, I, a 22 year-old early-career-in-tech individual
 
 By using this technique.
 
-The people who get the most are the ones you give \*before\* they know what they'll get back.
+The people who get the most are the ones who give \*before\* they know what they'll get back.
 
 - - -
 
@@ -117,7 +117,7 @@ If you give to 10 people and 2 become champions for you, that beats giving to 0.
 
 Next time you see someone (even a stranger) asking for help, you don't need to build them a whole tool like a did for Sam (that's risky), but at least send them a useful message.
 
-See how you can helpful, proactively, not just when someone asks you for a favor.
+See how you can be helpful, proactively, not just when someone asks you for a favor.
 
 Don't see how you can get something back. 
 

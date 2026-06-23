@@ -10,6 +10,17 @@ const allPosts = await getCollection('blog');
 // Filter to only published posts
 const publishedPosts = allPosts.filter(post => post.data.published !== false);
 
+// Helper: extract first real paragraph from markdown body
+function getBlurb(body: string): string {
+  const stripped = body
+    .replace(/^---[\s\S]*?---\n?/, '') // strip frontmatter if any leaked in
+    .replace(/!\[.*?\]\(.*?\)/g, '')   // strip images
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1'); // flatten links
+  const paragraphs = stripped.split(/\n\n+/).map(p => p.trim()).filter(p => p && !p.startsWith('#'));
+  const first = paragraphs[0] || '';
+  return first.length > 200 ? first.slice(0, 200).replace(/\s\S+$/, '') + '…' : first;
+}
+
 // Group posts by topic sections from CMS
 const writingSections = homePage.writingSections || [];
 const postsByTopic = writingSections.map(section => {
@@ -47,8 +58,8 @@ const ungroupedPosts = publishedPosts
 
     <!-- Hero / Intro -->
     <section class="mb-12">
-      <h1 class="text-2xl md:text-3xl font-bold mb-2">{homePage.hero.title}</h1>
-      <p class="text-base md:text-lg mb-2 text-gray-700">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">{homePage.hero.title}</h1>
+      <p class="text-lg md:text-xl mb-2 text-gray-700">
         {homePage.hero.subtitle}
       </p>
     </section>
@@ -67,15 +78,17 @@ const ungroupedPosts = publishedPosts
     <!-- Writing Sections by Topic -->
     {postsByTopic.map((section) => (
       <section class="mb-12">
-        <h2 class="text-lg font-bold mb-2">{section.title}</h2>
-        <ul class="list-disc pl-6 space-y-3">
+        <h2 class="text-lg font-bold mb-6">{section.title}</h2>
+        <div class="space-y-0">
           {section.posts.map((post) => (
-            <li>
-              <div class="flex items-baseline gap-3">
-                <a href={`/blog/${post.slug}`} class="group">
-                  <span class="text-base group-hover:text-[#06402B]">{post.data.title}</span>
-                </a>
-                <span class="text-xs text-gray-500 flex-shrink-0">
+            <div class="border-t border-gray-200 py-6">
+              <a href={`/blog/${post.slug}`} class="group block">
+                <h3 class="text-xl font-bold mb-3 group-hover:text-[#06402B] leading-snug">{post.data.title}</h3>
+              </a>
+              <p class="text-base text-gray-700 mb-4 leading-relaxed">{getBlurb(post.body)}</p>
+              <div class="flex items-center gap-6">
+                <a href={`/blog/${post.slug}`} class="text-sm font-semibold tracking-wide uppercase text-[#06402B] underline underline-offset-4">Read more</a>
+                <span class="text-xs text-gray-400">
                   {post.data.date.toLocaleDateString('en-US', { 
                     month: 'short', 
                     day: 'numeric',
@@ -83,23 +96,25 @@ const ungroupedPosts = publishedPosts
                   })}
                 </span>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     ))}
 
     <!-- Ungrouped Posts (no topic match) -->
     {ungroupedPosts.length > 0 && (
       <section class="mb-12">
-        <ul class="list-disc pl-6 space-y-3">
+        <div class="space-y-0">
           {ungroupedPosts.map((post) => (
-            <li>
-              <div class="flex items-baseline gap-3">
-                <a href={`/blog/${post.slug}`} class="group">
-                  <span class="text-base group-hover:text-[#06402B]">{post.data.title}</span>
-                </a>
-                <span class="text-xs text-gray-500 flex-shrink-0">
+            <div class="border-t border-gray-200 py-6">
+              <a href={`/blog/${post.slug}`} class="group block">
+                <h3 class="text-xl font-bold mb-3 group-hover:text-[#06402B] leading-snug">{post.data.title}</h3>
+              </a>
+              <p class="text-base text-gray-700 mb-4 leading-relaxed">{getBlurb(post.body)}</p>
+              <div class="flex items-center gap-6">
+                <a href={`/blog/${post.slug}`} class="text-sm font-semibold tracking-wide uppercase text-[#06402B] underline underline-offset-4">Read more</a>
+                <span class="text-xs text-gray-400">
                   {post.data.date.toLocaleDateString('en-US', { 
                     month: 'short', 
                     day: 'numeric',
@@ -107,9 +122,9 @@ const ungroupedPosts = publishedPosts
                   })}
                 </span>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     )}
 

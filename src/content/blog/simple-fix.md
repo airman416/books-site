@@ -62,6 +62,8 @@ When Sam tweeted asking for a tool, I just [built it for him](https://samparr.ar
 
 ![](/images/samparrabot-ai-search.jpeg)
 
+![](/images/samgpt.png)
+
 Sure, I had an ulterior motive—I wanted to talk to him (I'm a fan of the MFM podcast).
 
 However, by creating the tool, I:
@@ -71,7 +73,7 @@ However, by creating the tool, I:
 * Gained AI Engineering skills
 * Earned a [spotlight on a newsletter](https://theairuntime.com/p/builder-spotlight-armaan-agrawal)
 
----
+- - -
 
 Put another way, giving lets you create an environment where 1 + 1 > 2.
 

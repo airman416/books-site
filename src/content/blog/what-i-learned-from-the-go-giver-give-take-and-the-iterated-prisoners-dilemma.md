@@ -64,11 +64,19 @@ Let’s look at this from the game theory angle:
 
 ### The Iterated Prisoner's Dilemma.
 
-In the Prisoner's Dilemma, two individuals must decide whether to cooperate with each other or betray each other (defect). The catch is that while mutual cooperation yields a good outcome for both, a player can get an even better outcome by defecting if the other player cooperates. However, if both defect, they both suffer a poor outcome.
+In the Prisoner's Dilemma, two individuals must decide whether to cooperate with each other or betray each other (defect). 
 
-When this game is played only once, the mathematically logical choice is to defect. But when the game is played repeatedly over many rounds (an "iterated" game), strategies emerge that favor cooperation.
+The catch is that while mutual cooperation yields a good outcome for both, a player can get an even better outcome by defecting if the other player cooperates. 
 
-In the early 1980s, political scientist Robert Axelrod hosted a famous computer tournament. He invited game theorists to submit strategies (computer programs) to play the Iterated Prisoner's Dilemma against each other.
+However, if both defect, they both suffer a poor outcome.
+
+When this game is played only once, the mathematically logical choice is to defect. 
+
+But when the game is played repeatedly over many rounds (an "iterated" game), strategies emerge that favor cooperation.
+
+In the early 1980s, political scientist Robert Axelrod hosted a famous computer tournament. 
+
+He invited game theorists to submit strategies (computer programs) to play the Iterated Prisoner's Dilemma against each other.
 
 The surprising winner of the tournament was a simple strategy called Tit-for-Tat. It only has two rules:
 
@@ -80,7 +88,7 @@ Tit-for-Tat was highly successful because it was "nice" (it never started a figh
 
 However, as researchers continued to study these models, they discovered a fatal flaw in Tit-for-Tat: it is completely vulnerable to "noise."
 
-The Defection Spiral (The "Death Spiral")
+### The Defection Spiral (The "Death Spiral")
 
 In Axelrod's original tournament, the environment was perfect. Every move was executed flawlessly and communicated perfectly.
 
@@ -88,13 +96,13 @@ But the real world is noisy. In real-world interactions, people make mistakes, i
 
 When two strict Tit-for-Tat players interact in a noisy environment, a single mistake triggers a catastrophe:
 
-Round 1: Both Cooperate.
+**Round 1: Both Cooperate.**
 
-Round 2: Player A tries to Cooperate, but a misunderstanding occurs (noise). Player B perceives it as a Defection.
+**Round 2: Player A tries to Cooperate, but a misunderstanding occurs (noise). Player B perceives it as a Defection.**
 
-Round 3: Following its rule, Player B punishes Player A by Defecting. Player A, who knows they tried to cooperate in Round 2, feels betrayed and perceives Player B's action as an unprovoked Defection.
+**Round 3: Following its rule, Player B punishes Player A by Defecting. Player A, who knows they tried to cooperate in Round 2, feels betrayed and perceives Player B's action as an unprovoked Defection.**
 
-Round 4: Player A retaliates by Defecting. Player B retaliates for that defection.
+**Round 4: Player A retaliates by Defecting. Player B retaliates for that defection.**
 
 <table style="border-collapse: collapse; font-family: 'abril-display', serif; font-size: 0.875rem;">
   <thead>
@@ -228,11 +236,13 @@ Favors rarely cost the exact same amount they are worth.
 
 An introduction to a hiring manager might cost you five minutes of typing, but it could secure the other person a career-defining role. If you demand a favor of equal value in return before you make the introduction, that massive value is never created.
 
+### Examples
+
 I asked Claude to describe a scenario.
 
 ---
 
-Scenario: You're a senior dev. A junior colleague is stuck on a hard bug and asks for help.
+> Scenario: You're a senior dev. A junior colleague is stuck on a hard bug and asks for help.
 
 **Matcher:**
 
@@ -258,7 +268,7 @@ Another example from Claude:
 
 ---
 
-Scenario: You're job hunting. A friend asks you to review their resume.
+> Scenario: You're job hunting. A friend asks you to review their resume.
 
 **Matcher:**
 
@@ -273,8 +283,6 @@ You review the resume, but you also notice their story isn't landing. You refram
 Then — because you're thinking about their outcome, not your ledger — you intro them to one person you know at a target company.
 
 They get the job. They're now inside a company you might want to work at someday. They become a warm referral. Their hiring manager knows your name before you've ever applied. Their whole network is now slightly more available to you — not because they owe you, but because you genuinely moved their life forward and people remember that.
-
----
 
 The matcher got one resume review back.
 

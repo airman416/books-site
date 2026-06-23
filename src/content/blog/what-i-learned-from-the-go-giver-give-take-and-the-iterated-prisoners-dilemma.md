@@ -10,7 +10,7 @@ moreEssays:
   heading: More essays
   links:
     - title: "Simple counterintuitive fix "
-      url: https://essays.armaanagrawal.com/blog/simple-counterintuitive-fix/
+      url: https://essays.armaanagrawal.com/blog/simple-fix/
 ---
 
 ### The Iterated Prisoner's Dilemma.

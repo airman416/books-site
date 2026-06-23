@@ -151,6 +151,65 @@ If the opponent defects, Generous Tit-for-Tat usually retaliates by defecting. H
 
 This built-in forgiveness—which in human terms translates to "giving without keeping score" or "letting it slide"—acts as a circuit breaker for the defection spiral.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css">
+<style>
+  body { font-family: 'abril-display', serif; background: #fff; padding: 2rem; }
+</style>
+</head>
+<body>
+<table style="border-collapse: collapse; font-family: 'abril-display', serif; font-size: 0.875rem;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: left;"></th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">R1</th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">R2</th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">R3</th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">R4</th>
+      <th style="border: 3px solid #06402B; padding: 0.75rem 1rem; color: #06402B; font-weight: 700; text-align: center;">R5</th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">R6</th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">R7</th>
+      <th style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; color: #6B7280; font-weight: 700; text-align: center;">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; font-weight: 700; color: #161717;">A</td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+3</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #6B7280; color: #fff;">?<br><span style="font-size: 0.7rem; opacity: 0.8;">+5</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+0</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #DC2626; color: #fff;">✕<br><span style="font-size: 0.7rem; opacity: 0.8;">+1</span></td>
+      <td style="border: 3px solid #06402B; padding: 0.75rem 1rem; text-align: center; background: #DC2626; color: #fff;">✕<br><span style="font-size: 0.7rem; opacity: 0.8;">+5</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+3</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+3</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #161717;">20</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; font-weight: 700; color: #161717;">B</td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+3</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+0</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #DC2626; color: #fff;">✕<br><span style="font-size: 0.7rem; opacity: 0.8;">+5</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #DC2626; color: #fff;">✕<br><span style="font-size: 0.7rem; opacity: 0.8;">+1</span></td>
+      <td style="border: 3px solid #06402B; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓ ★<br><span style="font-size: 0.7rem; opacity: 0.8;">+0</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+3</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; background: #06402B; color: #fff;">✓<br><span style="font-size: 0.7rem; opacity: 0.8;">+3</span></td>
+      <td style="border: 1px solid #E5E7EB; padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #161717;">15</td>
+    </tr>
+  </tbody>
+</table>
+<p style="font-family: 'abril-display', serif; font-size: 0.75rem; color: #6B7280; margin-top: 0.75rem;">
+  <span style="color: #06402B; font-weight: 700;">✓</span> Cooperate &nbsp;·&nbsp;
+  <span style="color: #DC2626; font-weight: 700;">✕</span> Defect &nbsp;·&nbsp;
+  <span style="color: #6B7280; font-weight: 700;">?</span> Accident (noise) &nbsp;·&nbsp;
+  <span style="color: #06402B; font-weight: 700;">★</span> Generous forgiveness &nbsp;·&nbsp;
+  C/C = 3pts each · D/C = 5pts vs 0pts · D/D = 1pt each
+</p>
+</body>
+</html>
+
 By occasionally absorbing a perceived loss without retaliating, the generous strategy breaks the cycle of punishment and resets the relationship back to mutual cooperation. While the generous player risks being taken advantage of in a single round, the mathematical reality is that the long-term gains of restoring a cooperative relationship massively outweigh the short-term cost of the unreciprocated favor.
 
 ### Value Creation
@@ -171,17 +230,15 @@ An introduction to a hiring manager might cost you five minutes of typing, but i
 
 I asked Claude to describe a scenario.
 
-Scenario: You're a senior dev. A junior colleague is stuck on a hard bug and asks for help.
-
 ---
 
-Matcher:
+Scenario: You're a senior dev. A junior colleague is stuck on a hard bug and asks for help.
+
+**Matcher:**
 
 Helps — but mentally logs it. "I spent an hour on this, so next time I need a code review or a favor, they owe me." If the junior has nothing to offer in return, the matcher drags their feet. The value exchanged = \~1 hour in, \~1 favor out. Pie stays the same size.
 
----
-
-Otherish giver:
+**Otherish giver:**
 
 Sits down, fixes the bug, and while they're at it — documents the pattern, explains the underlying concept, and maybe loops in one other person who'd benefit. Now:
 
@@ -199,19 +256,17 @@ When the senior eventually needs something — a referral, a good word, someone 
 
 Another example from Claude:
 
-Scenario: You're job hunting. A friend asks you to review their resume.
-
 ---
 
-Matcher:
+Scenario: You're job hunting. A friend asks you to review their resume.
+
+**Matcher:**
 
 You're busy, also applying to jobs. You think: "I'll help if they help me back." You give it a quick pass, fix a few typos, send it back. Mental note: they owe me a resume review.
 
 If they land somewhere good — maybe you ask for a referral. Transactional. You got back roughly what you put in.
 
----
-
-Otherish giver:
+**Otherish giver:**
 
 You review the resume, but you also notice their story isn't landing. You reframe their narrative, flag the weak spots, and send over a template that worked for you. Takes 45 extra minutes.
 

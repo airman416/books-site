@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import PostHog from '../components/posthog.astro';
+import GoatCounter from '../components/goatcounter.astro';
 import siteSettings from '../data/siteSettings.json';
 
 interface Props {
@@ -107,6 +108,9 @@ const absoluteImageURL = ogImageURL.toString();
     
     <!-- PostHog Analytics -->
     <PostHog />
+    
+    <!-- GoatCounter Analytics -->
+    <GoatCounter />
     
     <!-- Lyket Like Buttons -->
     <script is:inline src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_cbf8d6a056397e132808dd46bdc2b7"></script>

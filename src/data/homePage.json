@@ -11,6 +11,18 @@
       "topic": "Essays"
     }
   ],
+  "projects": [
+    {
+      "name": "CMachine",
+      "url": "https://carousels.armaanagrawal.com",
+      "description": "Create social media carousels and narrated video slides."
+    },
+    {
+      "name": "Repoog",
+      "url": "https://repoog.fly.dev",
+      "description": "AI-generated Open Graph images for GitHub repositories."
+    }
+  ],
   "challengeQuiz": {
     "show": false,
     "text": "Take the challenge quiz to see if an unconventional path is right for you.",

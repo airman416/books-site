@@ -1,35 +1,16 @@
 ---
 import '../styles/global.css';
-import PostHog from '../components/posthog.astro';
-import siteSettings from '../data/siteSettings.json';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
-  image?: string;
 }
 
-const { 
-  title, 
-  description = siteSettings.site.description,
-  image = '/images/og-image.png'
+const {
+  title = "Books — Armaan Agrawal",
+  description = "Books that shaped how I think — with notes on why they mattered."
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-// Determine if CDN is enabled and construct image URL
-const cdnEnabled = siteSettings.cdn?.enabled || false;
-const cdnBaseUrl = siteSettings.cdn?.baseUrl || '';
-
-// Use CDN URL if enabled, otherwise use local path
-// CDN has images at root level, so we extract just the filename
-const imagePath = cdnEnabled && cdnBaseUrl && image.startsWith('/')
-  ? `${cdnBaseUrl}${image.replace('/images/', '/')}`
-  : image;
-
-const ogImageURL = new URL(imagePath, Astro.site);
-
-// Ensure absolute URL for OG image (critical for iMessage)
-const absoluteImageURL = ogImageURL.toString();
 ---
 
 <!doctype html>
@@ -38,184 +19,23 @@ const absoluteImageURL = ogImageURL.toString();
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content={siteSettings.site.title} />
     <meta name="theme-color" content="#06402B" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
-    
-    <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta name="image" property="og:image" content={absoluteImageURL} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={siteSettings.site.title} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:site_name" content={siteSettings.site.title} />
-    <meta property="og:locale" content="en_US" />
-    
-    <!-- Apple/iMessage Specific Meta Tags -->
-    <meta name="apple-mobile-web-app-title" content={siteSettings.site.title} />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="apple-touch-icon" href={imagePath} />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content={siteSettings.site.twitter} />
-    <meta name="twitter:creator" content={siteSettings.site.twitter} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={absoluteImageURL} />
-    <meta name="twitter:image:alt" content={siteSettings.site.title} />
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Armaan Agrawal",
-      "description": "I build software and speak about what I learn along the way.",
-      "url": "https://armaanagrawal.com",
-      "image": {
-        "@type": "ImageObject",
-        "url": absoluteImageURL,
-        "width": 1200,
-        "height": 630
-      },
-      "sameAs": [
-        "https://x.com/airman416",
-        "https://linkedin.com/in/agr1",
-        "https://tiktok.com/@armaanagrawal5"
-      ],
-      "jobTitle": "Software Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Armaan Agrawal"
-      },
-      "knowsAbout": ["Startups", "Productivity", "Business", "Technology"]
-    }
-    </script>
-    
-    <!-- Adobe Typekit Fonts -->
+    <meta property="og:url" content={canonicalURL} />
     <link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css" />
-    
     <title>{title}</title>
-    
-    <!-- PostHog Analytics -->
-    <PostHog />
-    
-    <!-- Lyket Like Buttons -->
-    <script is:inline src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_cbf8d6a056397e132808dd46bdc2b7"></script>
-    
-    <!-- Netlify Identity Widget -->
-    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Initials in Top Left -->
-    <div class="fixed top-6 left-6 z-50">
-      <a href="/" id="nav-initials" class="text-2xl font-bold text-[#161717] hover:opacity-70">
-        {siteSettings.site.initials}
-      </a>
-    </div>
-    
+    <nav class="fixed top-6 left-6 z-50">
+      <a href="https://armaanagrawal.com" class="text-2xl font-bold" style="color: #161717; text-decoration: none;">A.A.</a>
+    </nav>
     <slot />
-    
-    <!-- Netlify Identity Redirect Handler -->
-    <script is:inline>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-    
-    <!-- Navigation Initials Color Adapter -->
-    <script>
-      import '../scripts/navColorAdapter.js';
-    </script>
-    
-    <!-- ConvertKit Form with AJAX -->
-    <script is:inline>
-      (function() {
-        // Look for either newsletter-form ID or data-uid attribute
-        const formContainer = document.getElementById('newsletter-form') || document.querySelector('[data-uid="8646838"]');
-        if (!formContainer) return;
-        
-        // Create the form HTML
-        const formHTML = `
-          <form id="convertkit-form" class="newsletter-form" method="post" action="https://app.kit.com/forms/8646838/subscriptions">
-            <div class="form-row">
-              <input 
-                type="email" 
-                name="email_address" 
-                placeholder="Enter your email" 
-                required 
-                class="email-input"
-              />
-              <button type="submit" class="submit-button">Subscribe</button>
-            </div>
-          </form>
-          <div id="form-message" style="display: none;"></div>
-        `;
-        
-        formContainer.innerHTML = formHTML;
-        
-        // Handle form submission with AJAX
-        const form = document.getElementById('convertkit-form');
-        const messageDiv = document.getElementById('form-message');
-        
-        form.addEventListener('submit', async function(e) {
-          e.preventDefault();
-          
-          const formData = new FormData(form);
-          const email = formData.get('email_address');
-          
-          try {
-            const response = await fetch(form.action, {
-              method: 'POST',
-              body: formData,
-              headers: {
-                'Accept': 'application/json'
-              }
-            });
-            
-            if (response.ok) {
-              // Show success message
-              form.style.display = 'none';
-              messageDiv.innerHTML = `
-                <div class="success-message">
-                  <p>You're in! Check your email/spam folder to confirm.</p>
-                </div>
-              `;
-              messageDiv.style.display = 'block';
-            } else {
-              // Show error message
-              messageDiv.innerHTML = `
-                <div class="error-message">
-                  <p>Something went wrong. Please try again.</p>
-                </div>
-              `;
-              messageDiv.style.display = 'block';
-            }
-          } catch (error) {
-            // Show error message
-            messageDiv.innerHTML = `
-              <div class="error-message">
-                <p>Something went wrong. Please try again.</p>
-              </div>
-            `;
-            messageDiv.style.display = 'block';
-          }
-        });
-      })();
-    </script>
+    <footer class="py-12 text-center" style="color: var(--gray-500); font-size: 0.875rem;">
+      Armaan Agrawal
+    </footer>
   </body>
 </html>

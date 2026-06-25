@@ -1,187 +1,184 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import homePage from '../data/homePage.json';
-import { getImageUrl } from '../utils/imageUtils';
+import { books } from '../data/books';
 
-const allPosts = await getCollection('blog');
-
-// Filter to only published posts
-const publishedPosts = allPosts.filter(post => post.data.published !== false);
-
-// Helper: extract first real paragraph from markdown body
-function getBlurb(body: string): string {
-  const stripped = body
-    .replace(/^---[\s\S]*?---\n?/, '') // strip frontmatter if any leaked in
-    .replace(/!\[.*?\]\(.*?\)/g, '')   // strip images
-    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1'); // flatten links
-  const paragraphs = stripped.split(/\n\n+/).map(p => p.trim()).filter(p => p && !p.startsWith('#'));
-  const first = paragraphs[0] || '';
-  return first;
-}
-
-// Group posts by topic sections from CMS
-const writingSections = homePage.writingSections || [];
-const postsByTopic = writingSections.map(section => {
-  const posts = publishedPosts
-    .filter(post => post.data.topic === section.topic)
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-  return {
-    title: section.title,
-    posts
-  };
-}).filter(section => section.posts.length > 0);
-
-// Get posts that don't match any topic filter
-const usedTopics = writingSections.map(section => section.topic);
-const ungroupedPosts = publishedPosts
-  .filter(post => !post.data.topic || !usedTopics.includes(post.data.topic))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const allTags = ['memoir', 'philosophy', 'stoicism', 'business', 'product', 'advertising'];
 ---
 
-<Layout title={`${homePage.hero.title}`} description={homePage.hero.subtitle}>
-  <main class="w-full max-w-4xl mx-auto px-8 py-20">
-    <!-- Profile Picture -->
-    <div class="mb-6">
-      <div class="w-32 h-32 md:w-40 md:h-40 overflow-hidden">
-        <Image 
-          src={getImageUrl(homePage.hero.image)} 
-          alt={homePage.hero.imageAlt}
-          width={160}
-          height={160}
-          class="w-full h-full object-cover"
-          loading="eager"
-        />
-      </div>
+<Layout title="Books — Armaan Agrawal">
+  <main class="max-w-4xl mx-auto px-8 py-20">
+    <header class="mb-12">
+      <p class="uppercase tracking-widest mb-3" style="font-size: 0.75rem; color: var(--gray-500);">Reading list</p>
+      <h1 class="mb-4" style="font-size: 2.5rem; font-weight: 700; color: var(--black);">Books I recommend</h1>
+      <p style="color: var(--gray-700); font-size: 1.0625rem;">Books that shaped how I think — with notes on why they mattered.</p>
+    </header>
+
+    <div class="mb-10 flex flex-wrap gap-2">
+      <button class="filter-pill active" data-tag="all">All</button>
+      {allTags.map(tag => (
+        <button class="filter-pill" data-tag={tag}>{tag}</button>
+      ))}
     </div>
 
-    <!-- Hero / Intro -->
-    <section class="mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold mb-2">{homePage.hero.title}</h1>
-      <p class="text-lg md:text-xl mb-2 text-gray-700">
-        {homePage.hero.subtitle}
-      </p>
-    </section>
-
-    <!-- Challenge Quiz Section -->
-    {homePage.challengeQuiz?.show && (
-      <section class="mb-12">
-        <p class="text-base md:text-lg mb-2 text-gray-700">
-          <a href={homePage.challengeQuiz.url || '/30du'} class="group">
-            <span>{homePage.challengeQuiz.linkText || homePage.challengeQuiz.text}</span>
+    <ul class="book-list" style="list-style: none; padding: 0; margin: 0;">
+      {books.map(book => (
+        <li
+          class="book-card"
+          data-tags={book.tags.join(',')}
+          style="border-bottom: 1px solid var(--gray-200);"
+        >
+          <a href={`/books/${book.slug}`} class="book-card-link">
+            <div class="book-cover-wrap">
+              <img
+                src={book.cover}
+                alt={book.title}
+                class="book-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="book-info">
+              <p class="book-tags">
+                {book.tags.map((t, i) => (
+                  <span>{i > 0 ? ' · ' : ''}{t.toUpperCase()}</span>
+                ))}
+              </p>
+              <h2 class="book-title">{book.title}</h2>
+              <p class="book-meta">{book.author} · {book.year}</p>
+              <p class="book-pitch">{book.pitch}</p>
+              <span class="book-cta">Read my notes &rarr;</span>
+            </div>
           </a>
-        </p>
-      </section>
-    )}
-
-    <!-- Writing Sections by Topic -->
-    {postsByTopic.map((section) => (
-      <section class="mb-12">
-        <h2 class="text-lg font-bold mb-6">{section.title}</h2>
-        <div class="space-y-0">
-          {section.posts.map((post) => (
-            <div class="border-t border-gray-200 py-6">
-              <a href={`/blog/${post.slug}`} class="group block no-underline" style="text-decoration: none;">
-                <h3 class="text-xl font-bold mb-3 group-hover:text-[#06402B] leading-snug no-underline">{post.data.title}</h3>
-              </a>
-              <p class="text-base text-gray-700 mb-4 leading-relaxed">{getBlurb(post.body)}</p>
-              <div class="flex items-center gap-6">
-                <a href={`/blog/${post.slug}`} class="text-sm font-semibold tracking-wide uppercase text-[#06402B] underline underline-offset-4">Read more</a>
-                <span class="text-xs text-gray-400">
-                  {post.data.date.toLocaleDateString('en-US', { 
-                    month: 'short', 
-                    day: 'numeric',
-                    year: 'numeric' 
-                  })}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    ))}
-
-    <!-- Ungrouped Posts (no topic match) -->
-    {ungroupedPosts.length > 0 && (
-      <section class="mb-12">
-        <div class="space-y-0">
-          {ungroupedPosts.map((post) => (
-            <div class="border-t border-gray-200 py-6">
-              <a href={`/blog/${post.slug}`} class="group block no-underline" style="text-decoration: none;">
-                <h3 class="text-xl font-bold mb-3 group-hover:text-[#06402B] leading-snug no-underline">{post.data.title}</h3>
-              </a>
-              <p class="text-base text-gray-700 mb-4 leading-relaxed">{getBlurb(post.body)}</p>
-              <div class="flex items-center gap-6">
-                <a href={`/blog/${post.slug}`} class="text-sm font-semibold tracking-wide uppercase text-[#06402B] underline underline-offset-4">Read more</a>
-                <span class="text-xs text-gray-400">
-                  {post.data.date.toLocaleDateString('en-US', { 
-                    month: 'short', 
-                    day: 'numeric',
-                    year: 'numeric' 
-                  })}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    )}
-
-    <!-- Newsletter -->
-    <section class="mt-18 mb-8">
-      <p class="text-sm text-gray-700 mb-2">
-        {homePage.newsletter.description}
-      </p>
-      <div id="newsletter-form"></div>
-    </section>
-
-    <!-- Connect Icons -->
-    <section class="mt-8">
-      <div class="flex flex-wrap gap-6 text-sm items-center justify-center">
-        {homePage.cta.links.map((link: any) => {
-          // Map link labels to icons
-          let icon = '';
-          let ariaLabel = '';
-          
-          if (link.label.includes('X')) {
-            icon = '𝕏';
-            ariaLabel = 'Follow on X';
-          } else if (link.label.includes('LinkedIn')) {
-            icon = 'in';
-            ariaLabel = 'Connect on LinkedIn';
-          } else if (link.label.includes('TikTok')) {
-            icon = '♪';
-            ariaLabel = 'Follow on TikTok';
-          } else if (link.label.includes('Resume')) {
-            icon = '↓';
-            ariaLabel = 'Download Resume';
-          }
-          
-          return link.url ? (
-            <a 
-              href={link.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="group"
-              aria-label={ariaLabel}
-              title={ariaLabel}
-            >
-              <span class="text-sm group-hover:text-[#06402B]">{icon}</span>
-            </a>
-          ) : (
-            <a 
-              href={link.file} 
-              download 
-              class="group"
-              aria-label={ariaLabel}
-              title={ariaLabel}
-            >
-              <span class="text-sm group-hover:text-[#06402B]">{icon}</span>
-            </a>
-          );
-        })}
-      </div>
-    </section>
+        </li>
+      ))}
+    </ul>
   </main>
 </Layout>
+
+<style>
+  :root {
+    --black: #161717;
+    --green: #06402B;
+    --white: #FFFFFF;
+    --gray-700: #374151;
+    --gray-500: #6B7280;
+    --gray-200: #E5E7EB;
+  }
+
+  .filter-pill {
+    border: 1px solid var(--gray-200);
+    background: transparent;
+    color: var(--gray-700);
+    font-family: 'abril-display', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+
+  .filter-pill.active,
+  .filter-pill:hover {
+    background-color: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+  }
+
+  .book-card-link {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    align-items: flex-start;
+    transition: background-color 0.2s;
+  }
+
+  .book-card-link:hover {
+    background-color: rgba(6, 64, 43, 0.04);
+  }
+
+  .book-cover-wrap {
+    flex-shrink: 0;
+    width: 120px;
+  }
+
+  .book-cover {
+    width: 120px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%);
+    transition: filter 0.3s;
+  }
+
+  .book-card-link:hover .book-cover {
+    filter: grayscale(0%);
+  }
+
+  .book-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .book-tags {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--green);
+    margin: 0 0 0.375rem 0;
+    text-transform: uppercase;
+  }
+
+  .book-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0 0 0.25rem 0;
+    line-height: 1.3;
+  }
+
+  .book-meta {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin: 0 0 0.625rem 0;
+  }
+
+  .book-pitch {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .book-cta {
+    font-size: 0.875rem;
+    color: var(--green);
+    text-decoration: underline;
+    text-decoration-color: rgba(6, 64, 43, 0.3);
+    text-underline-offset: 4px;
+  }
+
+  .book-card-link:hover .book-cta {
+    text-decoration-color: var(--green);
+  }
+</style>
+
+<script>
+  const pills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
+  const cards = document.querySelectorAll<HTMLLIElement>('.book-card');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const tag = pill.dataset.tag ?? 'all';
+      cards.forEach(card => {
+        const tags = (card.dataset.tags ?? '').split(',');
+        (card as HTMLElement).style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
+      });
+    });
+  });
+</script>

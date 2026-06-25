@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { books } from '../../data/books';
+
+export function getStaticPaths() {
+  return books.map(book => ({
+    params: { slug: book.slug },
+    props: { book },
+  }));
+}
+
+const { book } = Astro.props;
+const paragraphs = book.notes.split('\n\n').filter(p => p.trim());
+---
+
+<Layout title={`${book.title} — Armaan Agrawal`} description={book.pitch}>
+  <main class="max-w-4xl mx-auto px-8 py-20">
+    <a href="/" class="back-link">&larr; All books</a>
+
+    <div class="book-header">
+      <img
+        src={book.cover}
+        alt={book.title}
+        class="detail-cover"
+        loading="eager"
+      />
+      <div class="book-header-info">
+        <p class="detail-tags">
+          {book.tags.map((t, i) => (
+            <span>{i > 0 ? ' · ' : ''}{t.toUpperCase()}</span>
+          ))}
+        </p>
+        <h1 class="detail-title">{book.title}</h1>
+        <p class="detail-meta">{book.author} · {book.year}</p>
+        <p class="detail-pitch">{book.pitch}</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="notes-body">
+      {paragraphs.map(p => (
+        <p>{p}</p>
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --black: #161717;
+    --green: #06402B;
+    --white: #FFFFFF;
+    --gray-700: #374151;
+    --gray-500: #6B7280;
+    --gray-200: #E5E7EB;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: var(--green);
+    text-decoration: underline;
+    text-decoration-color: rgba(6, 64, 43, 0.3);
+    text-underline-offset: 4px;
+  }
+
+  .back-link:hover {
+    text-decoration-color: var(--green);
+  }
+
+  .book-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+  }
+
+  .detail-cover {
+    width: 240px;
+    max-width: 240px;
+    flex-shrink: 0;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .book-header-info {
+    flex: 1;
+    padding-top: 0.25rem;
+  }
+
+  .detail-tags {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  .detail-meta {
+    font-size: 0.9375rem;
+    color: var(--gray-500);
+    margin: 0 0 1rem 0;
+  }
+
+  .detail-pitch {
+    font-size: 1.0625rem;
+    color: var(--gray-700);
+    margin: 0;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    margin: 2rem 0;
+  }
+
+  .notes-body p {
+    font-size: 1.0625rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+    margin: 0 0 1.25rem 0;
+    max-width: 68ch;
+  }
+
+  @media (max-width: 600px) {
+    .book-header {
+      flex-direction: column;
+    }
+
+    .detail-cover {
+      width: 160px;
+      max-width: 160px;
+    }
+  }
+</style>
